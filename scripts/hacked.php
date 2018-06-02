@@ -2,7 +2,7 @@
 
 require_once 'functions.php';
 
-$type = $_GET["type"];
+$type = isset($_GET["type"]) ? $_GET["type"] : null;
 
 switch ($type) {
     case 'cookie':
