@@ -26,7 +26,7 @@ function send_mail($name, $subject, $from, $message)
     $message = clean_data($message);
 
 
-    $to = 'ltcastelnuovo@gmail.com';
+    $to = 'lucacastelnuovo@hetbaarnschlcyeum.nl';
     $headers = array(
         'From: ' . $from,
         'Content-Type:text/html',
