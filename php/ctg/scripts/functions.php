@@ -30,7 +30,9 @@ function send_mail($name, $subject, $from, $message)
     $headers = "From:" . $from;
     $message = $message . '<br /><p>Name from sender: ' . $name . '</p><p>IP from sender: ' . ip() . '</p>';
     // mail($to, $subject, $message, implode("\r\n", $headers));
-    return mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers);
+    echo $to . '<br />' . $subject . '<br />' . $message . '<br />' . $headers;
+    return false;
 }
 
 
