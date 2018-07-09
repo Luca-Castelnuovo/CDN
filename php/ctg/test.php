@@ -1,1 +1,2 @@
-<?php header("location: http://google.com");
+<?php
+header("location: http://google.com");
