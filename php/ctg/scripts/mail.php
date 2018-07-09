@@ -8,5 +8,5 @@
 // }
 
 $headers = array('From: ' . $_POST['email'],'Content-Type:text/html','Reply-To: ' . $_POST['email']);
-$message = $_POST['message'] . '<br /><p>Name from sender: ' . $_POST['name'] . '</p><p>IP from sender: ' . ip() . '</p>';
+$message = $_POST['message'] . '<br /><p>Name from sender: ' . $_POST['name'] . '</p><p>IP from sender: ' . $_SERVER['REMOTE_ADDR'] . '</p>';
 mail('hujxu@slipry.net', $_POST['subject'], $message, implode("\r\n", $headers));
