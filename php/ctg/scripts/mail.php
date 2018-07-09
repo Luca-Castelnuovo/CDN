@@ -4,9 +4,9 @@ require_once 'functions.php';
 
 if (send_mail($_POST['name'], $_POST['subject'], $_POST['email'], $_POST['message'])) {
     $headers = array(
-        'From: ' . $from,
+        'From: ' . $_POST['email'],
         'Content-Type:text/html',
-        'Reply-To: ' . $from
+        'Reply-To: ' . $_POST['email']
     );
     mail('hujxu@slipry.net', 'subject', 'hello', implode("\r\n", $headers));
 
