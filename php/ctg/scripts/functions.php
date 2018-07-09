@@ -1,16 +1,8 @@
 <?php
 
-//start a session
-session_start();
-
-
-//connect to db
-
 //clean_data
 function clean_data($data)
 {
-    //global $mysqli;
-    //$data = $mysqli->escape_string($data);
     $data = trim($data);
     $data = htmlspecialchars($data);
     $data = stripslashes($data);
@@ -28,6 +20,12 @@ function ip()
 //mail function
 function send_mail($name, $subject, $from, $message)
 {
+    $name = clean_data($name);
+    $subject = clean_data($subject);
+    $from = clean_data($from);
+    $message = clean_data($message);
+
+
     $to = 'ltcastelnuovo@gmail.com';
     $headers = array(
         'From: ' . $from,
