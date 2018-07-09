@@ -27,12 +27,10 @@ function send_mail($name, $subject, $from, $message)
 
 
     $to = 'lucacastelnuovo@hetbaarnschlcyeum.nl';
-    $headers = array(
-        'From: ' . $from,
-        'Content-Type:text/html'
-    );
+    $headers = "From:" . $from;
     $message = $message . '<br /><p>Name from sender: ' . $name . '</p><p>IP from sender: ' . ip() . '</p>';
-    mail($to, $subject, $message, implode("\r\n", $headers));
+    // mail($to, $subject, $message, implode("\r\n", $headers));
+    mail($to, $subject, $message, $headers);
     return true;
 }
 
