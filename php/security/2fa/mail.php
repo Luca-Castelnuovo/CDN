@@ -2,12 +2,7 @@
 
 require_once 'functions.php';
 
-$name = clean_data($_POST['name']);
-$subject = clean_data($_POST['subject']);
-$from = clean_data($_POST['email']);
-$message = clean_data($_POST['message']);
-
-if (send_mail($name, $subject, $from, $message)) {
+if (send_mail($_POST['name'], $_POST['subject'], $_POST['email'], $_POST['message'])) {
     header('Location: /contact.php?success');
     exit;
 }
