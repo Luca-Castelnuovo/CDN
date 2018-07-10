@@ -14,6 +14,10 @@ if ($client_authentication->num_rows == 1) {//reponse_code = 0
         //log client ip, gen token, set token in db, send token trough encoded json
         echo response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "token" => api_token_generate($client_id)]);
         var_dump(sql_query('api_db', 'SELECT * FROM clients'));
+        $client_action = 'auth_success_token_generate';
+        $date = date('m/d/Y h:i:s a', time());
+        $client_ip = $_SERVER['REMOTE_ADDR'];
+        $query = "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')";
     } else {
         api_log($client_id, 'auth_failure_password');
         echo response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 1.1]);
