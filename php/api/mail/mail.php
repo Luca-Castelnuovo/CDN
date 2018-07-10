@@ -10,7 +10,7 @@ require 'vendor/autoload.php';
 
 //Load additional functions and configuration
 require '../main/functions.php';
-$config = parse_ini_file('../config/mail.ini');
+$config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/mail.ini');
 
 $mail = new PHPMailer();
 

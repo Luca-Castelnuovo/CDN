@@ -1,6 +1,6 @@
 <?php
 
-$config = parse_ini_file('../config/authentication.ini');
+$config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/authentication.ini');
 
 //Connect to database
 function sql_connect($database = null)
