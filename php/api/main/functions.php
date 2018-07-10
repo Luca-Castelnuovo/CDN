@@ -46,13 +46,15 @@ function api_log($client_id, $client_action)
 {
     $date = date('m/d/Y h:i:s a', time());
     $client_ip = $_SERVER['REMOTE_ADDR'];
-    sql_query('api_db', "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')", false);
+    $query = "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')";
+    sql_query('api_db', $query, false);
 }
 
 function api_token_generate($client_id)
 {
     $client_token = gen(256);
-    sql_query('api_db', "UPDATE clients SET client_token=$client_token WHERE client_id=$client_id", false);
+    $query = "UPDATE clients SET client_token=$client_token WHERE client_id=$client_id";
+    sql_query('api_db', $query, false);
     api_log($client_id, 'auth_success_token_generate');
     return $client_token;
 }
