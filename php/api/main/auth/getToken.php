@@ -15,6 +15,7 @@ if ($client_authentication->num_rows == 1) {//reponse_code = 0
         echo response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "token" => api_token_generate($client_id)]);
         $client_token = gen(256);
         echo "UPDATE clients SET client_token=$client_token WHERE client_id=$client_id";
+        echo "test";
     } else {
         api_log($client_id, 'auth_failure_password');
         echo response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 1.1]);
