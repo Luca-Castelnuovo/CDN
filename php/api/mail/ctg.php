@@ -19,4 +19,4 @@ $result = api_call('POST', 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php
 //     header('Refresh: 5; URL=https://ctg.bss.design/');
 // }
 
-var_dump($result);
+var_dump($result['status']);
