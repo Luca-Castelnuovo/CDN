@@ -18,6 +18,7 @@ function sql_connect($database = null)
     }
 }
 
+
 //Close sql connection to save resources
 function sql_disconnect($conn)
 {
@@ -39,11 +40,21 @@ function sql_query($database, $query, $assoc = true)
     }
 }
 
+
+//Log api actions
 function api_log($client_id, $client_action)
 {
     $date = date('m/d/Y h:i:s a', time());
     $client_ip = $_SERVER['REMOTE_ADDR'];
     sql_query('api_db', "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')", false);
+}
+
+function api_token_generate($client_id)
+{
+    $client_token = gen(256);
+    sql_query('api_db', "UPDATE clients SET client_token=$client_token WHERE client_id=$client_id", false);
+    api_log($client_id, 'auth_success_token_generate');
+    return $client_token;
 }
 
 
@@ -72,12 +83,15 @@ function clean_data($data, $disable = 'none')
     return $data;
 }
 
+
 //encode array to json
 function response($output)
 {
     return json_encode($output);
 }
 
+
+//Make api calls for GET, PUT, POST
 function api_call($method, $url, $data = false)
 {
     $curl = curl_init();
@@ -105,4 +119,12 @@ function api_call($method, $url, $data = false)
     $result = curl_exec($curl);
     curl_close($curl);
     return json_decode($result, true);
+}
+
+
+//Generate random string
+function gen($length)
+{
+    $length = $length / 2;
+    return bin2hex(random_bytes($length));
 }
