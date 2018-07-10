@@ -20,3 +20,4 @@ $result = api_call('POST', 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php
 // }
 
 var_dump($result['status']);
+var_dump($result);
