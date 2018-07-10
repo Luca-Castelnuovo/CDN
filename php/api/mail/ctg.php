@@ -3,7 +3,7 @@
 $name = $_POST['name'];
 $from = $_POST['email'];
 $subject = 'Close The Gap | ' . $_POST['subject'];
-$body = '<h1>This email is from: ' . $name  . '</h1><br /><h2>Email: ' . $from  . '</h2>' . $_POST['body'];
+$body = '<style>h1,h2{margin:0}</style><h1>This email is from: ' . $name  . '</h1><br /><h2>Email: ' . $from  . '</h2>' . $_POST['body'];
 
 $data = ['to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body];
 
