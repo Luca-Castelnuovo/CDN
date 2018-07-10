@@ -21,8 +21,8 @@ $result = json_decode(file_get_contents($url, false, $context), true);
 
 if ($result['status'] == 'true') {
     echo '<h1>Mail succesvol verstuurd.</h1>' . PHP_EOL . '<h4>U wordt doorgestuurd in 3 seconden.</h4>';
-    header('Refresh: 3; URL=index.html');
+    header('Refresh: 3; URL=https://ctg.bss.design/');
 } else {
     echo '<h1>Mail niet verstuurd.</h1>' . PHP_EOL . '<h2>Probeer het later opnieuw AUB.</h2>' . PHP_EOL . '<h4>U wordt doorgestuurd in 5 seconden.</h4>';
-    header('Refresh: 5; URL=index.html');
+    header('Refresh: 5; URL=https://ctg.bss.design/');
 }
