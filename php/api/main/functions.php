@@ -31,7 +31,7 @@ function sql_query($database, $query, $assoc = true)
 {
     $conn = sql_connect($database);
     $result = $conn->query($conn->escape_string($query));
-    sql_disconnect($conn);
+    //sql_disconnect($conn);
 
     if ($assoc) {
         return $result->fetch_assoc();
