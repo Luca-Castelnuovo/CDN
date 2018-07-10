@@ -7,7 +7,8 @@ $body = '<h1>This email is from: ' . $name  . '</h1>' . PHP_EOL . $_POST['body']
 
 $data = ['to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body];
 
-$result = request_post('https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
+//$result = request_post('https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
+$result = api_call('post', 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
 
 if ($result['status'] == 'true') {
     echo '<h1>Mail succesvol verstuurd.</h1>' . PHP_EOL . '<h4>U wordt doorgestuurd in 3 seconden.</h4>';
