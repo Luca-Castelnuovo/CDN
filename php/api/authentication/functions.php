@@ -31,3 +31,10 @@ function clean_data($data)
     $data = stripslashes($data);
     return $data;
 }
+
+function output($output)
+{
+    //$out = ["status" => false, "error_code" => $error_code];
+    echo json_encode($output);
+    exit;
+}

@@ -37,4 +37,8 @@ $mail->Body    = clean_data($_POST['body']);
 $altBody = isset($_POST['altbody']) ? $_POST['altbody'] : $_POST['body'];
 $mail->AltBody = clean_data($altBody);
 
-$mail->send();
+if ($mail->send()) {
+    output(["status" => true, "type" => "mail"]);
+} else {
+    output(["status" => false, "type" => "mail"]);
+}
