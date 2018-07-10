@@ -1,11 +1,11 @@
 <?php
 
-$message = 'test message <h1>capitiol</h1>';
+$body = 'test message <h1>capitiol</h1>';
 $subject = 'test subject';
 // $subject = $_POST['subject'];
 
 $url = 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php';
-$data = array('to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'message' => $message);
+$data = array('to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body);
 
 $options = array(
     'http' => array(
