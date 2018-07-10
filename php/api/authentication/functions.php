@@ -34,7 +34,5 @@ function clean_data($data)
 
 function output($output)
 {
-    //$out = ["status" => false, "error_code" => $error_code];
-    echo json_encode($output);
-    exit;
+    return json_encode($output);
 }
