@@ -20,10 +20,8 @@ $result = json_decode(file_get_contents($url, false, $context), true);
 
 if ($result['status'] == 'true') {
     echo '<h1>Mail succesvol verstuurd.</h1>' . PHP_EOL . '<h4>U wordt doorgestuurd in 2 seconden.</h4>';
-    sleep(2);
-    header('Location: index.html');
+    header('Refresh: 2; URL=index.html');
 } else {
     echo '<h1>Mail niet verstuurd.</h1>' . PHP_EOL . '<h2>Probeer het later opnieuw AUB.</h2>' . PHP_EOL . '<h4>U wordt doorgestuurd in 5 seconden.</h4>';
-    sleep(5);
-    header('Location: index.html');
+    header('Refresh: 5; URL=index.html');
 }
