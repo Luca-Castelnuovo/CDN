@@ -28,11 +28,11 @@ function api_token_validate($client_id, $client_token, $api_level)
     if ($result->num_rows == 1) {
         $result_assoc = $result->fetch_assoc();
         if ($api_level <= $result_assoc['client_level']) {
-            api_log($client_id, 'auth_success_token_generate');
+            api_log($client_id, 'auth_success_token_valid');
             $client_token_new = api_token_generate($client_id);
             return response(["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 1.0, "client_token" => $client_token_new]);
         } else {
-            api_log($client_id, 'auth_success_token_generate');
+            api_log($client_id, 'auth_failure_client_level');
             return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 1.1]);
         }
     } else {
