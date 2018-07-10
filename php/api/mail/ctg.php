@@ -3,7 +3,7 @@
 $name = $_POST['name'];
 $from = $_POST['email'];
 $subject = $_POST['subject'];
-$body = '<h1>This email is from: </h1>' . $name . PHP_EOL . $_POST['body'];
+$body = '<h1>This email is from:' . $name  . '</h1>' . PHP_EOL . $_POST['body'];
 
 $url = 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php';
 $data = array('to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body);
