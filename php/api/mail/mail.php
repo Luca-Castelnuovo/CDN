@@ -30,19 +30,12 @@ $mail->addReplyTo($config['addReplyTo'], $config['addReplyToName']);
 $mail->addAddress(clean_data($_POST['to']));
 
 //Content
-// $mail->isHTML(true);
-// $mail->Subject = clean_data($_POST['subject']);
-
-$body = clean_data($_POST['body']);
-
 $mail->isHTML(true);
-$mail->Subject = 'Here is the subject';
-$mail->Body    = $body;
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->Body    = clean_data($_POST['body'], 'html');
+$mail->Subject = clean_data($_POST['subject']);
 
-
-//$altBody = isset($_POST['altbody']) ? $_POST['altbody'] : $_POST['body'];
-//$mail->AltBody = clean_data($altBody);
+$altBody = isset($_POST['altbody']) ? $_POST['altbody'] : $_POST['body'];
+$mail->AltBody = clean_data($altBody, 'html');
 
 if ($mail->send()) {
     echo response(["status" => true, "type" => "mail", "body" => $body]);

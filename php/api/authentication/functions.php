@@ -20,15 +20,26 @@ function sql_connect($database = null)
 
 
 //Clean user submitted data
-function clean_data($data)
+function clean_data($data, $disable = 'none')
 {
-    //connect to db to use escape_string()
-    $conn = sql_connect();
+    if ($disable != 'sql') {
+        //connect to db to use escape_string()
+        $conn = sql_connect();
+        $data = $conn->escape_string($data);
+    }
 
-    $data = $conn->escape_string($data);
-    $data = trim($data);
-    $data = htmlspecialchars($data);
-    $data = stripslashes($data);
+    if ($disable != 'trim') {
+        $data = trim($data);
+    }
+
+    if ($disable != 'html') {
+        $data = htmlspecialchars($data);
+    }
+
+    if ($disable != 'slash') {
+        $data = stripslashes($data);
+    }
+
     return $data;
 }
 
