@@ -44,7 +44,7 @@ function sql_query($database, $query, $assoc = true)
 //Log api actions
 function api_log($client_id, $client_action)
 {
-    $date = date('m/d/Y h:i:s a', time());
+    $date = date('Y-m-d H:i:s', time());
     $client_ip = $_SERVER['REMOTE_ADDR'];
     $query = "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')";
     sql_query('api_db', $query, false);
