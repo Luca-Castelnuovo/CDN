@@ -47,7 +47,8 @@ function api_log($client_id, $client_action)
     $date = date('m/d/Y h:i:s a', time());
     $client_ip = $_SERVER['REMOTE_ADDR'];
     $query = "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')";
-    sql_query('api_db', $query, false);
+    echo $query;
+    //sql_query('api_db', $query, false);
 }
 
 function api_token_generate($client_id)
