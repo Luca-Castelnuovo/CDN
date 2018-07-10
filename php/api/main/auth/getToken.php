@@ -5,7 +5,7 @@ require '../functions.php';
 $client_id = clean_data($_POST['client_id']);
 $client_password = clean_data($_POST['test']);
 
-$query = "SELECT id FROM clients WHERE client_id=$client_id";
+$query = "SELECT client_password FROM clients WHERE client_id=$client_id";
 $client_authentication = sql_query('api_db', $query, false);
 
 if ($client_authentication->num_rows == 1) {//reponse_code = 0
@@ -16,7 +16,6 @@ if ($client_authentication->num_rows == 1) {//reponse_code = 0
     } else {
         api_log($client_id, 'auth_failure_password');
         echo response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 1.1]);
-        echo $client_password . '<br />' . $client_authentication_associative['client_password'];
     }
 } else {
     api_log('unknown', 'auth_failure_unknown_user');
