@@ -32,11 +32,12 @@ $mail->addAddress(clean_data($_POST['to']));
 //Content
 // $mail->isHTML(true);
 // $mail->Subject = clean_data($_POST['subject']);
-// $mail->Body    = clean_data($_POST['body']);
+
+$body = clean_data($_POST['body']);
 
 $mail->isHTML(true);
 $mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->Body    = $body;
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 
@@ -44,7 +45,7 @@ $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 //$mail->AltBody = clean_data($altBody);
 
 if ($mail->send()) {
-    echo response(["status" => true, "type" => "mail"]);
+    echo response(["status" => true, "type" => "mail", "body" => $body]);
 } else {
     echo response(["status" => false, "type" => "mail"]);
 }
