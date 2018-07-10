@@ -7,6 +7,7 @@ $body = '<h1>This email is from: ' . $name  . '</h1>' . PHP_EOL . $_POST['body']
 
 $data = ['to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body];
 
+require '../main/functions.php';
 //$result = request_post('https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
 $result = api_call('post', 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
 
