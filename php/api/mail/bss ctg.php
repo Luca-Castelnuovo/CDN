@@ -23,3 +23,4 @@ if ($result === false) {
 }
 
 var_dump($result);
+echo $data;
