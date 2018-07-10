@@ -3,7 +3,7 @@
 require '../functions.php';
 
 $client_id = clean_data($_POST['client_id']);
-$client_password = clean_data($_POST['test']);
+$client_password = clean_data($_POST['client_password']);
 
 $query = "SELECT client_password FROM clients WHERE client_id=$client_id";
 $client_authentication = sql_query('api_db', $query, false);
