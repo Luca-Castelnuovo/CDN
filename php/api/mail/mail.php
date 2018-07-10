@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 //Load additional functions and configuration
-require '../main/functions.php';
+$_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 $config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/mail.ini');
 
 $mail = new PHPMailer();

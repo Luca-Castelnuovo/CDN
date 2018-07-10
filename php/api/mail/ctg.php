@@ -7,8 +7,7 @@ $body = '<h1>This email is from: ' . $name  . '</h1><br /><h2>Email: ' . $from  
 
 $data = ['to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body];
 
-require '../main/functions.php';
-//$result = request_post('https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
+$_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 $result = api_call('POST', 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
 
 if ($result['status'] == 'true') {

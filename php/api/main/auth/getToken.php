@@ -1,6 +1,6 @@
 <?php
 
-require '../functions.php';
+$_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
 $client_id = clean_data($_POST['client_id']);
 $client_password = clean_data($_POST['client_password']);
