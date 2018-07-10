@@ -5,7 +5,7 @@ $config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/authentica
 //Connect to database
 function sql_connect($database = null)
 {
-    $config = parse_ini_file('../config/authentication.ini');
+    $config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/authentication.ini');
 
     $database = isset($database) ? $database : $config['database'];
 
