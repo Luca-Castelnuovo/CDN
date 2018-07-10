@@ -17,7 +17,7 @@ if ($client_authentication->num_rows == 1) {//reponse_code = 0
         $client_action = 'auth_success_token_generate';
         $date = date('m/d/Y h:i:s a', time());
         $client_ip = $_SERVER['REMOTE_ADDR'];
-        $query = "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')";
+        echo "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')";
     } else {
         api_log($client_id, 'auth_failure_password');
         echo response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 1.1]);
