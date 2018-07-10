@@ -5,7 +5,7 @@ $config = parse_ini_file('../config/authentication.ini');
 //Connect to database
 function sql_connect($database = null)
 {
-    global $config;
+    $config = parse_ini_file('../config/authentication.ini');
 
     $database = isset($database) ? $database : $config['database'];
 
