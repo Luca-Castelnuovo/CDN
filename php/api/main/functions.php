@@ -49,21 +49,6 @@ function response($output)
     return json_encode($output);
 }
 
-//make a post request
-function request_post($url, $data)
-{
-    $options = array(
-        'http' => array(
-            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method'  => 'POST',
-            'content' => http_build_query($data)
-        )
-    );
-
-    $context  = stream_context_create($options);
-    return json_decode(file_get_contents($url, false, $context), true);
-}
-
 function api_call($method, $url, $data = false)
 {
     $curl = curl_init();
