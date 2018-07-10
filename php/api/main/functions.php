@@ -18,6 +18,29 @@ function sql_connect($database = null)
     }
 }
 
+//Close sql connection to save resources
+function sql_disconnect($conn)
+{
+    mysqli_close($conn);
+}
+
+
+//Execute sql query's and have to possibility to return an associative array
+function sql_query($database, $query, $assoc = true)
+{
+    $conn = sql_connect($database);
+
+    $result = $conn->query(escape_string($query));
+
+    sql_disconnect($conn);
+
+    if ($assoc) {
+        return $result->fetch_assoc();
+    } else {
+        return $result;
+    }
+}
+
 
 //Clean user submitted data
 function clean_data($data, $disable = 'none')
@@ -26,6 +49,7 @@ function clean_data($data, $disable = 'none')
         //connect to db to use escape_string()
         $conn = sql_connect();
         $data = $conn->escape_string($data);
+        sql_disconnect($conn);
     }
 
     if ($disable != 'trim') {
