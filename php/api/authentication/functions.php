@@ -32,7 +32,7 @@ function clean_data($data)
     return $data;
 }
 
-function output($output)
+function response($output)
 {
     return json_encode($output);
 }
