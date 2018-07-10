@@ -13,9 +13,12 @@ if ($client_authentication->num_rows == 1) {//reponse_code = 0
     if (password_verify($client_password, $client_authentication_associative['client_password'])) {//reponse_code = 1
         //log client ip, gen token, set token in db, send token trough encoded json
         // $client_token = api_token_generate($client_id);
+
         $client_token = gen(256);
         $query = "UPDATE clients SET client_token='$client_token' WHERE client_id='$client_id'";
-        sql_query('api_db', $query, false);
+        $conn = sql_connect($database);
+        $result = $conn->query($query);
+
         echo response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "client_token" => $client_token]);
     } else {
         api_log($client_id, 'auth_failure_password');
