@@ -30,7 +30,7 @@ function sql_disconnect($conn)
 function sql_query($database, $query, $assoc = true)
 {
     $conn = sql_connect($database);
-    $result = $conn->query($conn->escape_string($query));
+    $result = $conn->query($query);
     sql_disconnect($conn);
 
     if ($assoc) {
