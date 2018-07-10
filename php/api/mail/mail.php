@@ -34,8 +34,8 @@ $mail->isHTML(true);
 $mail->Subject = clean_data($_POST['subject']);
 $mail->Body    = clean_data($_POST['body']);
 
-$altBody = isset($_POST['altbody']) ? $_POST['altbody'] : $_POST['body'];
-$mail->AltBody = clean_data($altBody);
+//$altBody = isset($_POST['altbody']) ? $_POST['altbody'] : $_POST['body'];
+//$mail->AltBody = clean_data($altBody);
 
 if ($mail->send()) {
     echo response(["status" => true, "type" => "mail"]);
