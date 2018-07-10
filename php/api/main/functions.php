@@ -29,9 +29,7 @@ function sql_disconnect($conn)
 function sql_query($database, $query, $assoc = true)
 {
     $conn = sql_connect($database);
-
     $result = $conn->query(escape_string($query));
-
     sql_disconnect($conn);
 
     if ($assoc) {
@@ -39,6 +37,13 @@ function sql_query($database, $query, $assoc = true)
     } else {
         return $result;
     }
+}
+
+function api_log($client_id, $client_action)
+{
+    $date = date('m/d/Y h:i:s a', time());
+    $client_ip = $_SERVER['REMOTE_ADDR'];
+    sql_query('api_db', "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('$date', '$client_id', '$client_action', '$client_ip')", false);
 }
 
 

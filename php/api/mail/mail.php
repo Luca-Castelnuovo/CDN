@@ -30,16 +30,16 @@ $mail->addReplyTo($config['addReplyTo'], $config['addReplyToName']);
 $mail->addAddress(clean_data($_POST['to']));
 
 //Content
-if (!isset($_POST['to'])) {
-    echo response(["status" => false, "response_code" => 0.0]);
+if (!isset($_POST['to'])) {//reponse_code = 0
+    echo response(["status" => false, "type" => "mail", "response_code" => 0.0]);
     exit;
 }
-if (!isset($_POST['subject'])) {
-    echo response(["status" => false, "response_code" => 0.1]);
+if (!isset($_POST['subject'])) {//reponse_code = 0
+    echo response(["status" => false, "type" => "mail", "response_code" => 0.1]);
     exit;
 }
-if (!isset($_POST['body'])) {
-    echo response(["status" => false, "response_code" => 0.2]);
+if (!isset($_POST['body'])) {//reponse_code = 0
+    echo response(["status" => false, "type" => "mail", "response_code" => 0.2]);
     exit;
 }
 
@@ -50,8 +50,8 @@ $mail->Subject = clean_data($_POST['subject']);
 $altBody = isset($_POST['altbody']) ? $_POST['altbody'] : $_POST['body'];
 $mail->AltBody = clean_data($altBody, 'html');
 
-if ($mail->send()) {
-    echo response(["status" => true, "response_code" => 1.1]);
+if ($mail->send()) {//reponse_code = 1
+    echo response(["status" => true, "type" => "mail", "response_code" => 1.1]);
 } else {
-    echo response(["status" => false, "response_code" => 1.0]);
+    echo response(["status" => false, "type" => "mail", "response_code" => 1.0]);
 }

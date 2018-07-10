@@ -2,15 +2,23 @@
 
 require '../functions.php';
 
-$client_id = $_POST['client_id'];
-$client_password = $_POST['client_password'];
+$client_id = clean_data($_POST['client_id']);
+$client_password = clean_data($_POST['client_password']);
 
-$query = '';
+$query = "SELECT id FROM clients WHERE client_id=$client_id";
+$client_authentication = sql_query('api_db', $query, false);
 
-sql_query('api_db', $query);
-
-if (sql_query('api_db', $query, false)->num_rows = 0) {
-    //log client ip, gen token, set token in db, send token trough encoded json
+if ($client_authentication->num_rows == 1) {//reponse_code = 0
+    $client_authentication_associative = $client_authentication->fetch_assoc();
+    if (password_verify($client_password, $client_authentication_associative['client_password'])) {//reponse_code = 1
+        //log client ip, gen token, set token in db, send token trough encoded json
+        api_log($client_id, 'auth_success_token_generate');
+        echo response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "token" => api_token_generate()]);
+    } else {
+        api_log($client_id, 'auth_failure_password');
+        echo response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 1.1]);
+    }
 } else {
-    //log client ip, send error trough encoded json
+    api_log('unknown', 'auth_failure_unknown_user');
+    echo response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.0]);
 }
