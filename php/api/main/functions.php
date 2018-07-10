@@ -53,7 +53,7 @@ function api_log($client_id, $client_action)
 function api_token_generate($client_id)
 {
     $client_token = gen(256);
-    $query = "UPDATE clients SET client_token=$client_token WHERE client_id=$client_id";
+    $query = "UPDATE clients SET client_token='$client_token' WHERE client_id='$client_id'";
     sql_query('api_db', $query, false);
     api_log($client_id, 'auth_success_token_generate');
     return $client_token;
