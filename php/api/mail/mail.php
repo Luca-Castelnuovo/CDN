@@ -42,4 +42,3 @@ if ($mail->send()) {
 } else {
     echo response(["status" => false, "type" => "mail"]);
 }
-echo response(["status" => false, "type" => "mail"]);
