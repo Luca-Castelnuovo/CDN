@@ -23,12 +23,12 @@ function api_client_validate($client_id, $client_password)
             break;
 
         case 1.1:////username_password_no_match
-            api_log($client_id, 'auth_failure_client_validate_client_mismatch_password');
+            api_log($client_id, 'auth_failure_api_client_validate_client_mismatch_password');
             return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.0]);
             break;
 
         default://client_not_found
-            api_log('unknown', 'auth_failure_client_validate_client_unknown');
+            api_log('unknown', 'auth_failure_api_client_validate_client_unknown');
             return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.1]);
             break;
     }
@@ -41,7 +41,7 @@ function api_token_generate($client_id)
     $client_token = gen(256);
     $query = "UPDATE clients SET client_token='{$client_token}' WHERE client_id='{$client_id}'";
     sql_query('api_db', $query, false);
-    api_log($client_id, 'auth_success_token_generate');
+    api_log($client_id, 'auth_success_api_token_generate');
     return $client_token;
 }
 
@@ -49,9 +49,9 @@ function api_token_generate($client_id)
 //Delete used api access token
 function api_token_delete($client_id, $client_token)
 {
-    $query = "UPDATE clients SET client_token='{$client_token}' WHERE client_id='{$client_id}'";
+    $query = "DELETE FROM tokens WHERE client_id='{$client_id}' AND client_token='{$client_token}'";
     sql_query('api_db', $query, false);
-    api_log($client_id, 'auth_success_token_generate');
+    api_log($client_id, 'auth_success_api_token_delete');
 }
 
 
