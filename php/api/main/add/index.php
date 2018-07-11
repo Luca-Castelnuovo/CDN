@@ -14,6 +14,8 @@
 <body>
     <div class="wrapper">
         <form class="login" method="post">
+            <?php if (!isset($_GET['client_token'])) {
+    ?>
             <p class="title">Generate Token</p>
             <div class="input-field">
                 <label for="username">Client Username</label>
@@ -28,6 +30,11 @@
                 <input type="text" name="client_ip" class="text validate" id="client_ip" autocomplete="off">
             </div>
             <button id="submit"><i class="spinner"></i> <span class="state">Generate Token</span></button>
+        <?php
+} else {
+        require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
+        echo '<textarea rows="30" cols="60" readonly>' . clean_data($_GET['client_token']) . '</textarea>';
+    } ?>
         </form>
     </div>
     <script src="/js/vanilla/randomBackground.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
