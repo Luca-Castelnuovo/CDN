@@ -55,7 +55,7 @@ function api_token_delete($client_id, $client_token)
 }
 
 
-//Generate api access token
+//Validate api access token and access level
 function api_token_validate($client_id, $client_token, $required_api_level)
 {
     $client_id = clean_data($client_id);
