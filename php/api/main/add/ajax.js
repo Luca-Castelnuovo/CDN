@@ -17,7 +17,7 @@ $("#submit").click(function () {
 		dataType: "JSON",
 		success: function (a) {
 			a.status ? (o.addClass("ok"), s.html(a.client_token), setTimeout(function () {
-				window.location.replace("/home")
+				//window.location.replace("/home")
 			}, 500)) : (o.addClass("error"), s.html("Username and Password did not match!"), setTimeout(function () {
 				window.location.reload();
 			}, 1e3))
