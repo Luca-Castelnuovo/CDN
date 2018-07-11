@@ -73,7 +73,6 @@ function is_empty_var($data, $error)
         exit();
     } else {
         echo 'not empty';
-        exit();
     }
 }
 
