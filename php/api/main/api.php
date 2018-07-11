@@ -12,25 +12,23 @@ function api_log($client_id, $client_action)
 //Validate client credentials
 function api_client_validate($client_id, $client_password)
 {
+    $client_id = clean_data($client_id);
+    $client_password = clean_data($client_password);
+
     $validate_result = validate_client_id_and_pass($client_id, $client_password);
 
     switch ($validate_result['response_code']) {
         case 1.0://success
-            if ($validate_result['status']) {
-                return response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "client_token" => api_token_generate($client_id)]);
-            } else {
-                api_log($client_id, 'auth_failure_status_not_match_response_code');
-                return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 1.1]);
-            }
+            return response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "client_token" => api_token_generate($client_id)]);
             break;
 
         case 1.1:////username_password_no_match
-            api_log($client_id, 'auth_failure_password');
+            api_log($client_id, 'auth_failure_client_validate_client_mismatch_password');
             return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.0]);
             break;
 
         default://client_not_found
-            api_log('unknown', 'auth_failure_unknown_user');
+            api_log('unknown', 'auth_failure_client_validate_client_unknown');
             return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.1]);
             break;
     }
@@ -48,29 +46,73 @@ function api_token_generate($client_id)
 }
 
 
-//Generate api access token
-function api_token_validate($client_id, $client_token, $api_level)
+//Delete used api access token
+function api_token_delete($client_id, $client_token)
 {
-    $query = "SELECT client_level FROM clients WHERE client_id='{$client_id}' AND client_token='{$client_token}'";
+    $query = "UPDATE clients SET client_token='{$client_token}' WHERE client_id='{$client_id}'";
+    sql_query('api_db', $query, false);
+    api_log($client_id, 'auth_success_token_generate');
+}
+
+
+//Generate api access token
+function api_token_validate($client_id, $client_token, $required_api_level)
+{
+    $client_id = clean_data($client_id);
+    $client_token = clean_data($client_token);
+    $required_api_level = clean_data($required_api_level);
+
+    //check client exists
+    $query = "SELECT id FROM clients WHERE client_id='{$client_id}'";
     $result = sql_query('api_db', $query, false);
 
     if ($result->num_rows == 1) {
         $result_assoc = $result->fetch_assoc();
-        if ($api_level <= $result_assoc['client_level']) {
-            api_log($client_id, 'auth_success_token_valid');
-            $client_token_new = api_token_generate($client_id);
-            return response(["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 1.0, "client_token" => $client_token_new]);
-        } else {
-            api_log($client_id, 'auth_failure_client_level');
-            return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 1.1]);
-        }
     } else {
-        api_log($client_id, 'auth_failure_token_validate_mismatch_id_token');
+        api_log($client_id, 'auth_failure_api_token_validate_client_unknown');
         return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 0.0]);
     }
 
+    //check token valid
+    $query = "SELECT id FROM tokens WHERE client_id='{$client_id}' AND client_token='{$client_token}'";
+    $result = sql_query('api_db', $query, false);
 
-    return $client_token;
+    if ($result->num_rows != 1) {
+        api_log($client_id, 'auth_failure_api_token_validate_id_mismatch_token');
+        return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 1.0]);
+    }
+
+    //check client access level
+    api_validate_level($client_id, $required_api_level);
+
+    //delete old token
+    api_token_delete($client_id, $client_token);
+
+    //generate new token and return output
+    return response(["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 3.0]);
+}
+
+
+//validate client and api_level
+function api_validate_level($client_id, $required_api_level)
+{
+    $query = "SELECT client_level FROM clients WHERE client_id='{$client_id}'";
+    $result = sql_query('api_db', $query, false);
+
+    if ($result->num_rows == 1) {
+        $result_assoc = $result->fetch_assoc();
+        if ($required_api_level <= $result_assoc['client_level']) {
+            api_log($client_id, 'auth_success_token_client_level');
+            $client_token_new = api_token_generate($client_id);
+            return response(["response_code" => 1.0, "client_token" => $client_token_new]);
+        } else {
+            api_log($client_id, 'auth_failure_api_validate_level_client_level_too_low');
+            return response(["respone_code" => 1.1]);
+        }
+    } else {
+        api_log($client_id, 'auth_failure_api_validate_level_client_unknown');
+        return response(["respone_code" => 0.0]);
+    }
 }
 
 

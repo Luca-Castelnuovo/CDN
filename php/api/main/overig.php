@@ -50,20 +50,17 @@ function config_load($config)
 //Compare hash to password
 function validate_client_id_and_pass($client_id, $client_password)
 {
-    $client_id = clean_data($client_id);
-    $client_password = clean_data($client_password);
-
     $query = "SELECT client_password FROM clients WHERE client_id=$client_id";
     $query_result = sql_query('api_db', $query, false);
 
     if ($query_result->num_rows == 1) {//reponse_code = 0
         $query_result_assoc = $query_result->fetch_assoc();
         if (password_verify($password, $query_result_assoc['client_password'])) {
-            return response(["status" => true, "respone_code" => 1.0]);
+            return response(["respone_code" => 1.0]);
         } else {
-            return response(["status" => false, "respone_code" => 1.1]);
+            return response(["respone_code" => 1.1]);
         }
     } else {
-        return response(["status" => false, "respone_code" => 0.0]);
+        return response(["respone_code" => 0.0]);
     }
 }
