@@ -49,7 +49,7 @@ function api_token_generate($client_id)
 //Delete used api access token
 function api_token_delete($client_id, $client_token)
 {
-    $query = "DELETE FROM tokens WHERE client_id='{$client_id}' AND client_token='{$client_token}'";
+    $query = "DELETE FROM tokens WHERE client_token='{$client_token}'";
     sql_query('api_db', $query, false);
     api_log($client_id, 'auth_success_api_token_delete');
 }
@@ -86,7 +86,7 @@ function api_token_validate($client_id, $client_token, $required_api_level)
     api_validate_level($client_id, $required_api_level);
 
     //delete old token
-    api_token_delete($client_id, $client_token);
+    api_token_delete($client_token);
 
     //return true
     return response(["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 3.0]);
@@ -103,15 +103,14 @@ function api_validate_level($client_id, $required_api_level)
         $result_assoc = $result->fetch_assoc();
         if ($required_api_level <= $result_assoc['client_level']) {
             api_log($client_id, 'auth_success_token_client_level');
-            $client_token_new = api_token_generate($client_id);
-            return response(["response_code" => 1.0, "client_token" => $client_token_new]);
+            return ["response_code" => 1.0];
         } else {
             api_log($client_id, 'auth_failure_api_validate_level_client_level_too_low');
-            return response(["respone_code" => 1.1]);
+            return ["respone_code" => 1.1];
         }
     } else {
         api_log($client_id, 'auth_failure_api_validate_level_client_unknown');
-        return response(["respone_code" => 0.0]);
+        return ["respone_code" => 0.0];
     }
 }
 
