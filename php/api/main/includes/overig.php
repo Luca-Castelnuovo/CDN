@@ -66,10 +66,11 @@ function validate_client_id_and_pass($client_id, $client_password)
 }
 
 //Return false on empty var
-function is_empty($data, $error)
+function is_empty_var($data, $error)
 {
     if (!isset($data)) {
         echo $error;
         exit();
     }
+    exit();
 }
