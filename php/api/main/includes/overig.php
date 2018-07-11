@@ -69,7 +69,7 @@ function validate_client_id_and_pass($client_id, $client_password)
 function is_empty_var($data, $error)
 {
     if (!empty($data)) {
-        echo $error;
+        echo response($error);
         exit();
     }
 }
