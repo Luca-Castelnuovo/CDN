@@ -23,4 +23,4 @@ if (!password_verify($client_password, $query_result_assoc['client_password'])) 
     exit;
 }
 
-echo "test";
+echo response(["status" => true, "response_code" => 99]);
