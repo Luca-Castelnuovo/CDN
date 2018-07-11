@@ -5,7 +5,10 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
 //api validation
-
+if (!api_client_validate($_GET['client_id'], $_GET['client_password'])['status']) {
+    echo response(["status" => false, "type" => "mail", "response_code" => 2]);
+    exit();
+}
 
 
 // Import PHPMailer classes into the global namespace
@@ -38,7 +41,7 @@ $mail->addAddress(clean_data($_POST['to']));
 
 //Content
 if (!isset($_POST['to'])) {//reponse_code = 0
-    echo response(["status" => false, "type" => "mail", "response_code" => 0.0]);
+    echo response(["status" => false, "type" => "mail", "response_code" => 0]);
     exit;
 }
 if (!isset($_POST['subject'])) {//reponse_code = 0
@@ -60,5 +63,5 @@ $mail->AltBody = clean_data($altBody, 'html');
 if ($mail->send()) {//reponse_code = 1
     echo response(["status" => true, "type" => "mail", "response_code" => 1.1]);
 } else {
-    echo response(["status" => false, "type" => "mail", "response_code" => 1.0]);
+    echo response(["status" => false, "type" => "mail", "response_code" => 1]);
 }

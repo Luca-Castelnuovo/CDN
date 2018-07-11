@@ -89,7 +89,7 @@ function api_token_validate($client_id, $client_token, $required_api_level)
     api_token_delete($client_token);
 
     //return true
-    return response(["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 3.0]);
+    return ["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 3.0];
 }
 
 
