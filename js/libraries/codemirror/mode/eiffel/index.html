@@ -56,7 +56,7 @@ feature -- Access
             "built_in"
         ensure
             generator_not_void: Result /= Void
-            generator_not_empty: not Result.is_empty
+            generator_not_empty: not Result.is_empty_var
         end
 
     generating_type: TYPE [detachable like Current]
