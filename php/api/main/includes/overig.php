@@ -71,6 +71,9 @@ function is_empty_var($data, $error)
     if (empty($data) && $data != 0) {
         echo response($error);
         exit();
+    } else {
+        echo 'not empty';
+        exit();
     }
 }
 
