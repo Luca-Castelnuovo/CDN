@@ -69,6 +69,7 @@ function validate_client_id_and_pass($client_id, $client_password)
 function is_empty($data, $error)
 {
     if (empty($data) && $data != 0) {
+        api_log('SERVER', 'is_empty_failure_var_is_empty');
         echo response($error);
         exit();
     }
