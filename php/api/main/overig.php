@@ -55,7 +55,7 @@ function validate_client_id_and_pass($client_id, $client_password)
 
     if ($query_result->num_rows == 1) {//reponse_code = 0
         $query_result_assoc = $query_result->fetch_assoc();
-        if (password_verify($password, $query_result_assoc['client_password'])) {
+        if (password_verify($client_password, $query_result_assoc['client_password'])) {
             return response(["respone_code" => 1.0]);
         } else {
             return response(["respone_code" => 1.1, $query_result_assoc['client_password']]);

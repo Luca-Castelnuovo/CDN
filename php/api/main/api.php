@@ -16,7 +16,6 @@ function api_client_validate($client_id, $client_password)
     $client_password = clean_data($client_password);
 
     $validate_result = validate_client_id_and_pass($client_id, $client_password);
-    return var_dump($validate_result);
 
     switch ($validate_result['response_code']) {
         case 1.0://success
