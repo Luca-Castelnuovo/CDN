@@ -36,28 +36,40 @@ function api_client_validate($client_id, $client_password)
 
 
 //Check if token is valid
-function api_client_valid_check($client_id, $client_password)
+function api_client_valid_check($client_id, $client_token)
 {
     $client_id = clean_data($client_id);
-    $client_password = clean_data($client_password);
+    $client_token = clean_data($client_token);
+    $required_api_level = clean_data($required_api_level);
 
-    $validate_result = validate_client_id_and_pass($client_id, $client_password);
+    //check client exists
+    $query = "SELECT id FROM clients WHERE client_id='{$client_id}'";
+    $result = sql_query('api_db', $query, false);
 
-    switch ($validate_result['response_code']) {
-        case 1://success
-            return response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "client_token" => api_token_generate($client_id)]);
-            break;
-
-        case 1.1:////username_password_no_match
-            api_log($client_id, 'auth_failure_api_client_validate_client_mismatch_password');
-            return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.0]);
-            break;
-
-        default://client_not_found
-            api_log('unknown', 'auth_failure_api_client_validate_client_unknown');
-            return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.1]);
-            break;
+    if ($result->num_rows == 1) {
+        $result_assoc = $result->fetch_assoc();
+    } else {
+        api_log($client_id, 'auth_failure_api_token_validate_client_unknown');
+        return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 0.0]);
     }
+
+    //check token valid
+    $query = "SELECT id FROM tokens WHERE client_id='{$client_id}' AND client_token='{$client_token}'";
+    $result = sql_query('api_db', $query, false);
+
+    if ($result->num_rows != 1) {
+        api_log($client_id, 'auth_failure_api_token_validate_id_mismatch_token');
+        return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 1.0]);
+    }
+
+    //check client access level
+    api_validate_level($client_id, $required_api_level);
+
+    //delete old token
+    api_token_delete($client_token);
+
+    //return true
+    return ["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 3.0];
 }
 
 //Generate api access token
