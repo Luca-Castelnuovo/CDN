@@ -9,6 +9,33 @@ function api_log($client_id, $client_action)
     sql_query('api_db', $query, false);
 }
 
+//Validate client credentials
+function api_client_validate($client_id, $client_password)
+{
+    $validate_result = validate_client_id_and_pass($client_id, $client_password);
+
+    switch ($validate_result['response_code']) {
+        case 1.0://success
+            if ($validate_result['status']) {
+                return response(["status" => true, "type" => "auth", "subType" => "getToken", "response_code" => 1.0, "client_token" => api_token_generate($client_id)]);
+            } else {
+                api_log($client_id, 'auth_failure_status_not_match_response_code');
+                return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 1.1]);
+            }
+            break;
+
+        case 1.1:////username_password_no_match
+            api_log($client_id, 'auth_failure_password');
+            return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.0]);
+            break;
+
+        default://client_not_found
+            api_log('unknown', 'auth_failure_unknown_user');
+            return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.1]);
+            break;
+    }
+}
+
 
 //Generate api access token
 function api_token_generate($client_id)

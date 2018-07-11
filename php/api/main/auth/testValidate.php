@@ -1,4 +1,4 @@
-<?php
+0<?php
 
 require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
