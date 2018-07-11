@@ -19,7 +19,7 @@ is_empty($_GET['client_ip'], ["status" => false, "response_code" => 3.2]);
 //Check is user exists
 if ($query_result->num_rows != 1) {//reponse_code = 0
     echo response(["status" => false, "response_code" => 0]);
-    api_log('unknown', 'add_failure_user_unknown');
+    action_log('unknown', 'add_failure_user_unknown');
     exit;
 }
 
@@ -27,7 +27,7 @@ if ($query_result->num_rows != 1) {//reponse_code = 0
 $query_result_assoc = $query_result->fetch_assoc();
 if (!password_verify($client_password, $query_result_assoc['client_password'])) {
     echo response(["status" => false, "response_code" => 1]);
-    api_log($client_id, 'add_failure_user_mismatch_password');
+    action_log($client_id, 'add_failure_user_mismatch_password');
     exit;
 }
 
@@ -36,5 +36,5 @@ $client_token = gen(256);
 $query = "INSERT INTO tokens (client_id,client_token,client_ip) VALUES ('{$client_id}','{$client_token}','{$client_ip}')";
 sql_query('api_db', $query, false);
 
-api_log($client_id, 'add_success');
+action_log($client_id, 'add_success');
 echo response(["status" => true, "response_code" => 2, "client_token" => $client_token]);

@@ -69,8 +69,17 @@ function validate_client_id_and_pass($client_id, $client_password)
 function is_empty($data, $error)
 {
     if (empty($data) && $data != 0) {
-        api_log('SERVER', 'is_empty_failure_var_is_empty');
+        action_log('SERVER', 'is_empty_failure_var_is_empty');
         echo response($error);
         exit();
     }
+}
+
+//Log actions
+function action_log($client_id, $client_action)
+{
+    $date = date('Y-m-d H:i:s', time());
+    $client_ip = $_SERVER['REMOTE_ADDR'];
+    $query = "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('{$date}', '{$client_id}', '{$client_action}', '{$client_ip}')";
+    sql_query('api_db', $query, false);
 }

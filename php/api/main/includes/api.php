@@ -1,13 +1,6 @@
 <?php
 
-//Log api actions
-function api_log($client_id, $client_action)
-{
-    $date = date('Y-m-d H:i:s', time());
-    $client_ip = $_SERVER['REMOTE_ADDR'];
-    $query = "INSERT INTO logs (date, client_id, client_action, client_ip) VALUES ('{$date}', '{$client_id}', '{$client_action}', '{$client_ip}')";
-    sql_query('api_db', $query, false);
-}
+
 
 //Validate client credentials
 function api_client_validate($client_id, $client_password)
@@ -23,12 +16,12 @@ function api_client_validate($client_id, $client_password)
             break;
 
         case 1.1:////username_password_no_match
-            api_log($client_id, 'auth_failure_api_client_validate_client_mismatch_password');
+            action_log($client_id, 'auth_failure_api_client_validate_client_mismatch_password');
             return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.0]);
             break;
 
         default://client_not_found
-            api_log('unknown', 'auth_failure_api_client_validate_client_unknown');
+            action_log('unknown', 'auth_failure_api_client_validate_client_unknown');
             return response(["status" => false, "type" => "auth", "subType" => "getToken", "response_code" => 0.1]);
             break;
     }
@@ -49,7 +42,7 @@ function api_client_valid_check($client_id, $client_token)
     if ($result->num_rows == 1) {
         $result_assoc = $result->fetch_assoc();
     } else {
-        api_log($client_id, 'auth_failure_api_token_validate_client_unknown');
+        action_log($client_id, 'auth_failure_api_token_validate_client_unknown');
         return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 0.0]);
     }
 
@@ -58,7 +51,7 @@ function api_client_valid_check($client_id, $client_token)
     $result = sql_query('api_db', $query, false);
 
     if ($result->num_rows != 1) {
-        api_log($client_id, 'auth_failure_api_token_validate_id_mismatch_token');
+        action_log($client_id, 'auth_failure_api_token_validate_id_mismatch_token');
         return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 1.0]);
     }
 
@@ -78,7 +71,7 @@ function api_token_generate($client_id)
     $client_token = gen(256);
     $query = "INSERT INTO tokens (client_id,client_token) VALUES ('{$client_id}','{$client_token}')";
     sql_query('api_db', $query, false);
-    api_log($client_id, 'auth_success_api_token_generate');
+    action_log($client_id, 'auth_success_api_token_generate');
     return $client_token;
 }
 
@@ -88,7 +81,7 @@ function api_token_delete($client_token)
 {
     $query = "DELETE FROM tokens WHERE client_token='{$client_token}'";
     sql_query('api_db', $query, false);
-    api_log($client_id, 'auth_success_api_token_delete');
+    action_log($client_id, 'auth_success_api_token_delete');
 }
 
 
@@ -106,7 +99,7 @@ function api_token_validate($client_id, $client_token, $required_api_level)
     if ($result->num_rows == 1) {
         $result_assoc = $result->fetch_assoc();
     } else {
-        api_log($client_id, 'auth_failure_api_token_validate_client_unknown');
+        action_log($client_id, 'auth_failure_api_token_validate_client_unknown');
         return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 0.0]);
     }
 
@@ -115,7 +108,7 @@ function api_token_validate($client_id, $client_token, $required_api_level)
     $result = sql_query('api_db', $query, false);
 
     if ($result->num_rows != 1) {
-        api_log($client_id, 'auth_failure_api_token_validate_id_mismatch_token');
+        action_log($client_id, 'auth_failure_api_token_validate_id_mismatch_token');
         return response(["status" => false, "type" => "auth", "subType" => "validateToken", "response_code" => 1.0]);
     }
 
@@ -139,14 +132,14 @@ function api_validate_level($client_id, $required_api_level)
     if ($result->num_rows == 1) {
         $result_assoc = $result->fetch_assoc();
         if ($required_api_level <= $result_assoc['client_level']) {
-            api_log($client_id, 'auth_success_token_client_level');
+            action_log($client_id, 'auth_success_token_client_level');
             return ["response_code" => 1.0];
         } else {
-            api_log($client_id, 'auth_failure_api_validate_level_client_level_too_low');
+            action_log($client_id, 'auth_failure_api_validate_level_client_level_too_low');
             return ["respone_code" => 1.1];
         }
     } else {
-        api_log($client_id, 'auth_failure_api_validate_level_client_unknown');
+        action_log($client_id, 'auth_failure_api_validate_level_client_unknown');
         return ["respone_code" => 0.0];
     }
 }
