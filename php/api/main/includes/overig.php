@@ -64,3 +64,12 @@ function validate_client_id_and_pass($client_id, $client_password)
         return ["response_code" => 0.0];
     }
 }
+
+//Return false on empty var
+function is_empty($data, $error)
+{
+    if (!isset($data)) {
+        echo $error;
+        exit();
+    }
+}

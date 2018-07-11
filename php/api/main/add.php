@@ -11,6 +11,11 @@ $client_ip = clean_data($_GET['client_ip']);
 $query = "SELECT client_password FROM clients WHERE client_id=$client_id";
 $query_result = sql_query('api_db', $query, false);
 
+//Check if vars are not empty
+is_empty($_GET['client_id'], ["status" => false, "response_code" => 3]);
+is_empty($_GET['client_password'], ["status" => false, "response_code" => 3.1]);
+is_empty($_GET['client_ip'], ["status" => false, "response_code" => 3.2]);
+
 //Check is user exists
 if ($query_result->num_rows != 1) {//reponse_code = 0
     echo response(["status" => false, "response_code" => 0]);
