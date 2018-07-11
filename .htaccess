@@ -1,2 +1,2 @@
 # block access to .ini
-RedirectMatch 403 \.txt$
+RedirectMatch 403 \.ini$
