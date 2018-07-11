@@ -33,7 +33,7 @@
         <?php
 } else {
         require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
-        echo '<p class="title">Client Token:</p><textarea rows="30" cols="12" readonly>' . clean_data($_GET['client_token']) . '</textarea><button onclick="window.location.replace(\"index.php\")"><span class="state">Back</span></button>';
+        echo '<p class="title">Client Token:</p><textarea rows="12" cols="12" readonly>' . clean_data($_GET['client_token']) . '</textarea><button onclick="window.location.replace(\"index.php\")"><span class="state">Back</span></button>';
     } ?>
         </form>
     </div>
