@@ -47,7 +47,7 @@ function api_token_generate($client_id)
 
 
 //Delete used api access token
-function api_token_delete($client_id, $client_token)
+function api_token_delete($client_token)
 {
     $query = "DELETE FROM tokens WHERE client_token='{$client_token}'";
     sql_query('api_db', $query, false);
