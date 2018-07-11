@@ -1,5 +1,12 @@
 <?php
-//vars needed to be passed: to,subject,body,altbody(optional)
+//vars needed to be passed: client_id,client_token,to,subject,body,altbody(optional)
+
+//Load api functions
+require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
+
+//api validation
+
+
 
 // Import PHPMailer classes into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
@@ -8,8 +15,6 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
-//Load api functions
-require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
 //Load mail congfig
 $config = config_load('mail');

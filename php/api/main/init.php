@@ -1,5 +1,5 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/sql.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/api.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/overig.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/includes/sql.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/includes/api.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/includes/overig.php';
