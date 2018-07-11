@@ -88,7 +88,7 @@ function api_token_validate($client_id, $client_token, $required_api_level)
     //delete old token
     api_token_delete($client_id, $client_token);
 
-    //generate new token and return output
+    //return true
     return response(["status" => true, "type" => "auth", "subType" => "validateToken", "response_code" => 3.0]);
 }
 
