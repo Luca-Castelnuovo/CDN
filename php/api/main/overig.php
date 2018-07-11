@@ -24,15 +24,24 @@ function clean_data($data, $disable = 'none')
     return $data;
 }
 
+
 //Encode array to json
 function response($output)
 {
     return json_encode($output);
 }
 
+
 //Generate random string
 function gen($length)
 {
     $length = $length / 2;
     return bin2hex(random_bytes($length));
+}
+
+
+//Load configuration
+function config_load($config)
+{
+    return parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/' . $config . '.ini');
 }

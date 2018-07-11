@@ -5,10 +5,14 @@ $from = $_POST['email'];
 $subject = 'Close The Gap | ' . $_POST['subject'];
 $body = '<h1>This email is from: ' . $name  . '</h1><br /><h2>Email: ' . $from  . '</h2>' . $_POST['body'];
 
-$data = ['to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body];
-
-require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
-$result = api_call('POST', 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php', $data);
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_POST, 1);
+curl_setopt($curl, CURLOPT_POSTFIELDS, ['to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body]);
+curl_setopt($curl, CURLOPT_URL, 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php');
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$result = curl_exec($curl);
+curl_close($curl);
+$result = json_decode($result, true);
 
 if ($result['status'] == 'true') {
     echo '<h1>Mail succesvol verstuurd.</h1><br /><h4>U wordt doorgestuurd in 3 seconden.</h4>';

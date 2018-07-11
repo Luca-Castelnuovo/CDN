@@ -8,9 +8,11 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
-//Load additional functions and configuration
+//Load api functions
 require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
-$config = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/mail.ini');
+
+//Load mail congfig
+$config = config_load('mail');
 
 $mail = new PHPMailer();
 

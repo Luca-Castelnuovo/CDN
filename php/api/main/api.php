@@ -9,6 +9,7 @@ function api_log($client_id, $client_action)
     sql_query('api_db', $query, false);
 }
 
+
 //Generate api access token
 function api_token_generate($client_id)
 {
@@ -18,6 +19,7 @@ function api_token_generate($client_id)
     api_log($client_id, 'auth_success_token_generate');
     return $client_token;
 }
+
 
 //Generate api access token
 function api_token_validate($client_id, $client_token, $api_level)

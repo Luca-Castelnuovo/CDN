@@ -2,8 +2,8 @@
 
 require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
-$client_id = clean_data($_POST['client_id']);
-$client_password = clean_data($_POST['client_password']);
+$client_id = clean_data($_GET['client_id']);
+$client_password = clean_data($_GET['client_password']);
 
 $query = "SELECT client_password FROM clients WHERE client_id=$client_id";
 $client_authentication = sql_query('api_db', $query, false);
