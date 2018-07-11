@@ -42,7 +42,7 @@ function api_token_generate($client_id)
     $query = "INSERT INTO tokens (client_id,client_token) VALUES ('{$client_token}','{$client_id}')";
     sql_query('api_db', $query, false);
     api_log($client_id, 'auth_success_api_token_generate');
-    return $client_token;
+    return $query;
 }
 
 
