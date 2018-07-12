@@ -41,15 +41,15 @@ $mail->addAddress(clean_data($_POST['to']));
 
 //Content
 if (!isset($_POST['to'])) {//reponse_code = 0
-    echo response(["status" => false, "type" => "mail", "response_code" => 0]);
+    echo response(["status" => false, "response_code" => 0]);
     exit;
 }
 if (!isset($_POST['subject'])) {//reponse_code = 0
-    echo response(["status" => false, "type" => "mail", "response_code" => 0.1]);
+    echo response(["status" => false, "response_code" => 0.1]);
     exit;
 }
 if (!isset($_POST['body'])) {//reponse_code = 0
-    echo response(["status" => false, "type" => "mail", "response_code" => 0.2]);
+    echo response(["status" => false, "response_code" => 0.2]);
     exit;
 }
 
