@@ -47,24 +47,6 @@ function config_load($config)
 }
 
 
-//Compare hash to password
-function validate_client_id_and_pass($client_id, $client_password)
-{
-    $query = "SELECT client_password FROM clients WHERE client_id=$client_id";
-    $query_result = sql_query('api_db', $query, false);
-
-    if ($query_result->num_rows == 1) {//reponse_code = 0
-        $query_result_assoc = $query_result->fetch_assoc();
-        if (password_verify($client_password, $query_result_assoc['client_password'])) {
-            return ["response_code" => 1.0];
-        } else {
-            return ["response_code" => 1.1];
-        }
-    } else {
-        return ["response_code" => 0.0];
-    }
-}
-
 //Return false on empty var
 function is_empty($data, $error)
 {
@@ -73,6 +55,7 @@ function is_empty($data, $error)
         exit();
     }
 }
+
 
 //Log actions
 function action_log($client_id, $client_action)

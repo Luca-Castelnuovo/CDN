@@ -2,8 +2,6 @@
 
 require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
-//echo api_client_validate($_GET['client_id'], $_GET['client_password']);
-
 $client_id = clean_data($_GET['client_id']);
 $client_password = clean_data($_GET['client_password']);
 $client_ip = clean_data($_GET['client_ip']);
@@ -32,9 +30,7 @@ if (!password_verify($client_password, $query_result_assoc['client_password'])) 
 }
 
 //Generate token
-$client_token = gen(256);
-$query = "INSERT INTO tokens (client_id,client_token,client_ip) VALUES ('{$client_id}','{$client_token}','{$client_ip}')";
-sql_query('api_db', $query, false);
+api_token_generate($client_id, $client_ip);
 
 
 //Output token
