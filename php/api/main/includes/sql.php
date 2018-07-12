@@ -29,12 +29,12 @@ function sql_query($database, $query, $assoc = true)
 {
     $conn = sql_connect($database);
 
+    $result = $conn->query($query);
+
     //Check if query was succesfull
-    if (!$conn->query($query)) {
+    if (!$result) {
         echo response(["status" => false, "type" => "sql"]);
         exit();
-    } else {
-        $result = $conn->query($query);
     }
 
     sql_disconnect($conn);
