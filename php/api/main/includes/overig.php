@@ -43,7 +43,7 @@ function gen($length)
 //Load configuration
 function config_load($config)
 {
-    return parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/config/' . $config . '.ini');
+    return parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/php/api/main/config/' . $config . '.ini');
 }
 
 
