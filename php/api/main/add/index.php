@@ -33,11 +33,16 @@
         <?php
 } else {
         require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
-        echo '<p class="title">Client Token:</p><textarea rows="9" readonly>' . clean_data($_GET['client_token']) . '</textarea><button onclick="window.location.replace = window.location.pathname;"><span class="state">Back</span></button>';
+        echo '<p class="title">Client Token:</p><textarea rows="9" readonly>' . clean_data($_GET['client_token']) . '</textarea><button onclick="onback();"><span class="state">Back</span></button>';
     } ?>
         </form>
     </div>
     <script src="/js/vanilla/randomBackground.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script><script src= 'ajax.js'></script></body>
+    <script>
+function onback() {
+    window.location.replace = window.loaction.href.split("?")[0];
+}
 
+    </script>
 </html>
