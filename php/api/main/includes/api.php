@@ -16,7 +16,7 @@ function api_validate_access($client_id, $client_token, $service_name)
         $result_assoc = $result->fetch_assoc();
     } else {
         action_log($client_id, 'validate_access_failure_id_mismatch_token');
-        return response(["status" => false, "response_code" => 0]);
+        return ["status" => false, "response_code" => 0];
     }
 
     //Check ip
@@ -24,7 +24,7 @@ function api_validate_access($client_id, $client_token, $service_name)
         $result_assoc = $result->fetch_assoc();
     } else {
         action_log($client_id, 'validate_access_failure_token_mismatch_ip');
-        return response(["status" => false, "response_code" => 1]);
+        return ["status" => false, "response_code" => 1];
     }
 
     //Check access level
@@ -36,11 +36,11 @@ function api_validate_access($client_id, $client_token, $service_name)
 
     if ($result_client['client_level'] != $result_api['api_level']) {
         action_log($client_id, 'validate_access_failure_service_level_mismatch_client_level');
-        return response(["status" => false, "response_code" => 2]);
+        return ["status" => false, "response_code" => 2];
     }
 
     action_log($client_id, 'validate_access_success');
-    return response(["status" => true, "response_code" => 3]);
+    return ["status" => true, "response_code" => 3];
 }
 
 
