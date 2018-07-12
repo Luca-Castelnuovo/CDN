@@ -1,5 +1,7 @@
 <?php
 
+//TODO make an select option for the differentr api types
+
 require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
 $client_id = clean_data($_GET['client_id']);
