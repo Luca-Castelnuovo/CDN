@@ -44,8 +44,8 @@
         reload();
     }
     function reload() {
-        console.log(window.location.href.split("?")[0]);
-        window.location = window.location.href.split("?")[0];
+        //console.log(window.location.href.split("?")[0]);
+        window.location = window.location.href.split("?client_token")[0];
     }
 
     </script>
