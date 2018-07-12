@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Log In</title>
+    <title>Generate Token</title>
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name=viewport>
     <link rel="stylesheet" type="text/css" href="https://cdn.lucacastelnuovo.nl/css/vanilla/test.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700">
