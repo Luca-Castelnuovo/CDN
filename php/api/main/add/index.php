@@ -42,6 +42,7 @@
     <script>
 function onback() {
     console.log(window.location.replace);
+    console.log("____________");
     console.log(window.location.href.split("?")[0]);
     window.location.replace = window.location.href.split("?")[0];
 }
