@@ -1,7 +1,5 @@
 <?php
 
-
-
 //Validate client credentials
 function api_client_validate($client_id, $client_password)
 {
