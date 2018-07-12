@@ -76,7 +76,7 @@ function api_token_generate($client_id)
 }
 
 
-//Delete used api access token
+//Delete used api access token //REMOVE
 function api_token_delete($client_token)
 {
     $query = "DELETE FROM tokens WHERE client_token='{$client_token}'";
@@ -85,7 +85,7 @@ function api_token_delete($client_token)
 }
 
 
-//Validate api access token and access level
+//Validate api access token and access level REMOVE
 function api_token_validate($client_id, $client_token, $required_api_level)
 {
     $client_id = clean_data($client_id);
@@ -123,7 +123,7 @@ function api_token_validate($client_id, $client_token, $required_api_level)
 }
 
 
-//validate client and api_level
+//validate client and api_level TODO
 function api_validate_level($client_id, $required_api_level)
 {
     $query = "SELECT client_level FROM clients WHERE client_id='{$client_id}'";
