@@ -10,7 +10,7 @@ if (!$validate_response['status']) {
     echo response(["status" => false, "type" => "mail", "response_code" => 2]);
     exit();
 } else {
-    echo $validate_response['status'];
+    var_dump($validate_response);
     exit();
 }
 
