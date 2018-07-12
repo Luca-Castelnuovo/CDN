@@ -61,7 +61,7 @@ $altBody = isset($_POST['altbody']) ? $_POST['altbody'] : $_POST['body'];
 $mail->AltBody = clean_data($altBody, 'html');
 
 if ($mail->send()) {//reponse_code = 1
-    echo response(["status" => true, "type" => "mail", "response_code" => 1.1]);
+    echo response(["status" => true, "response_code" => 1]);
 } else {
-    echo response(["status" => false, "type" => "mail", "response_code" => 1]);
+    echo response(["status" => false, "response_code" => 1.1]);
 }
