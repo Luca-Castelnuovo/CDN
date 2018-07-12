@@ -1,11 +1,8 @@
 <?php
 
 
-//Validate api token
-//valid token
-//valid ip
-//valid access level
-function api_validate_access($client_id, $client_token)
+//Validate api token (id-token, token-ip, id-access_level)
+function api_validate_access($client_id, $client_token, $service_name)
 {
     $client_id = clean_data($client_id);
     $client_token = clean_data($client_token);
@@ -26,9 +23,24 @@ function api_validate_access($client_id, $client_token)
     if ($result_assoc['token_ip'] == $client_ip) {
         $result_assoc = $result->fetch_assoc();
     } else {
-        action_log($client_id, 'validate_access_failure_id_mismatch_token');
-        return response(["status" => false, "response_code" => 0]);
+        action_log($client_id, 'validate_access_failure_token_mismatch_ip');
+        return response(["status" => false, "response_code" => 1]);
     }
+
+    //Check access level
+    $query = "SELECT client_level FROM clients WHERE client_id='{$client_id}'";
+    $result_client = sql_query('api_db', $query);
+
+    $query = "SELECT api_level FROM services WHERE service_name='{$service_name}'";
+    $result_api = sql_query('api_db', $query);
+
+    if ($result_client['client_level'] != $result_api['api_level']) {
+        action_log($client_id, 'validate_access_failure_service_level_mismatch_client_level');
+        return response(["status" => false, "response_code" => 2]);
+    }
+
+    action_log($client_id, 'validate_access_success');
+    return response(["status" => true, "response_code" => 3]);
 }
 
 
