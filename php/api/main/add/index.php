@@ -41,10 +41,9 @@
     </script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script><script src= 'ajax.js'></script></body>
     <script>
 function onback() {
-    console.log(window.location.replace);
-    console.log("____________");
     console.log(window.location.href.split("?")[0]);
-    window.location.replace = window.location.href.split("?")[0];
+    var url = window.location.href.split("?")[0];
+    window.location.replace = url;
 }
 
     </script>
