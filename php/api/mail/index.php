@@ -9,9 +9,6 @@ $validate_response = api_validate_access($_GET['client_id'], $_GET['client_token
 if (!$validate_response['status']) {
     echo response(["status" => false, "type" => "mail", "response_code" => 2]);
     exit();
-} else {
-    var_dump($validate_response);
-    exit();
 }
 
 
