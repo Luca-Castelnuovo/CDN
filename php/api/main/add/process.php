@@ -6,7 +6,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
 $client_id = clean_data($_GET['client_id']);
 $client_password = clean_data($_GET['client_password']);
-$client_ip = clean_data($_GET['client_ip']);
+$token_ip = clean_data($_GET['token_ip']);
 
 $query = "SELECT client_password FROM clients WHERE client_id=$client_id";
 $query_result = sql_query('api_db', $query, false);
@@ -14,7 +14,7 @@ $query_result = sql_query('api_db', $query, false);
 //Check if vars are not empty
 is_empty($_GET['client_id'], ["status" => false, "response_code" => 3]);
 is_empty($_GET['client_password'], ["status" => false, "response_code" => 3.1]);
-is_empty($_GET['client_ip'], ["status" => false, "response_code" => 3.2]);
+is_empty($_GET['token_ip'], ["status" => false, "response_code" => 3.2]);
 
 //Check is user exists
 if ($query_result->num_rows != 1) {//reponse_code = 0
@@ -32,7 +32,7 @@ if (!password_verify($client_password, $query_result_assoc['client_password'])) 
 }
 
 //Generate token
-api_token_generate($client_id, $client_ip);
+api_token_generate($client_id, $token_ip);
 
 
 //Output token

@@ -5,7 +5,7 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
 
 //api validation
-if (!api_client_validate($_GET['client_id'], $_GET['client_password'])['status']) {
+if (!api_validate_access($_GET['client_id'], $_GET['client_token'])['status']) {
     echo response(["status" => false, "type" => "mail", "response_code" => 2]);
     exit();
 }

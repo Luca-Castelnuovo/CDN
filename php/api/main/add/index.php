@@ -27,7 +27,7 @@
             </div>
             <div class="input-field">
                 <label for="client_ip">Server IP</label>
-                <input type="text" name="client_ip" class="text validate" id="client_ip" autocomplete="off">
+                <input type="text" name="token_ip" class="text validate" id="client_ip" autocomplete="off">
             </div>
             <button id="submit"><i class="spinner"></i> <span class="state">Generate Token</span></button>
         </form>
