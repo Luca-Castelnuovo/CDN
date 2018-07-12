@@ -8,7 +8,7 @@ $body = '<h1>This email is from: ' . $name  . '</h1><br /><h2>Email: ' . $from  
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_POST, 1);
 curl_setopt($curl, CURLOPT_POSTFIELDS, ['to' => 'lucacastelnuovo@hetbaarnschlyceum.nl', 'subject' => $subject, 'body' => $body]);
-curl_setopt($curl, CURLOPT_URL, 'https://cdn.lucacastelnuovo.nl/php/api/mail/mail.php');
+curl_setopt($curl, CURLOPT_URL, 'https://cdn.lucacastelnuovo.nl/php/api/mail/index.php');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($curl);
 curl_close($curl);
