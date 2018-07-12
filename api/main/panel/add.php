@@ -4,17 +4,13 @@
 
 <head>
     <title>Log In</title>
-    <meta charset=utf-8>
-    <meta content="ie=edge" http-equiv=x-ua-compatible>
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name=viewport>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/css/test.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.lucacastelnuovo.nl/css/vanilla/test.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"></head>
 <body>
     <div class="wrapper">
-<?php if (!isset($_GET['client_token'])) {
-    ?>
+    <?php if (!isset($_GET['client_token'])) { ?>
         <form class="login" method="post">
             <p class="title">Generate Token</p>
             <div class="input-field">
@@ -31,13 +27,14 @@
             </div>
             <button id="submit"><i class="spinner"></i> <span class="state">Generate Token</span></button>
         </form>
-        <?php
-} else {
+        <?php } else {
         require $_SERVER['DOCUMENT_ROOT'] . '/php/api/main/init.php';
         echo '<form action="index.php" class="login">
         <p class="title">Client Token:</p><textarea rows="9" readonly>' . clean_data($_GET['client_token']) . '</textarea><button type="submit"><span class="state">Back</span></button></form>';
-    } ?>
+        } ?>
     </div>
-    <script src="/js/vanilla/randomBackground.js"></script><script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script><script src= 'main.js'></script></body>
+    <script src="https://cdn.lucacastelnuovo.nl/js/vanilla/randomBackground.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src= 'main.js'></script></body>
 </html>
