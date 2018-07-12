@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"></head>
 <body>
     <div class="wrapper">
-        <form class="login" method="post">
-            <?php if (!isset($_GET['client_token'])) {
+<?php if (!isset($_GET['client_token'])) {
     ?>
+        <form class="login" method="post">
             <p class="title">Generate Token</p>
             <div class="input-field">
                 <label for="username">Client Username</label>
