@@ -32,8 +32,7 @@ if (!password_verify($client_password, $query_result_assoc['client_password'])) 
 }
 
 //Generate token
-api_token_generate($client_id, $token_ip);
-
+$client_token = api_token_generate($client_id, $token_ip);
 
 //Output token
 action_log($client_id, 'add_success');
