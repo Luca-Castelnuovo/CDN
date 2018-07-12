@@ -68,7 +68,6 @@ function api_token_generate($client_id, $token_ip)
     $client_token = gen(256);
     $query = "INSERT INTO tokens (client_id,client_token,token_ip) VALUES ('{$client_id}','{$client_token}','{$token_ip}')";
     sql_query('api_db', $query, false);
-    action_log($client_id, 'auth_success_api_token_generate');
     return $client_token;
 }
 
@@ -78,5 +77,4 @@ function api_token_delete($client_token)
 {
     $query = "DELETE FROM tokens WHERE client_token='{$client_token}'";
     sql_query('api_db', $query, false);
-    action_log($client_id, 'auth_success_api_token_delete');
 }
