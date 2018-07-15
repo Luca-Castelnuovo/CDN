@@ -244,6 +244,6 @@ iframe {
     border: 1px solid black;
 }
 
-.hide {
+.hidden {
    visibility: hidden;
 }
