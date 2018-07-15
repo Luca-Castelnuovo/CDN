@@ -42,7 +42,7 @@ body {
   .login.loading button, .loader {
     max-height: 100%;
     padding-top: 50px; }
-    .login.loading button .spinner, .loader .spinner {
+    .login.loading button .spinner, .loader.loading .spinner {
       opacity: 1;
       top: 40%; }
   .login.ok button {
