@@ -1,5 +1,11 @@
 <?php
 
-$background = isset($_GET['background']) ? $_GET['background'] : 0;
+$background = isset($_GET['background']) ? $_GET['background'] : 'null';
+
 header('Content-Type: application/javascript');
-echo "document.body.style.backgroundImage = \"url('https://cdn.lucacastelnuovo.nl/images/backgrounds/\" + $background + \".jpg')\";";
+
+if ($background == 'null') {
+    echo "document.body.style.backgroundImage = \"url('https://cdn.lucacastelnuovo.nl/images/backgrounds/\" + Math.floor(10 * Math.random()) + \".jpg')\";";
+} else {
+    echo "document.body.style.backgroundImage = \"url('https://cdn.lucacastelnuovo.nl/images/backgrounds/\" + $background + \".jpg')\";";
+}
