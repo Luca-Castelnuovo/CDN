@@ -8,16 +8,16 @@ $loader.addClass('loading');
 
 //Show content and hide loader
 function stopLoading() {
-    $content.slideUp(0,function(){
+    $content.fadeOut(0,function(){
         $loader.removeClass('loading');
-        $content.removeClass('hidden').slideDown('fast');
+        $content.removeClass('hidden').fadeIn('fast');
     });
 }
 
 //Hide content and show loader
 function startLoading() {
-    $content.slideUp('fast', function() {
-      $content.addClass('hidden').slideDown(0);
+    $content.fadeOut('fast', function() {
+      $content.addClass('hidden').fadeIn(0);
       $loader.addClass('loading');
     });
 }
