@@ -11,5 +11,5 @@ if (empty($_GET['url'])) {
         echo "document.body.style.backgroundImage = \"url('https://cdn.lucacastelnuovo.nl/images/backgrounds/\" + $background + \".jpg')\";";
     }
 } else {
-    echo "document.body.style.backgroundImage = \"url({$_GET['url']})\";";
+    echo "document.body.style.backgroundImage = \"url('{$_GET['url']}')\";";
 }
