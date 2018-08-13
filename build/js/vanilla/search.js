@@ -1,0 +1,1 @@
+"use strict";function searchList(){var e,t,n,a,l,s;for(e=document.getElementById("searchfield"),t=e.value.toUpperCase(),n=document.getElementById("ul"),a=n.getElementsByTagName("li"),s=0;s<a.length;s++)l=a[s].getElementsByTagName("a")[0],l.innerHTML.toUpperCase().indexOf(t)>-1?a[s].style.display="":a[s].style.display="none"}
