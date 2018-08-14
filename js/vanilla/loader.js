@@ -1,6 +1,6 @@
 //Define content and loader
-var $content = $('.content');
-var $loader = $('.loader');
+var $content = document.querySelector('.content');
+var $content = document.querySelector('.loader');
 
 //Hide content and show loader
 $content.addClass('hidden');
