@@ -62,13 +62,6 @@
 		"oAP": "\/build\/html\/hacking\/cookie.html",
 		"oF": 0
 		},
-	"\/html\/hacking\/cookie.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/html\/hacking\/cookie.php",
-		"oF": 0
-		},
 	"\/html\/hacking\/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -249,6 +242,20 @@
 		"oA": 0,
 		"oAP": "\/build\/php\/background.php",
 		"oF": 0
+		},
+	"\/php\/checkDB.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/php\/checkDB.php",
+		"oF": 0
+		},
+	"\/php\/stealCookie.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/php\/stealCookie.php",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -261,7 +268,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 555876985
+	"lastBuiltDate": 555941895
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
