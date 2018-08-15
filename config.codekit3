@@ -15,58 +15,31 @@
 		"oAP": "\/build\/build",
 		"oF": 0
 		},
-	"\/css\/vanilla\/cdn.css": {
+	"\/css\/loader.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/build\/css\/vanilla\/cdn.css",
+		"oAP": "\/build\/css\/loader.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/vanilla\/test.css": {
+	"\/css\/test.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/build\/css\/vanilla\/test.css",
+		"oAP": "\/build\/css\/test.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"\/css\/vanilla\/test.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/build\/css\/vanilla\/test.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
 		},
 	"\/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/build\/favicon.ico",
-		"oF": 0
-		},
-	"\/html\/hacking\/cookie.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/html\/hacking\/cookie.html",
-		"oF": 0
-		},
-	"\/html\/hacking\/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/html\/hacking\/index.html",
 		"oF": 0
 		},
 	"\/images\/backgrounds\/0.jpg": {
@@ -198,40 +171,12 @@
 		"oF": 0,
 		"opt": 1
 		},
-	"\/images\/searchicon.png": {
-		"ft": 32768,
-		"iS": 860,
-		"oA": 0,
-		"oAP": "\/build\/images\/searchicon.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"\/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/index.html",
-		"oF": 0
-		},
-	"\/js\/vanilla\/loader.js": {
+	"\/js\/loader.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/build\/js\/vanilla\/loader.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"\/js\/vanilla\/search.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/build\/js\/vanilla\/search.js",
+		"oAP": "\/build\/js\/loader.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -243,11 +188,11 @@
 		"oAP": "\/build\/php\/background.php",
 		"oF": 0
 		},
-	"\/php\/checkDB.php": {
+	"\/php\/check.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/build\/php\/checkDB.php",
+		"oAP": "\/build\/php\/check.php",
 		"oF": 0
 		},
 	"\/php\/stealCookie.php": {
@@ -268,7 +213,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 555941895
+	"lastBuiltDate": 556033916
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
