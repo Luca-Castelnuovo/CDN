@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $conn = new mysqli($config['host'], $config['username'], $config['password'], 'test_db');
             $conn->connect_error ? http_response_code(500) : http_response_code(200);
             echo $mysqli->connect_error;
-            $conn->connection->close();
+            $conn->connection->close;
             exit;
             break;
 
