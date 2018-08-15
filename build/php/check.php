@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             break;
 
         default:
-            http_response_code(418);
+            http_response_code(400);
             exit;
         }
     } else {
@@ -50,6 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 } else {
-    http_response_code(418);
+    http_response_code(405);
     exit;
 }
