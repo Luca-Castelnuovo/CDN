@@ -1,12 +1,13 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $config = parse_ini_file('/var/www/test.lucacastelnuovo.nl/config.ini');
-    if ($_POST['pingdom_key'] === $config['pingdom_key']) {
+    $config = parse_ini_file('/var/www/cdn.lucacastelnuovo.nl/config.ini');
+    if (!empty($_POST['pingdom_key']) && ($_POST['pingdom_key'] === $config['pingdom_key'])) {
         switch ($_GET['pingdom_check']) {
         case 'db':
             $conn = new mysqli($config['host'], $config['username'], $config['password'], 'test_db');
             $conn->connect_error ? http_response_code(500) : http_response_code(200);
+            echo $mysqli->connect_error();
             $conn->connection->close();
             exit;
             break;
