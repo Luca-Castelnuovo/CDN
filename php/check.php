@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         case 'db':
             $conn = new mysqli($config['host'], $config['username'], $config['password'], 'test_db');
             $conn->connect_error ? http_response_code(500) : http_response_code(200);
-            echo $mysqli->connect_error;
+            echo $conn->connect_error;
             $conn->connection->close;
             exit;
             break;
