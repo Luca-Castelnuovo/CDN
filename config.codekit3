@@ -174,11 +174,11 @@
 		"oT": 1,
 		"q": 90
 		},
-	"\/images\/betasterren\/errorr.gif": {
+	"\/images\/betasterren\/error.gif": {
 		"ft": 4194304,
 		"iS": 5096820,
 		"oA": 0,
-		"oAP": "\/build\/images\/betasterren\/errorr.gif",
+		"oAP": "\/build\/images\/betasterren\/error.gif",
 		"oF": 0,
 		"opt": 1
 		},
@@ -193,11 +193,11 @@
 		"oT": 1,
 		"q": 90
 		},
-	"\/images\/betasterren\/pdff.png": {
+	"\/images\/betasterren\/pdf.png": {
 		"ft": 32768,
 		"iS": 143263,
 		"oA": 0,
-		"oAP": "\/build\/images\/betasterren\/pdff.png",
+		"oAP": "\/build\/images\/betasterren\/pdf.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
