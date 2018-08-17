@@ -152,11 +152,52 @@
 		"opt": 1,
 		"q": 90
 		},
+	"\/images\/betasterren\/default_profile.png": {
+		"ft": 32768,
+		"iS": 10130,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/default_profile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
 	"\/images\/betasterren\/dfm.png": {
 		"ft": 32768,
 		"iS": 368616,
 		"oA": 0,
 		"oAP": "\/build\/images\/betasterren\/dfm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/errorr.gif": {
+		"ft": 4194304,
+		"iS": 5096820,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/errorr.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/images\/betasterren\/logo.png": {
+		"ft": 32768,
+		"iS": 6697,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/pdff.png": {
+		"ft": 32768,
+		"iS": 143263,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/pdff.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
@@ -213,7 +254,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556038811
+	"lastBuiltDate": 556209057
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
