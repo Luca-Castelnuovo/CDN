@@ -212,6 +212,16 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/js\/betasterren\/init.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/js\/betasterren\/init.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/loader.js": {
 		"ft": 64,
 		"ma": 0,
