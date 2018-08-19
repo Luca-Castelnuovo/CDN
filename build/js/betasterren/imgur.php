@@ -176,7 +176,7 @@ var feedback = function(res) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', '{$_GET['response_url']}');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send('CSRFtoken=' + CSRFtoken.value + '&type=' + 'leerling_profile_picture' + '&url=' + get_link);
+        xhr.send('CSRFtoken=' + CSRFtoken.value + '&type=' + '{$_GET['type']}' + '&url=' + get_link);
     }
 };
 
