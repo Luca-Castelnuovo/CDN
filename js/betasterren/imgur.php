@@ -169,7 +169,7 @@ var feedback = function(res) {
         $.ajax({
             type: "POST",
             url: '{$_GET['response_url']}',
-            data: {CSRFtoken: CSRFtoken.value, type:'{$_GET['type']}', url:get_link},
+            data: {CSRFtoken: CSRFtoken.value, type:'{$_GET['type']}', id: {$_GET['id']}, url:get_link},
             cache: !1,
             dataType: "JSON",
             success: function (response) {
