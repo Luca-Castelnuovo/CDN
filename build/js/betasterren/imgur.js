@@ -185,7 +185,7 @@ var feedback = function(res) {
 };
 
 new Imgur({
-    clientid: 'bab6d5583b1ff5d',
+    clientid: getParameterByName('client_id'),
     callback: feedback
 });
 
