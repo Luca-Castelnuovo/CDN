@@ -168,8 +168,8 @@ var feedback = function(res) {
         var CSRFtoken = document.querySelector('#CSRFtoken');
 
         var xhr = new XMLHttpRequest();
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.open('POST', '/generel/upload.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.send(encodeURI('CSRFtoken=' + CSRFtoken + 'type=' + 'leerling_profile_picture' + 'url=' + get_link));
     }
 };
