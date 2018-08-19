@@ -164,13 +164,6 @@ echo <<<END
 var feedback = function(res) {
     if (res.success === true) {
         var get_link = res.data.link.replace(/^http:\/\//i, 'https://');
-
-        var infodiv = document.querySelector('.info');
-        while (infodiv.firstChild) {
-            infodiv.removeChild(infodiv.firstChild);
-        }
-        infodiv.innerHTML += '<h3 class="center-align">Success</h3>';
-
         var CSRFtoken = document.querySelector('#CSRFtoken');
 
         $.ajax({
