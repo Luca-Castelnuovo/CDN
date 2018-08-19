@@ -173,10 +173,23 @@ var feedback = function(res) {
 
         var CSRFtoken = document.querySelector('#CSRFtoken');
 
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '{$_GET['response_url']}');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send('CSRFtoken=' + CSRFtoken.value + '&type=' + '{$_GET['type']}' + '&url=' + get_link);
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('POST', '{$_GET['response_url']}');
+        // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        // xhr.send('CSRFtoken=' + CSRFtoken.value + '&type=' + '{$_GET['type']}' + '&url=' + get_link);
+
+        $.ajax({
+            type: "POST",
+            url: '{$_GET['response_url']}',
+            json: {CSRFtoken: CSRFtoken.value, type:'{$_GET['type']}', url:get_link},
+            success: function (response) {
+                if(response['status']) {
+                    location.replace(response['url']);
+                } else {
+                    location.replace(response['url']);
+                }
+            }
+        });
     }
 };
 

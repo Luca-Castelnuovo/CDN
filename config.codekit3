@@ -225,6 +225,16 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/js\/ajax.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/js\/ajax.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/background.php": {
 		"cB": 0,
 		"ft": 8192,
