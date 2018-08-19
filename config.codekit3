@@ -15,6 +15,19 @@
 		"oAP": "\/build\/build",
 		"oF": 0
 		},
+	"\/css\/betasterren\/imgur.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/css\/betasterren\/imgur.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/css\/loader.css": {
 		"aP": 1,
 		"bl": 0,
@@ -212,6 +225,16 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/js\/betasterren\/imgur.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/js\/betasterren\/imgur.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/betasterren\/init.js": {
 		"ft": 64,
 		"ma": 0,
@@ -264,7 +287,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556209057
+	"lastBuiltDate": 556378557
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
