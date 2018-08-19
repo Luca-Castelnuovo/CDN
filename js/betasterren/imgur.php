@@ -174,14 +174,14 @@ var feedback = function(res) {
         var CSRFtoken = document.querySelector('#CSRFtoken');
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', {$_GET['response_url']});
+        xhr.open('POST', '{$_GET['response_url']}');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.send('CSRFtoken=' + CSRFtoken.value + '&type=' + 'leerling_profile_picture' + '&url=' + get_link);
     }
 };
 
 new Imgur({
-    clientid: {$_GET['client_id']},
+    clientid: '{$_GET['client_id']}',
     callback: feedback
 });
 
