@@ -1,1 +1,182 @@
-!function(e,t){"use strict";"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?module.exports=t():e.Imgur=t()}(this,function(){"use strict";var e=function(t){if(!(this&&this instanceof e))return new e(t);if(t||(t={}),!t.clientid)throw"Provide a valid Client Id here: https://api.imgur.com/";this.clientid=t.clientid,this.endpoint="https://api.imgur.com/3/image",this.callback=t.callback||void 0,this.dropzone=document.querySelectorAll(".dropzone"),this.info=document.querySelectorAll(".info"),this.run()};return e.prototype={createEls:function(e,t,i){var n,r=document.createElement(e);for(n in t)t.hasOwnProperty(n)&&(r[n]=t[n]);return i&&r.appendChild(document.createTextNode(i)),r},insertAfter:function(e,t){e.parentNode.insertBefore(t,e.nextSibling)},post:function(e,t,i){var n=new XMLHttpRequest;n.open("POST",e,!0),n.setRequestHeader("Authorization","Client-ID "+this.clientid),n.onreadystatechange=function(){if(4===this.readyState){if(!(this.status>=200&&this.status<300))throw new Error(this.status+" - "+this.statusText);var e="";try{e=JSON.parse(this.responseText)}catch(t){e=this.responseText}i.call(window,e)}},n.send(t),n=null},createDragZone:function(){var e,t,i;e=this.createEls("p",{className:"top flow-text"},"Drop Image Here"),t=this.createEls("p",{className:"flow-text"},"Or click here to select image"),i=this.createEls("input",{type:"file",className:"input",accept:"image/*"}),Array.prototype.forEach.call(this.info,function(i){i.appendChild(e),i.appendChild(t)}.bind(this)),Array.prototype.forEach.call(this.dropzone,function(e){e.appendChild(i),this.status(e),this.upload(e)}.bind(this))},status:function(){},matchFiles:function(e,t){t.nextSibling;if(e.type.match(/image/)&&"image/svg+xml"!==e.type){var i=document.querySelector(".preloader-wrapper");document.querySelector(".info").removeChild(document.querySelector(".info p")),document.querySelector(".info").removeChild(document.querySelector(".info p")),i.classList.remove("hide"),i.classList.add("active");var n=new FormData;n.append("image",e),this.post(this.endpoint,n,function(e){"function"==typeof this.callback&&this.callback.call(this,e)}.bind(this))}else i.classList.add("hide"),i.classList.remove("active"),document.querySelector(".center-align h1").innerHTML="Invalid archive"},upload:function(e){var t,i,n,r,a=["dragenter","dragleave","dragover","drop"];e.addEventListener("change",function(a){if(a.target&&"INPUT"===a.target.nodeName&&"file"===a.target.type)for(i=a.target.files,n=0,r=i.length;n<r;n+=1)t=i[n],this.matchFiles(t,e)}.bind(this),!1),a.map(function(t){e.addEventListener(t,function(e){e.target&&"INPUT"===e.target.nodeName&&"file"===e.target.type&&("dragleave"===t||"drop"===t?e.target.parentNode.classList.remove("dropzone-dragging"):e.target.parentNode.classList.add("dropzone-dragging"))},!1)})},run:function(){this.createDragZone()}},e});var feedback=function(e){if(!0===e.success){for(var t=e.data.link.replace(/^http:\/\//i,"https://"),i=document.querySelector(".info");i.firstChild;)i.removeChild(i.firstChild);i.innerHTML+='<h3 class="center-align">Success</h3>';var n=document.querySelector("#CSRFtoken"),r=new XMLHttpRequest;r.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),r.open("POST","/generel/upload.php"),r.send(encodeURI("CSRFtoken="+n+"type=leerling_profile_pictureurl="+t))}};new Imgur({clientid:"bab6d5583b1ff5d",callback:feedback});
+/* Imgur Upload Script */
+(function(root, factory) {
+    "use strict";
+    if (typeof define === 'function' && define.amd) {
+        define([], factory);
+    } else if (typeof exports === 'object') {
+        module.exports = factory();
+    } else {
+        root.Imgur = factory();
+    }
+}(this, function() {
+    "use strict";
+    var Imgur = function(options) {
+        if (!this || !(this instanceof Imgur)) {
+            return new Imgur(options);
+        }
+
+        if (!options) {
+            options = {};
+        }
+
+        if (!options.clientid) {
+            throw 'Provide a valid Client Id here: https://api.imgur.com/';
+        }
+
+        this.clientid = options.clientid;
+        this.endpoint = 'https://api.imgur.com/3/image';
+        this.callback = options.callback || undefined;
+        this.dropzone = document.querySelectorAll('.dropzone');
+        this.info = document.querySelectorAll('.info');
+
+        this.run();
+    };
+
+    Imgur.prototype = {
+        createEls: function(name, props, text) {
+            var el = document.createElement(name),
+                p;
+            for (p in props) {
+                if (props.hasOwnProperty(p)) {
+                    el[p] = props[p];
+                }
+            }
+            if (text) {
+                el.appendChild(document.createTextNode(text));
+            }
+            return el;
+        },
+        insertAfter: function(referenceNode, newNode) {
+            referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+        },
+        post: function(path, data, callback) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.open('POST', path, true);
+            xhttp.setRequestHeader('Authorization', 'Client-ID ' + this.clientid);
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                    if (this.status >= 200 && this.status < 300) {
+                        var response = '';
+                        try {
+                            response = JSON.parse(this.responseText);
+                        } catch (err) {
+                            response = this.responseText;
+                        }
+                        callback.call(window, response);
+                    } else {
+                        throw new Error(this.status + " - " + this.statusText);
+                    }
+                }
+            };
+            xhttp.send(data);
+            xhttp = null;
+        },
+        createDragZone: function() {
+            var p1, p2, input;
+
+            p1 = this.createEls('p', {
+                className: 'top flow-text'
+            }, 'Drop Image Here');
+            p2 = this.createEls('p', {
+                className: 'flow-text'
+            }, 'Or click here to select image');
+            input = this.createEls('input', {
+                type: 'file',
+                className: 'input',
+                accept: 'image/*'
+            });
+
+            Array.prototype.forEach.call(this.info, function(zone) {
+                zone.appendChild(p1);
+                zone.appendChild(p2);
+            }.bind(this));
+            Array.prototype.forEach.call(this.dropzone, function(zone) {
+                zone.appendChild(input);
+                this.status(zone);
+                this.upload(zone);
+            }.bind(this));
+        },
+        status: function(el) {},
+        matchFiles: function(file, zone) {
+            var status = zone.nextSibling;
+
+            if (file.type.match(/image/) && file.type !== 'image/svg+xml') {
+                var loader = document.querySelector('.preloader-wrapper');
+                document.querySelector('.info').removeChild(document.querySelector('.info p'));
+                document.querySelector('.info').removeChild(document.querySelector('.info p'));
+                loader.classList.remove('hide')
+                loader.classList.add('active');
+
+                var fd = new FormData();
+                fd.append('image', file);
+
+                this.post(this.endpoint, fd, function(data) {
+                    typeof this.callback === 'function' && this.callback.call(this, data);
+                }.bind(this));
+            } else {
+                loader.classList.add('hide');
+                loader.classList.remove('active');
+                document.querySelector('.center-align h1').innerHTML = 'Invalid archive';
+            }
+        },
+        upload: function(zone) {
+            var events = ['dragenter', 'dragleave', 'dragover', 'drop'],
+                file, target, i, len;
+
+            zone.addEventListener('change', function(e) {
+                if (e.target && e.target.nodeName === 'INPUT' && e.target.type === 'file') {
+                    target = e.target.files;
+
+                    for (i = 0, len = target.length; i < len; i += 1) {
+                        file = target[i];
+                        this.matchFiles(file, zone);
+                    }
+                }
+            }.bind(this), false);
+
+            events.map(function(event) {
+                zone.addEventListener(event, function(e) {
+                    if (e.target && e.target.nodeName === 'INPUT' && e.target.type === 'file') {
+                        if (event === 'dragleave' || event === 'drop') {
+                            e.target.parentNode.classList.remove('dropzone-dragging');
+                        } else {
+                            e.target.parentNode.classList.add('dropzone-dragging');
+                        }
+                    }
+                }, false);
+            });
+        },
+        run: function() {
+            this.createDragZone();
+        }
+    };
+
+    return Imgur;
+}));
+
+var feedback = function(res) {
+    if (res.success === true) {
+        var get_link = res.data.link.replace(/^http:\/\//i, 'https://');
+
+        var infodiv = document.querySelector('.info');
+        while (infodiv.firstChild) {
+            infodiv.removeChild(infodiv.firstChild);
+        }
+        infodiv.innerHTML += '<h3 class="center-align">Success</h3>';
+
+        var CSRFtoken = document.querySelector('#CSRFtoken');
+
+        var xhr = new XMLHttpRequest();
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.open('POST', '/generel/upload.php');
+        xhr.send(encodeURI('CSRFtoken=' + CSRFtoken + 'type=' + 'leerling_profile_picture' + 'url=' + get_link));
+    }
+};
+
+new Imgur({
+    clientid: 'bab6d5583b1ff5d',
+    callback: feedback
+});
+
+
