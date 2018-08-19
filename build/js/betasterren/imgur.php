@@ -1,3 +1,9 @@
+<?php
+
+header('Content-Type: application/javascript');
+
+echo <<<END
+
 /* Imgur Upload Script */
 (function(root, factory) {
     "use strict";
@@ -155,16 +161,6 @@
     return Imgur;
 }));
 
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
 var feedback = function(res) {
     if (res.success === true) {
         var get_link = res.data.link.replace(/^http:\/\//i, 'https://');
@@ -178,13 +174,15 @@ var feedback = function(res) {
         var CSRFtoken = document.querySelector('#CSRFtoken');
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', getParameterByName('response_url'));
+        xhr.open('POST', {$_GET['response_ur']});
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.send('CSRFtoken=' + CSRFtoken.value + '&type=' + 'leerling_profile_picture' + '&url=' + get_link);
     }
 };
 
 new Imgur({
-    clientid: getParameterByName('client_id'),
+    clientid: {$_GET['client_id']},
     callback: feedback
 });
+
+END;

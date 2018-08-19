@@ -225,15 +225,19 @@
 		"oF": 0,
 		"opt": 1
 		},
-	"\/js\/betasterren\/imgur.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
+	"\/js\/background.php": {
+		"cB": 0,
+		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/build\/js\/betasterren\/imgur.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
+		"oAP": "\/build\/js\/background.php",
+		"oF": 0
+		},
+	"\/js\/betasterren\/imgur.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/js\/betasterren\/imgur.php",
+		"oF": 0
 		},
 	"\/js\/betasterren\/init.js": {
 		"ft": 64,
@@ -254,13 +258,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
-		},
-	"\/php\/background.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/php\/background.php",
-		"oF": 0
 		},
 	"\/php\/check.php": {
 		"cB": 0,
