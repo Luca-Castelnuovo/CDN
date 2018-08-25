@@ -335,6 +335,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/js\/betasterren\/particles.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/js\/betasterren\/particles.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/loader.js": {
 		"ft": 64,
 		"ma": 0,
