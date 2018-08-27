@@ -318,6 +318,16 @@
 		"oAP": "\/build\/js\/background.php",
 		"oF": 0
 		},
+	"\/js\/betasterren\/gen.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/js\/betasterren\/gen.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/betasterren\/imgur.php": {
 		"cB": 0,
 		"ft": 8192,
