@@ -365,6 +365,13 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/LICENSE",
+		"oF": 0
+		},
 	"\/php\/check.php": {
 		"cB": 0,
 		"ft": 8192,
