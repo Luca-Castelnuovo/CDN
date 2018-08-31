@@ -1,35 +1,6 @@
 const CSRFtoken = document.querySelector('#CSRFtoken');
 const btnRegister = document.querySelector('#gen_register');
-const btnRegisterSend = document.querySelector('#gen_register_send');
-
-
-btnRegister.addEventListener("click", function() {
-    btnRegister.innerHTML = '<i class="material-icons left">code</i>Loading...';
-
-    $.ajax({
-        type: "POST",
-        url: '/admin/process.php',
-        dataType: "JSON",
-        timeout: (2 * 1000),
-        data: {
-            CSRFtoken: CSRFtoken.value,
-            type: 'gen',
-            gen: 'register_code'
-        },
-
-        success: function(response) {
-            if (response.status) {
-                btnRegister.innerHTML = response.url;
-            } else {
-                btnRegister.innerHTML = '<i class="material-icons left">code</i>Failed, please try again';
-            }
-        },
-
-        error: function(xhr, ajaxOptions, thrownError) {
-            btnRegister.innerHTML = '<i class="material-icons left">code</i>Failed, please try again';
-        }
-    });
-});
+const inputRegister = document.querySelector('#gen_register_email');
 
 btnRegisterSend.addEventListener("click", function() {
     btnRegisterSend.innerHTML = 'Loading';
@@ -42,8 +13,7 @@ btnRegisterSend.addEventListener("click", function() {
         data: {
             CSRFtoken: CSRFtoken.value,
             type: 'gen',
-            gen: 'register_send',
-            user:  document.querySelector('#gen_register_send_user')
+            user:  inputRegister.value
         },
 
         success: function(response) {
