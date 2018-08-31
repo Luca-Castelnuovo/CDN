@@ -2,7 +2,7 @@ const CSRFtoken = document.querySelector('#CSRFtoken');
 const btnRegister = document.querySelector('#gen_register');
 const inputRegister = document.querySelector('#gen_register_email');
 
-btnRegisterSend.addEventListener("click", function() {
+btnRegister.addEventListener("click", function() {
     btnRegisterSend.innerHTML = 'Loading';
 
     $.ajax({
