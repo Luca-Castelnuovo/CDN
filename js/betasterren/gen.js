@@ -3,7 +3,7 @@ const btnRegister = document.querySelector('#gen_register');
 const inputRegister = document.querySelector('#gen_register_email');
 
 btnRegister.addEventListener("click", function() {
-    btnRegisterSend.innerHTML = 'Loading';
+    btnRegister.innerHTML = 'Loading';
 
     $.ajax({
         type: "POST",
