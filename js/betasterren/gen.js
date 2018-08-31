@@ -24,7 +24,7 @@ btnRegister.addEventListener("click", function() {
             }
         },
 
-        error: function(xhr, ajaxOptions, thrownError) {
+        error: function() {
             btnRegister.innerHTML = 'Failed';
         }
     });
