@@ -176,6 +176,94 @@
 		"oT": 1,
 		"q": 90
 		},
+	"\/images\/betasterren\/icons\/icon-128x128.png": {
+		"ft": 32768,
+		"iS": 9434,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-128x128.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/icons\/icon-144x144.png": {
+		"ft": 32768,
+		"iS": 10949,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/icons\/icon-152x152.png": {
+		"ft": 32768,
+		"iS": 11717,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-152x152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/icons\/icon-192x192.png": {
+		"ft": 32768,
+		"iS": 15911,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/icons\/icon-384x384.png": {
+		"ft": 32768,
+		"iS": 41306,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-384x384.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/icons\/icon-512x512.png": {
+		"ft": 32768,
+		"iS": 63000,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/icons\/icon-72x72.png": {
+		"ft": 32768,
+		"iS": 4534,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/betasterren\/icons\/icon-96x96.png": {
+		"ft": 32768,
+		"iS": 6613,
+		"oA": 0,
+		"oAP": "\/build\/images\/betasterren\/icons\/icon-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
 	"\/images\/betasterren\/logo.png": {
 		"ft": 32768,
 		"iS": 6697,
