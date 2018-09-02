@@ -38,6 +38,71 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/css\/personal\/_bootstrap.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/css\/personal\/_bootstrap.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/css\/personal\/_font-awesome.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/css\/personal\/_font-awesome.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/css\/personal\/_fullPage.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/css\/personal\/_fullPage.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/css\/personal\/_main.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/css\/personal\/_main.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/css\/personal\/compiled.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/css\/personal\/compiled.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/css\/test.css": {
 		"aP": 1,
 		"bl": 0,
@@ -541,6 +606,56 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/js\/personal\/compiled.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/build\/js\/personal\/compiled.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/personal\/contact.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/build\/js\/personal\/contact.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/personal\/fullPage.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/build\/js\/personal\/fullPage.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/personal\/jqBootstrapValidation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/build\/js\/personal\/jqBootstrapValidation.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/personal\/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/build\/js\/personal\/main.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
@@ -566,6 +681,32 @@
 "hooks": [
 	],
 "manualImportLinks": {
+	"\/js\/personal\/compiled.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/personal\/contact.js",
+			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/personal\/fullPage.js",
+			"position": 1,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/personal\/jqBootstrapValidation.js",
+			"position": 2,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/personal\/main.js",
+			"position": 3,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"creationDate": 553707666,
@@ -573,7 +714,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 557584338
+	"lastBuiltDate": 557588414
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
