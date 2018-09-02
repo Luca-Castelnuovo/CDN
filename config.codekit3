@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/build",
+		"oF": 0
+		},
 	"\/css\/betasterren\/imgur.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -298,6 +304,94 @@
 		"oAP": "\/build\/images\/hacked.gif",
 		"oF": 0,
 		"opt": 1
+		},
+	"\/images\/personal\/icons\/icon-128x128.png": {
+		"ft": 32768,
+		"iS": 90112,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-128x128.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/personal\/icons\/icon-144x144.png": {
+		"ft": 32768,
+		"iS": 113446,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/personal\/icons\/icon-152x152.png": {
+		"ft": 32768,
+		"iS": 126002,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-152x152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/personal\/icons\/icon-192x192.png": {
+		"ft": 32768,
+		"iS": 197887,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/personal\/icons\/icon-384x384.png": {
+		"ft": 32768,
+		"iS": 30968,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-384x384.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/personal\/icons\/icon-512x512.png": {
+		"ft": 32768,
+		"iS": 30968,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/personal\/icons\/icon-72x72.png": {
+		"ft": 32768,
+		"iS": 29357,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"\/images\/personal\/icons\/icon-96x96.png": {
+		"ft": 32768,
+		"iS": 51520,
+		"oA": 0,
+		"oAP": "\/build\/images\/personal\/icons\/icon-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
 		},
 	"\/images\/personal\/portfolio\/and-aannemersbedrijf.jpg": {
 		"ft": 16384,
