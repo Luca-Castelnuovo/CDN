@@ -529,27 +529,3 @@ footer {
 #fp-nav ul li .fp-tooltip {
   color: #2c3e50 !important;
 }
-
-.btn-reverse {
-  font-size: 2rem;
-  color: #dc2f21;
-  background-color: #ffffff;
-
-  line-height: 40px;
-  padding: 0 30px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  box-shadow: 0 10px 25px 0 red;
-  transition: background-color 0.25s ease-in-out,
-    -webkit-transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
-    color 0.25s ease-in-out;
-  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out,
-    box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
-}
-
-.btn-reverse:hover {
-  color: #ffffff;
-  background-color: red;
-  box-shadow: 0 15px 25px 0 red;
-}
