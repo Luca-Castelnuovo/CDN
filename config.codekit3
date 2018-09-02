@@ -305,26 +305,26 @@
 		"oF": 0,
 		"opt": 1
 		},
-	"\/images\/personal\/portfolio\/and-aannemersbedrijf.png": {
-		"ft": 32768,
-		"iS": 41911,
+	"\/images\/personal\/portfolio\/and-aannemersbedrijf.jpg": {
+		"ft": 16384,
+		"iS": 22681,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/build\/images\/personal\/portfolio\/and-aannemersbedrijf.png",
+		"oAP": "\/build\/images\/personal\/portfolio\/and-aannemersbedrijf.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"oT": 1,
 		"q": 90
 		},
-	"\/images\/personal\/portfolio\/ciko-stappenplan.png": {
-		"ft": 32768,
-		"iS": 170173,
+	"\/images\/personal\/portfolio\/ciko-stappenplan.jpg": {
+		"ft": 16384,
+		"iS": 33782,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/build\/images\/personal\/portfolio\/ciko-stappenplan.png",
+		"oAP": "\/build\/images\/personal\/portfolio\/ciko-stappenplan.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"oT": 1,
 		"q": 90
 		},
 	"\/images\/personal\/portfolio\/create portofolio picture.pptx": {
@@ -334,59 +334,59 @@
 		"oAP": "\/build\/images\/personal\/portfolio\/create portofolio picture.pptx",
 		"oF": 0
 		},
-	"\/images\/personal\/portfolio\/hbl-betasterren.png": {
-		"ft": 32768,
-		"iS": 52812,
+	"\/images\/personal\/portfolio\/hbl-betasterren.jpg": {
+		"ft": 16384,
+		"iS": 17686,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/build\/images\/personal\/portfolio\/hbl-betasterren.png",
+		"oAP": "\/build\/images\/personal\/portfolio\/hbl-betasterren.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"oT": 1,
 		"q": 90
 		},
-	"\/images\/personal\/portfolio\/hbl-lustrum.png": {
-		"ft": 32768,
-		"iS": 59253,
+	"\/images\/personal\/portfolio\/hbl-lustrum.jpg": {
+		"ft": 16384,
+		"iS": 20889,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/build\/images\/personal\/portfolio\/hbl-lustrum.png",
+		"oAP": "\/build\/images\/personal\/portfolio\/hbl-lustrum.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"oT": 1,
 		"q": 90
 		},
-	"\/images\/personal\/portfolio\/TechAssistants-Soest.png": {
-		"ft": 32768,
-		"iS": 210744,
+	"\/images\/personal\/portfolio\/TechAssistants-Soest.jpg": {
+		"ft": 16384,
+		"iS": 40727,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/build\/images\/personal\/portfolio\/TechAssistants-Soest.png",
+		"oAP": "\/build\/images\/personal\/portfolio\/TechAssistants-Soest.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"oT": 1,
 		"q": 90
 		},
-	"\/images\/personal\/portfolio\/test.lucacastelnuovo.nl.png": {
-		"ft": 32768,
-		"iS": 32137,
+	"\/images\/personal\/portfolio\/test.lucacastelnuovo.nl.jpg": {
+		"ft": 16384,
+		"iS": 17193,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/build\/images\/personal\/portfolio\/test.lucacastelnuovo.nl.png",
+		"oAP": "\/build\/images\/personal\/portfolio\/test.lucacastelnuovo.nl.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"oT": 1,
 		"q": 90
 		},
-	"\/images\/personal\/profile.png": {
-		"ft": 32768,
-		"iS": 335732,
+	"\/images\/personal\/profile.jpg": {
+		"ft": 16384,
+		"iS": 44655,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "\/build\/images\/personal\/profile.png",
+		"oAP": "\/build\/images\/personal\/profile.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
-		"oT": 1,
 		"q": 90
 		},
 	"\/js\/ajax.js": {
@@ -485,7 +485,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 556471761
+	"lastBuiltDate": 557580599
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
