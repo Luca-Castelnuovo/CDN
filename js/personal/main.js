@@ -293,8 +293,8 @@ $(document).ready(function() {
     menu: "#menu",
     navigation: true,
     navigationPosition: "right",
-    navigationTooltips: ["Home", "Portfolio", "About Me", "Contact Me"]
-    // responsiveWidth: 1100
+    navigationTooltips: ["Home", "Portfolio", "About Me", "Contact Me"],
+    responsiveWidth: 600
   });
 });
 
