@@ -691,6 +691,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/js\/personal\/jQuery.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/build\/js\/personal\/jQuery.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/personal\/main.js": {
 		"ft": 64,
 		"ma": 0,
@@ -729,26 +739,32 @@
 	"\/js\/personal\/compiled.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/personal\/contact.js",
+			"linkedFileAbbreviatedPath": "\/js\/personal\/jQuery.js",
 			"position": 0,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/personal\/fullPage.js",
+			"linkedFileAbbreviatedPath": "\/js\/personal\/contact.js",
 			"position": 1,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/personal\/jqBootstrapValidation.js",
+			"linkedFileAbbreviatedPath": "\/js\/personal\/fullPage.js",
 			"position": 2,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/personal\/main.js",
+			"linkedFileAbbreviatedPath": "\/js\/personal\/jqBootstrapValidation.js",
 			"position": 3,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/personal\/main.js",
+			"position": 4,
 			"type": 0
 			}
 		]
@@ -759,7 +775,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 557595084
+	"lastBuiltDate": 557598685
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
