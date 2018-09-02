@@ -9,12 +9,6 @@
 	],
 "creatorBuild": "26680",
 "files": {
-	"\/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/build",
-		"oF": 0
-		},
 	"\/css\/betasterren\/imgur.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -485,7 +479,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 557580599
+	"lastBuiltDate": 557584338
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
