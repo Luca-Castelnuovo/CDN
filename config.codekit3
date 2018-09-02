@@ -120,6 +120,51 @@
 		"oAP": "\/build\/favicon.ico",
 		"oF": 0
 		},
+	"\/fonts\/personal\/fontawesome-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/personal\/fontawesome-webfont.eot",
+		"oF": 0
+		},
+	"\/fonts\/personal\/fontawesome-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/fonts\/personal\/fontawesome-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/fonts\/personal\/fontawesome-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/personal\/fontawesome-webfont.ttf",
+		"oF": 0
+		},
+	"\/fonts\/personal\/fontawesome-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/personal\/fontawesome-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/personal\/fontawesome-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/personal\/fontawesome-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/personal\/FontAwesome.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/fonts\/personal\/FontAwesome.otf",
+		"oF": 0
+		},
 	"\/images\/backgrounds\/0.jpg": {
 		"ft": 16384,
 		"iS": 502079,
@@ -714,7 +759,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 557588414
+	"lastBuiltDate": 557590900
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
