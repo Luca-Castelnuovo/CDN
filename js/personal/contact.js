@@ -11,7 +11,6 @@ $(function() {
             var name = $("input#name").val();
             var email = $("input#email").val();
             var message = $("textarea#message").val();
-            var recaptcha = grecaptcha.getResponse();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
@@ -34,8 +33,7 @@ $(function() {
                     $('#success > .alert-success').append("<strong>Your message has been sent.</strong>");
                     $('#success > .alert-success').append('</div>');
 
-                    //clear all fields and reset recaptcha
-                    grecaptcha.reset();
+                    //clear all fields
                     $('#contactForm').trigger("reset");
                 },
                 error: function(response) {
@@ -44,9 +42,6 @@ $(function() {
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
                     $('#success > .alert-danger').append("<strong>" + response.responseJSON.message);
                     $('#success > .alert-danger').append('</div>');
-
-                    //clear all fields and reset captcha
-                    grecaptcha.reset();
                 },
             })
         },
