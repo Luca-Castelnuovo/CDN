@@ -20,7 +20,6 @@ $(function() {
                 url: "mail.php",
                 type: "POST",
                 data: {
-                    recaptcha: recaptcha,
                     name: name,
                     email: email,
                     message: message
