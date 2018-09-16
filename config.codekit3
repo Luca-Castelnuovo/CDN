@@ -103,13 +103,13 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/css\/test.css": {
+	"\/css\/test\/main.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/build\/css\/test.css",
+		"oAP": "\/build\/css\/test\/main.css",
 		"oF": 0,
 		"oS": 3
 		},
