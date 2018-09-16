@@ -1,6 +1,6 @@
 //Define content and loader
-const content = document.querySelector('.content');
-const loader = document.querySelector('.loader');
+const content = jQuery('.content');
+const loader = jQuery('.loader');
 
 //Hide content and show loader
 content.addClass('hidden');
