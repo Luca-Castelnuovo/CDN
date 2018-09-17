@@ -47,7 +47,7 @@ a {
     color: black;
 }
 
-a .noline {
+a.noline {
     text-decoration:none;
 }
 
