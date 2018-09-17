@@ -51,6 +51,10 @@ a.noline {
     text-decoration:none;
 }
 
+a.noline:hover {
+    text-decoration:underline;
+}
+
 .left {
     float: left;
 }
