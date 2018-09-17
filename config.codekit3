@@ -15,6 +15,16 @@
 		"oAP": "\/build\/build",
 		"oF": 0
 		},
+	"\/css\/api\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/build\/css\/api\/style.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/css\/betasterren\/imgur.scss": {
 		"aP": 1,
 		"bl": 0,
