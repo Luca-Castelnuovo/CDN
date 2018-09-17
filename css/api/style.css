@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
 .page {
-    width: 360px;
     padding: 8% 0 0;
-    margin: auto;
 }
 
 .content {
-    position: relative;
-    z-index: 1;
+    margin: auto;
     background: #FFFFFF;
     width: 25rem;
     padding: 45px;
