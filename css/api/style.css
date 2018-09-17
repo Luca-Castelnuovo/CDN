@@ -48,6 +48,18 @@
     background: #43A047;
 }
 
+a {
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
 body {
     background: #76b852;
     background: -webkit-linear-gradient(right, #76b852, #8DC26F);
