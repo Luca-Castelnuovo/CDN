@@ -735,32 +735,32 @@
 	"\/js\/test\/codemirror.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/build\/js\/test\/codemirror.js",
 		"oF": 0,
-		"sC": 3,
-		"tS": 1
+		"sC": 0,
+		"tS": 0
 		},
 	"\/js\/test\/codemirror\/closetag.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/build\/js\/test\/codemirror\/closetag.js",
 		"oF": 0,
-		"sC": 3,
-		"tS": 1
+		"sC": 0,
+		"tS": 0
 		},
 	"\/js\/test\/codemirror\/css.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/build\/js\/test\/codemirror\/css.js",
 		"oF": 0,
-		"sC": 3,
-		"tS": 1
+		"sC": 0,
+		"tS": 0
 		},
 	"\/js\/test\/codemirror\/javascript.js": {
 		"ft": 64,
@@ -769,8 +769,8 @@
 		"oA": 0,
 		"oAP": "\/build\/js\/test\/codemirror\/javascript.js",
 		"oF": 0,
-		"sC": 3,
-		"tS": 1
+		"sC": 0,
+		"tS": 0
 		},
 	"\/js\/test\/codemirror\/xml.js": {
 		"ft": 64,
@@ -779,8 +779,8 @@
 		"oA": 0,
 		"oAP": "\/build\/js\/test\/codemirror\/xml.js",
 		"oF": 0,
-		"sC": 3,
-		"tS": 1
+		"sC": 0,
+		"tS": 0
 		},
 	"\/js\/test\/css.js": {
 		"ft": 64,
@@ -926,7 +926,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 558792937
+	"lastBuiltDate": 558864291
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
