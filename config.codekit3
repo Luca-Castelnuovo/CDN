@@ -879,6 +879,20 @@
 		"oAP": "\/build\/LICENSE",
 		"oF": 0
 		},
+	"\/pdf\/personal\/cv.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/pdf\/personal\/cv.pdf",
+		"oF": 0
+		},
+	"\/pdf\/personal\/hacklab.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/pdf\/personal\/hacklab.pdf",
+		"oF": 0
+		},
 	"\/php\/check.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -936,7 +950,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 558864291
+	"lastBuiltDate": 558966601
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
