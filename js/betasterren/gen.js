@@ -19,10 +19,8 @@ btnRegister.addEventListener("click", function() {
         success: function(response) {
             if (response.status) {
                 btnRegister.innerHTML = 'Success';
-                location.replace('/general/toast?url=/admin&alert=Mail verstuurd');
             } else {
                 btnRegister.innerHTML = 'Failed';
-                location.replace('/general/toast?url=/admin&alert=Oeps er ging iets fout');
             }
         },
 
