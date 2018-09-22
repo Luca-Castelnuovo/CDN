@@ -33,3 +33,8 @@
         }
     });
 })(document);
+
+function filter(level)
+{
+    document.querySelector("#filter").value=level;
+}
