@@ -7,7 +7,7 @@
 		"uuidString": "90955B72-8727-4CC9-B682-FBB50EB85F96"
 		}
 	],
-"creatorBuild": "28901",
+"creatorBuild": "28905",
 "files": {
 	"/build": {
 		"ft": 65536,
@@ -24,19 +24,6 @@
 		"oAP": "/build/css/api/style.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"/css/betasterren/imgur.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/css/betasterren/imgur.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
 		},
 	"/css/loader.css": {
 		"aP": 1,
@@ -305,143 +292,11 @@
 		"opt": 1,
 		"q": 90
 		},
-	"/images/betasterren/default_profile.png": {
-		"ft": 32768,
-		"iS": 10130,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/default_profile.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-128x128.png": {
-		"ft": 32768,
-		"iS": 9434,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-128x128.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-144x144.png": {
-		"ft": 32768,
-		"iS": 10949,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-144x144.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-152x152.png": {
-		"ft": 32768,
-		"iS": 11717,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-152x152.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-192x192.png": {
-		"ft": 32768,
-		"iS": 15911,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-192x192.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-384x384.png": {
-		"ft": 32768,
-		"iS": 41306,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-384x384.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-512x512.png": {
-		"ft": 32768,
-		"iS": 63000,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-512x512.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-72x72.png": {
-		"ft": 32768,
-		"iS": 4534,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-72x72.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/icons/icon-96x96.png": {
-		"ft": 32768,
-		"iS": 6613,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/icons/icon-96x96.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/logo.png": {
-		"ft": 32768,
-		"iS": 6697,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/betasterren/pdf.png": {
-		"ft": 32768,
-		"iS": 143263,
-		"oA": 0,
-		"oAP": "/build/images/betasterren/pdf.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
 	"/images/dfm.png": {
 		"ft": 32768,
 		"iS": 368616,
 		"oA": 0,
 		"oAP": "/build/images/dfm.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/images/dont-hack.png": {
-		"ft": 32768,
-		"iS": 37941,
-		"oA": 0,
-		"oAP": "/build/images/dont-hack.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
@@ -603,7 +458,7 @@
 		"oAP": "/build/images/personal/portfolio/techassistants-soest.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 90
 		},
 	"/images/personal/portfolio/test.lucacastelnuovo.nl.jpg": {
@@ -644,53 +499,6 @@
 		"oA": 0,
 		"oAP": "/build/js/background.php",
 		"oF": 0
-		},
-	"/js/betasterren/filter.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/js/betasterren/filter.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/js/betasterren/gen.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/js/betasterren/gen.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/js/betasterren/imgur.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/js/betasterren/imgur.php",
-		"oF": 0
-		},
-	"/js/betasterren/init.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/js/betasterren/init.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/js/betasterren/particles.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/js/betasterren/particles.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
 		},
 	"/js/loader.js": {
 		"ft": 64,
@@ -970,7 +778,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryPicard",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 558966601
+	"lastBuiltDate": 563301811.21382797
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
