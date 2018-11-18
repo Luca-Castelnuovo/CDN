@@ -288,7 +288,7 @@ $(function() {
 //fullpage js
 $(document).ready(function() {
   $("#fullpage").fullpage({
-    anchors: ["Home", "Portfolio", "About", "Contact"],
+    anchors: ["HomeSection", "PortfolioSection", "AboutSection", "ContactSection"],
     sectionsColor: ["#dc2f21", "#ffffff", "#dc2f21", "#ffffff"],
     menu: "#menu",
     navigation: true,
