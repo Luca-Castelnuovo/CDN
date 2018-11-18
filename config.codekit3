@@ -494,7 +494,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/build/lucacastelnuovo.nl/js/contact.js",
 		"oF": 0,
 		"sC": 3,
@@ -504,7 +504,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/build/lucacastelnuovo.nl/js/fullPage.js",
 		"oF": 0,
 		"sC": 3,
@@ -514,7 +514,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/build/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
 		"oF": 0,
 		"sC": 3,
@@ -524,7 +524,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/build/lucacastelnuovo.nl/js/jQuery.js",
 		"oF": 0,
 		"sC": 3,
@@ -534,7 +534,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/build/lucacastelnuovo.nl/js/main.js",
 		"oF": 0,
 		"sC": 3,
@@ -726,6 +726,38 @@
 "hooks": [
 	],
 "manualImportLinks": {
+	"/lucacastelnuovo.nl/js/compiled.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/jQuery.js",
+			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
+			"position": 1,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/fullPage.js",
+			"position": 2,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/contact.js",
+			"position": 3,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/main.js",
+			"position": 4,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"creationDate": 564134075.31215703,
@@ -733,7 +765,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 564256323.10905302
+	"lastBuiltDate": 564258113.83115995
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
