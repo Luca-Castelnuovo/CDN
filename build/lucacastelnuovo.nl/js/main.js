@@ -9,6 +9,6 @@ $(function(){$("body").on("input propertychange",".floating-label-form-group",fu
 //contact
 $(function(){$("input,textarea").jqBootstrapValidation({preventSubmit:!0,submitError:function(){},filter:function(){return $(this).is(":visible")}}),$('a[data-toggle="tab"]').click(function(t){t.preventDefault(),$(this).tab("show")})}),$("#name").focus(function(){$("#success").html("")}),
 //fullpage js
-$(document).ready(function(){$("#fullpage").fullpage({anchors:["HomeSection","PortfolioSection","AboutSection","ContactSection"],sectionsColor:["#dc2f21","#ffffff","#dc2f21","#ffffff"],menu:"#menu",navigation:!0,navigationPosition:"right",navigationTooltips:["Home","Portfolio","About Me","Contact Me"],responsiveWidth:600})}),
+$(document).ready(function(){$("#fullpage").fullpage({anchors:["Home","Portfolio","About","Contact"],sectionsColor:["#dc2f21","#ffffff","#dc2f21","#ffffff"],menu:"#menu",navigation:!0,navigationPosition:"right",navigationTooltips:["Home","Portfolio","About Me","Contact Me"],responsiveWidth:600})}),
 //remove loader
 $("#page-top").imagesLoaded(function(){$("#preloader").addClass("loaded")});
