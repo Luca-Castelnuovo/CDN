@@ -524,11 +524,11 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/build/lucacastelnuovo.nl/js/main.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 1
+		"tS": 0
 		},
 	"/lucacastelnuovo.nl/pdf/cv.pdf": {
 		"cB": 0,
@@ -733,12 +733,6 @@
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/contact.js",
 			"position": 2,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/main.js",
-			"position": 3,
 			"type": 1
 			}
 		]
