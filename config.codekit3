@@ -530,6 +530,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/lucacastelnuovo.nl/js/main2.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/js/main2.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/lucacastelnuovo.nl/pdf/cv.pdf": {
 		"cB": 0,
 		"ft": 8192,
