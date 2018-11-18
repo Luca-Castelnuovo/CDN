@@ -74,15 +74,15 @@ if ($_GET['file'] == 'background') {
 #############
 
 if (isset($_GET['folder1']) && isset($_GET['folder2']) && isset($_GET['folder3'])  && isset($_GET['folder4'])) {
-    $file = 'files/' . $_GET['folder1'] . '/' . $_GET['folder2'] . '/' . $_GET['folder3'] . '/'  . $_GET['folder4'] . '/' . $_GET['file'];
+    $file = $_GET['folder1'] . '/' . $_GET['folder2'] . '/' . $_GET['folder3'] . '/'  . $_GET['folder4'] . '/' . $_GET['file'];
 } elseif (isset($_GET['folder1']) && isset($_GET['folder2']) && isset($_GET['folder3'])) {
-    $file = 'files/' . $_GET['folder1'] . '/' . $_GET['folder2'] . '/' . $_GET['folder3'] . '/' . $_GET['file'];
+    $file = $_GET['folder1'] . '/' . $_GET['folder2'] . '/' . $_GET['folder3'] . '/' . $_GET['file'];
 } elseif (isset($_GET['folder1']) && isset($_GET['folder2'])) {
-    $file = 'files/' . $_GET['folder1'] . '/' . $_GET['folder2'] . '/' . $_GET['file'];
+    $file = $_GET['folder1'] . '/' . $_GET['folder2'] . '/' . $_GET['file'];
 } elseif (isset($_GET['folder1'])) {
-    $file = 'files/' . $_GET['folder1'] . '/' . $_GET['file'];
+    $file = $_GET['folder1'] . '/' . $_GET['file'];
 } else {
-    $file = 'files/' . $_GET['file'];
+    $file = $_GET['file'];
 }
 
 if (!file_exists($file)) {
@@ -94,6 +94,63 @@ if (!file_exists($file)) {
 # Display file #
 ################
 
-header('Content-Type: ' . mime_content_type($file));
+$file_extension = pathinfo($file, PATHINFO_EXTENSION);
+
+switch ($file_extension) {
+    // Web Files
+    case 'css':
+        $mime_type = 'text/css';
+        break;
+
+    case 'js':
+        $mime_type = 'application/javascript';
+        break;
+
+    // Images
+    case 'png':
+        $mime_type = 'image/png';
+        break;
+
+    case 'gif':
+        $mime_type = 'image/gif';
+        break;
+
+    case 'jpg':
+        $mime_type = 'image/jpg';
+        break;
+
+    case 'svg':
+        $mime_type = 'image/svg+xml';
+        break;
+
+    // Fonts
+    case 'eot':
+        $mime_type = 'application/vnd.ms-fontobject';
+        break;
+
+    case 'ttf':
+        $mime_type = 'font/ttf';
+        break;
+
+    case 'woff':
+        $mime_type = 'font/woff';
+        break;
+
+    case 'woff2':
+        $mime_type = 'font/woff2';
+        break;
+
+    // Generic
+    case 'pdf':
+        $mime_type = 'application/pdf';
+        break;
+
+    // Default
+    default:
+        $mime_type = 'text/plain';
+        break;
+}
+
+header('Content-Type: ' . $mime_type);
 
 readfile($file, 'r');

@@ -22,678 +22,172 @@
 		"oAP": "/build/favicon.ico",
 		"oF": 0
 		},
-	"/files/general/css/loader.css": {
+	"/general/css/loader.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/css/loader.css",
+		"oAP": "/build/general/css/loader.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/files/general/css/materialize.css": {
+	"/general/css/materialize.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/css/materialize.css",
+		"oAP": "/build/general/css/materialize.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/files/general/images/backgrounds/0.jpg": {
+	"/general/images/backgrounds/0.jpg": {
 		"ft": 16384,
 		"iS": 502079,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/0.jpg",
+		"oAP": "/build/general/images/backgrounds/0.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/1.jpg": {
+	"/general/images/backgrounds/1.jpg": {
 		"ft": 16384,
 		"iS": 385677,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/1.jpg",
+		"oAP": "/build/general/images/backgrounds/1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/2.jpg": {
+	"/general/images/backgrounds/2.jpg": {
 		"ft": 16384,
 		"iS": 372804,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/2.jpg",
+		"oAP": "/build/general/images/backgrounds/2.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/3.jpg": {
+	"/general/images/backgrounds/3.jpg": {
 		"ft": 16384,
 		"iS": 505675,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/3.jpg",
+		"oAP": "/build/general/images/backgrounds/3.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/4.jpg": {
+	"/general/images/backgrounds/4.jpg": {
 		"ft": 16384,
 		"iS": 944267,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/4.jpg",
+		"oAP": "/build/general/images/backgrounds/4.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/5.jpg": {
+	"/general/images/backgrounds/5.jpg": {
 		"ft": 16384,
 		"iS": 1139862,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/5.jpg",
+		"oAP": "/build/general/images/backgrounds/5.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/6.jpg": {
+	"/general/images/backgrounds/6.jpg": {
 		"ft": 16384,
 		"iS": 333694,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/6.jpg",
+		"oAP": "/build/general/images/backgrounds/6.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/7.jpg": {
+	"/general/images/backgrounds/7.jpg": {
 		"ft": 16384,
 		"iS": 760810,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/7.jpg",
+		"oAP": "/build/general/images/backgrounds/7.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/8.jpg": {
+	"/general/images/backgrounds/8.jpg": {
 		"ft": 16384,
 		"iS": 1130725,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/8.jpg",
+		"oAP": "/build/general/images/backgrounds/8.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/backgrounds/9.jpg": {
+	"/general/images/backgrounds/9.jpg": {
 		"ft": 16384,
 		"iS": 467016,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/files/general/images/backgrounds/9.jpg",
+		"oAP": "/build/general/images/backgrounds/9.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/files/general/images/dfm.png": {
+	"/general/images/dfm.png": {
 		"ft": 32768,
 		"iS": 368616,
 		"oA": 0,
-		"oAP": "/build/files/general/images/dfm.png",
+		"oAP": "/build/general/images/dfm.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"oT": 1,
 		"q": 90
 		},
-	"/files/general/images/hacked.gif": {
+	"/general/images/hacked.gif": {
 		"ft": 4194304,
 		"iS": 7046,
 		"oA": 0,
-		"oAP": "/build/files/general/images/hacked.gif",
+		"oAP": "/build/general/images/hacked.gif",
 		"oF": 0,
 		"opt": 1
 		},
-	"/files/general/js/ajax.js": {
+	"/general/js/ajax.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/files/general/js/ajax.js",
+		"oAP": "/build/general/js/ajax.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/files/general/js/loader.js": {
+	"/general/js/loader.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/files/general/js/loader.js",
+		"oAP": "/build/general/js/loader.js",
 		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/lucacastelnuovo.nl/css/_bootstrap.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/build/files/lucacastelnuovo.nl/css/_bootstrap.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/files/lucacastelnuovo.nl/css/_font-awesome.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/build/files/lucacastelnuovo.nl/css/_font-awesome.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/files/lucacastelnuovo.nl/css/_fullPage.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/build/files/lucacastelnuovo.nl/css/_fullPage.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/files/lucacastelnuovo.nl/css/_main.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/build/files/lucacastelnuovo.nl/css/_main.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/files/lucacastelnuovo.nl/css/compiled.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/css/compiled.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.eot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.eot",
-		"oF": 0
-		},
-	"/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/build/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.ttf",
-		"oF": 0
-		},
-	"/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff",
-		"oF": 0
-		},
-	"/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff2",
-		"oF": 0
-		},
-	"/files/lucacastelnuovo.nl/fonts/FontAwesome.otf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/fonts/FontAwesome.otf",
-		"oF": 0
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-128x128.png": {
-		"ft": 32768,
-		"iS": 90112,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-128x128.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-144x144.png": {
-		"ft": 32768,
-		"iS": 113446,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-144x144.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-152x152.png": {
-		"ft": 32768,
-		"iS": 126002,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-152x152.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-192x192.png": {
-		"ft": 32768,
-		"iS": 197887,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-192x192.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-384x384.png": {
-		"ft": 32768,
-		"iS": 30968,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-384x384.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-512x512.png": {
-		"ft": 32768,
-		"iS": 30968,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-512x512.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-72x72.png": {
-		"ft": 32768,
-		"iS": 29357,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-72x72.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/icons/icon-96x96.png": {
-		"ft": 32768,
-		"iS": 51520,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/icons/icon-96x96.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"oT": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/portfolio/and-aannemersbedrijf.jpg": {
-		"ft": 16384,
-		"iS": 22681,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/portfolio/and-aannemersbedrijf.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/portfolio/ciko-stappenplan.jpg": {
-		"ft": 16384,
-		"iS": 33782,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/portfolio/ciko-stappenplan.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/portfolio/create portofolio picture.pptx": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/portfolio/create portofolio picture.pptx",
-		"oF": 0
-		},
-	"/files/lucacastelnuovo.nl/images/portfolio/hbl-betasterren.jpg": {
-		"ft": 16384,
-		"iS": 17686,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/portfolio/hbl-betasterren.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/portfolio/hbl-lustrum.jpg": {
-		"ft": 16384,
-		"iS": 20889,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/portfolio/hbl-lustrum.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/portfolio/techassistants-soest.jpg": {
-		"ft": 16384,
-		"iS": 40727,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/portfolio/techassistants-soest.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/portfolio/test.lucacastelnuovo.nl.jpg": {
-		"ft": 16384,
-		"iS": 17193,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/portfolio/test.lucacastelnuovo.nl.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/images/profile.jpg": {
-		"ft": 16384,
-		"iS": 44655,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/images/profile.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/files/lucacastelnuovo.nl/js/compiled.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/js/compiled.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/lucacastelnuovo.nl/js/contact.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/js/contact.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/lucacastelnuovo.nl/js/fullPage.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/js/fullPage.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/lucacastelnuovo.nl/js/jqBootstrapValidation.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/lucacastelnuovo.nl/js/jQuery.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/js/jQuery.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/lucacastelnuovo.nl/js/main.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/js/main.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/lucacastelnuovo.nl/pdf/cv.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/pdf/cv.pdf",
-		"oF": 0
-		},
-	"/files/lucacastelnuovo.nl/pdf/hacklab.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/files/lucacastelnuovo.nl/pdf/hacklab.pdf",
-		"oF": 0
-		},
-	"/files/test.lucacastelnuovo.nl/css/codemirror.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/css/codemirror.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/files/test.lucacastelnuovo.nl/css/main.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/css/main.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/files/test.lucacastelnuovo.nl/js/codemirror.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/codemirror.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/codemirror/closetag.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/codemirror/closetag.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/codemirror/css.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/codemirror/css.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/codemirror/javascript.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/codemirror/javascript.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/codemirror/xml.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/codemirror/xml.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/css.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/css.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/files.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/files.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/invite.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/invite.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/javascript.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/javascript.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/login.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/login.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/projects.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/projects.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/register.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/register.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/files/test.lucacastelnuovo.nl/js/xml.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/files/test.lucacastelnuovo.nl/js/xml.js",
-		"oF": 1,
 		"sC": 3,
 		"tS": 1
 		},
@@ -702,6 +196,362 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/build/index.php",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/css/_bootstrap.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/lucacastelnuovo.nl/css/_bootstrap.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/lucacastelnuovo.nl/css/_font-awesome.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/lucacastelnuovo.nl/css/_font-awesome.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/lucacastelnuovo.nl/css/_fullPage.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/lucacastelnuovo.nl/css/_fullPage.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/lucacastelnuovo.nl/css/_main.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/lucacastelnuovo.nl/css/_main.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/lucacastelnuovo.nl/css/compiled.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/css/compiled.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/lucacastelnuovo.nl/fonts/fontawesome-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/fonts/fontawesome-webfont.eot",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/fonts/fontawesome-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/lucacastelnuovo.nl/fonts/fontawesome-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/lucacastelnuovo.nl/fonts/fontawesome-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/fonts/fontawesome-webfont.ttf",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/fonts/fontawesome-webfont.woff2",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/fonts/FontAwesome.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/fonts/FontAwesome.otf",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-128x128.png": {
+		"ft": 32768,
+		"iS": 90112,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-128x128.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-144x144.png": {
+		"ft": 32768,
+		"iS": 113446,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-152x152.png": {
+		"ft": 32768,
+		"iS": 126002,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-152x152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-192x192.png": {
+		"ft": 32768,
+		"iS": 197887,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-384x384.png": {
+		"ft": 32768,
+		"iS": 30968,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-384x384.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-512x512.png": {
+		"ft": 32768,
+		"iS": 30968,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-72x72.png": {
+		"ft": 32768,
+		"iS": 29357,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/icons/icon-96x96.png": {
+		"ft": 32768,
+		"iS": 51520,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/icons/icon-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/portfolio/and-aannemersbedrijf.jpg": {
+		"ft": 16384,
+		"iS": 22681,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/portfolio/and-aannemersbedrijf.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/portfolio/ciko-stappenplan.jpg": {
+		"ft": 16384,
+		"iS": 33782,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/portfolio/ciko-stappenplan.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/portfolio/create portofolio picture.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/portfolio/create portofolio picture.pptx",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/images/portfolio/hbl-betasterren.jpg": {
+		"ft": 16384,
+		"iS": 17686,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/portfolio/hbl-betasterren.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/portfolio/hbl-lustrum.jpg": {
+		"ft": 16384,
+		"iS": 20889,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/portfolio/hbl-lustrum.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/portfolio/techassistants-soest.jpg": {
+		"ft": 16384,
+		"iS": 40727,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/portfolio/techassistants-soest.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/portfolio/test.lucacastelnuovo.nl.jpg": {
+		"ft": 16384,
+		"iS": 17193,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/portfolio/test.lucacastelnuovo.nl.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/images/profile.jpg": {
+		"ft": 16384,
+		"iS": 44655,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/images/profile.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 90
+		},
+	"/lucacastelnuovo.nl/js/compiled.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/js/compiled.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/lucacastelnuovo.nl/js/contact.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/js/contact.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/lucacastelnuovo.nl/js/fullPage.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/js/fullPage.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/lucacastelnuovo.nl/js/jqBootstrapValidation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/lucacastelnuovo.nl/js/jQuery.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/js/jQuery.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/lucacastelnuovo.nl/js/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/js/main.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/lucacastelnuovo.nl/pdf/cv.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/pdf/cv.pdf",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/pdf/hacklab.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/pdf/hacklab.pdf",
 		"oF": 0
 		},
 	"/README.md": {
@@ -721,6 +571,156 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/test.lucacastelnuovo.nl/css/codemirror.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/test.lucacastelnuovo.nl/css/codemirror.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/test.lucacastelnuovo.nl/css/main.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/test.lucacastelnuovo.nl/css/main.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/test.lucacastelnuovo.nl/js/codemirror.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/codemirror/closetag.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/closetag.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/codemirror/css.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/css.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/codemirror/javascript.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/javascript.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/codemirror/xml.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/xml.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/css.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/css.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/files.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/files.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/invite.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/invite.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/javascript.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/javascript.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/login.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/login.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/projects.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/projects.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/register.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/register.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/test.lucacastelnuovo.nl/js/xml.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/xml.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
 		}
 	},
 "hooks": [
@@ -733,7 +733,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 564247318.10405505
+	"lastBuiltDate": 564256323.10905302
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
