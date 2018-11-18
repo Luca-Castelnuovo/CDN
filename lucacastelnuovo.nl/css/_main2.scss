@@ -311,9 +311,9 @@ section#contact {
 
 .btn-outline {
   margin-top: 15px;
-  border: 2px solid #dc2f21;
+  border: 2px solid #fff;
   font-size: 20px;
-  color: #dc2f21;
+  color: #fff;
   background: 0 0;
   transition: all 0.3s ease-in-out;
 }
@@ -328,15 +328,14 @@ footer {
 .btn-outline:focus,
 .btn-outline:hover {
   border: 2px solid #dc2f21;
-  color: #fff;
-  background: #dc2f21;
+  color: #dc2f21;
+  background: #fff;
 }
 
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #eee;
 }
 
 .floating-label-form-group input,
@@ -400,6 +399,12 @@ footer {
   background-color: #dc2f21 !important;
   border-color: #fff !important;
   transition: all .3s ease-in-out;
+}
+
+.btn-success:hover {
+  color: #dc2f21 !important;
+  background-color: #fff !important;
+  border-color: #dc2f21 !important;
 }
 
 .text-danger, .text-danger:hover {
