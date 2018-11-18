@@ -5,7 +5,7 @@
 ##########
 
 $GLOBALS['config'] = (object) array(
-    'server_token' => 'dfb150884d1bef586762db46661740afcfc456e3c87f2641b8cb3e657ccff2b1'
+    'server_token' => '1bfce65d195e2fdc1ae5eed6d537f0b0da1a76b8ea169ceae94af6312f57efbbeac5c0a4e69de5dda39bbf0f920863782fd5bc125dd77b290db94300c87e0a86'
 );
 
 
