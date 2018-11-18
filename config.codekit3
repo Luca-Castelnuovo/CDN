@@ -721,25 +721,25 @@
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
 			"position": 0,
-			"type": 0
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/fullPage.js",
 			"position": 1,
-			"type": 0
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/contact.js",
 			"position": 2,
-			"type": 0
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/main.js",
 			"position": 3,
-			"type": 0
+			"type": 1
 			}
 		]
 	},
