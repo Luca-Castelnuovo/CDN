@@ -332,6 +332,18 @@ footer {
   background: #fff;
 }
 
+.btn.btn-lg.btn-outline {
+    color: #dc2f21;
+    border: 2px solid #dc2f21;
+    background: #fff;
+}
+
+.btn.btn-lg.btn-outline:hover {
+    color: #fff;
+    border: 2px solid #dc2f21;
+    background: #dc2f21;
+}
+
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
