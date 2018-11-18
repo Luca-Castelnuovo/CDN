@@ -37,18 +37,20 @@ function response($status, $extra)
 # Check token #
 ###############
 
-$check_request = request('https://auth.lucacastelnuovo.nl/check.php', ["token" => "{$_GET['token']}", "server_token" => "{$GLOBALS['config']->server_token}"]);
+if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
+    $check_request = request('https://auth.lucacastelnuovo.nl/check.php', ["token" => "{$_GET['token']}", "server_token" => "{$GLOBALS['config']->server_token}"]);
 
-if (empty($check_request)) {
-    response(false, ["error" => "Couldn't reach authentication server."]);
-}
+    if (empty($check_request)) {
+        response(false, ["error" => "Couldn't reach authentication server."]);
+    }
 
-if (!$check_request['status']) {
-    response(false, ["error" => "{$check_request['error']}"]);
-}
+    if (!$check_request['status']) {
+        response(false, ["error" => "{$check_request['error']}"]);
+    }
 
-if (empty($_GET['file'])) {
-    response(false, ["error" => "Please specify a file."]);
+    if (empty($_GET['file'])) {
+        response(false, ["error" => "Please specify a file."]);
+    }
 }
 
 
