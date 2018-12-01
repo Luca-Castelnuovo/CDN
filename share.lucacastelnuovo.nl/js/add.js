@@ -43,6 +43,7 @@ btn.addEventListener("click", function() {
         }
     }
 
-    xhr.open('GET', '/add.php?token=' + token + '&message=' + message + '&expires=' + expires);
+    xhr.open('POST', '/add.php?token=' + token + '&message=' + message + '&expires=' + expires);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send();
 });
