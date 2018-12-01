@@ -31,6 +31,11 @@ btn.addEventListener("click", function() {
                     "<div class='input-field col s12'>" +
                     "<input value='" +   json.url_server + "'>" +
                     "</div>" +
+                    "</div>" +
+                    "<div class='row'>" +
+                    "<a onClick='window.location.reload()' class='col s12 btn-large waves-effect orange'>" +
+                    "Another One" +
+                    "</a>" +
                     "</div>";
 
                 container.innerHTML = html;

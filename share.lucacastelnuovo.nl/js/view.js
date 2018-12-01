@@ -19,17 +19,24 @@ btn.addEventListener("click", function() {
                     return false;
                 }
 
+                // const html =
+                //     "<div class='row'>" +
+                //     "<textarea id='textarea-message' class='materialize-textarea'>" +
+                //     json.message +
+                //     "</textarea>" +
+                //     "</div>";
+
                 const html =
                     "<div class='row'>" +
-                    "<textarea id='textarea-message' class='materialize-textarea'>" +
+                    "<p>" +
                     json.message +
-                    "</textarea>" +
+                    "</p>" +
                     "</div>";
 
                 container.innerHTML = html;
 
-                const textarea = document.querySelector('#textarea-message');
-                M.textareaAutoResize(textarea);
+                // const textarea = document.querySelector('#textarea-message');
+                // M.textareaAutoResize(textarea);
             }
         }
     }
