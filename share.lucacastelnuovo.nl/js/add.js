@@ -24,14 +24,12 @@ btn.addEventListener("click", function() {
                 const html =
                     "<div class='row'>" +
                     "<div class='input-field col s12'>" +
-                    "<input id='url_user' value='" +   json.url_user + "'>" +
-                    "<label for='url_user'>User Url</label>" +
+                    "<input value='" +   json.url_user + "'>" +
                     "</div>" +
                     "</div>" +
                     "<div class='row'>" +
                     "<div class='input-field col s12'>" +
-                    "<input id='url_server' value='" +   json.url_server + "'>" +
-                    "<label for='url_server'>Server Url</label>" +
+                    "<input value='" +   json.url_server + "'>" +
                     "</div>" +
                     "</div>";
 
