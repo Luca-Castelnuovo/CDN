@@ -3,7 +3,7 @@ const container = document.querySelector('.card-content');
 
 btn.addEventListener("click", function() {
     const token = document.querySelector('#token').value;
-    const message = document.querySelector('#message').value;
+    const message = encodeURIComponent(document.querySelector('#message').value);
     const expires = document.querySelector('#expires').value;
 
     var xhr = new XMLHttpRequest();
