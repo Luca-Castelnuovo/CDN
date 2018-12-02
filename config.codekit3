@@ -608,36 +608,6 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/share.lucacastelnuovo.nl/js/add.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/share.lucacastelnuovo.nl/js/add.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/share.lucacastelnuovo.nl/js/service-worker.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/share.lucacastelnuovo.nl/js/service-worker.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/share.lucacastelnuovo.nl/js/view.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/share.lucacastelnuovo.nl/js/view.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
 	"/test.lucacastelnuovo.nl/css/codemirror.css": {
 		"aP": 1,
 		"bl": 0,
@@ -819,7 +789,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 565463510.58379102
+	"lastBuiltDate": 565466297.92806804
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
