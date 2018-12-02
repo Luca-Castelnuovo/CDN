@@ -14,29 +14,24 @@ btn.addEventListener("click", function() {
                 var json = JSON.parse(xhr.responseText);
 
                 if (!json.status) {
-                    alert(json.error);
+                    M.toast({html: json.error})
                     btn.innerHTML = "View message";
                     return false;
                 }
-
-                // const html =
-                //     "<div class='row'>" +
-                //     "<textarea id='textarea-message' class='materialize-textarea'>" +
-                //     json.message +
-                //     "</textarea>" +
-                //     "</div>";
 
                 const html =
                     "<div class='row'>" +
                     "<p>" +
                     json.message +
                     "</p>" +
+                    "</div>" +
+                    "<div class='row'>" +
+                    "<a onClick='window.location.reload()' class='col s12 btn-small waves-effect orange'>" +
+                    "Close message" +
+                    "</a>" +
                     "</div>";
 
                 container.innerHTML = html;
-
-                // const textarea = document.querySelector('#textarea-message');
-                // M.textareaAutoResize(textarea);
             }
         }
     }

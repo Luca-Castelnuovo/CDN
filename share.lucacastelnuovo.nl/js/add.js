@@ -16,7 +16,7 @@ btn.addEventListener("click", function() {
                 var json = JSON.parse(xhr.responseText);
 
                 if (!json.status) {
-                    alert(json.error);
+                    M.toast({html: json.error})
                     btn.innerHTML = "Generate Message";
                     return false;
                 }
@@ -24,21 +24,18 @@ btn.addEventListener("click", function() {
                 const html =
                     "<div class='row'>" +
                     "<div class='input-field col s12'>" +
-                    "<input value='" +   json.url_user + "'>" +
-                    "</div>" +
-                    "</div>" +
-                    "<div class='row'>" +
-                    "<div class='input-field col s12'>" +
-                    "<input value='" +   json.url_server + "'>" +
+                    "<textarea id='textarea-message' class='materialize-textarea'>" +   json.url_user + "</textarea>" +
                     "</div>" +
                     "</div>" +
                     "<div class='row'>" +
                     "<a onClick='window.location.reload()' class='col s12 btn-large waves-effect orange'>" +
-                    "Another One" +
+                    "Create another message" +
                     "</a>" +
                     "</div>";
 
                 container.innerHTML = html;
+                const textarea = document.querySelector('#textarea-message');
+                M.textareaAutoResize(textarea);
             }
         }
     }

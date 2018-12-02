@@ -191,6 +191,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/general/js/manup.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/general/js/manup.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -608,6 +618,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/share.lucacastelnuovo.nl/js/service-worker.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/share.lucacastelnuovo.nl/js/service-worker.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/share.lucacastelnuovo.nl/js/view.js": {
 		"ft": 64,
 		"ma": 0,
@@ -799,7 +819,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 565388558.05986702
+	"lastBuiltDate": 565463510.58379102
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
