@@ -9,14 +9,6 @@ Header set Access-Control-Allow-Origin "*"
 ExpiresActive On
 ExpiresDefault "access plus 2 days"
 
-# Disable php
-<Directory /var/www/cdn.lucacastelnuovo.nl/public_html>
-        <FilesMatch "(?i)\.(php|php3?|phtml)$">
-                Order Deny,Allow
-                Deny from All
-        </FilesMatch>
-</Directory>
-
 
 ##########################################
 # Prolong caching time for certain files #
