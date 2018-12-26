@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "28905",
 "files": {
+	"/.htaccess": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/.htaccess",
+		"oF": 0
+		},
 	"/build": {
 		"ft": 65536,
 		"oA": 1,
@@ -181,6 +188,13 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/general/js/dynamic/background.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/general/js/dynamic/background.php",
+		"oF": 0
+		},
 	"/general/js/loader.js": {
 		"ft": 64,
 		"ma": 0,
@@ -200,13 +214,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
-		},
-	"/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/index.php",
-		"oF": 0
 		},
 	"/lucacastelnuovo.nl/css/_bootstrap.scss": {
 		"aP": 1,
@@ -789,7 +796,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 565466297.92806804
+	"lastBuiltDate": 567510168.88841105
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
