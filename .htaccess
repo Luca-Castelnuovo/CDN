@@ -43,8 +43,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 
 # Allow dynamic files (/*/dynamic/file.* => /*/dynamic/file.php)
-RewriteRule ^(.+)\/dynamic\/([a-zA-Z]+)\.(\d+)\.(js|css)$ $1.dynamic.$2.php [L]
-RewriteRule ^(.+)\/dynamic\/([a-zA-Z]+)\.(js|css)$ $1.dynamic.$2.php [L]
+RewriteRule ^(.+)\/dynamic\/([a-zA-Z]+)\.(\d+)\.(js|css)$ $1/dynamic/$2.php [L]
+RewriteRule ^(.+)\/dynamic\/([a-zA-Z]+)\.(js|css)$ $1/dynamic/$2.php [L]
 
 # Cache Bust (/*/file.0-9.[js|css|png|jpe?g|gif] => /*/file.[js|css|png|jpe?g|gif])
 RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpe?g|gif)$ $1.$3 [L]
