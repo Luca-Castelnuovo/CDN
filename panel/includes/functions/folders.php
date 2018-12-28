@@ -36,7 +36,7 @@ HTML;
 function sub_folders_list($folder_id) {
     $folder_id = check_data($folder_id, true, 'Folder ID', true, '/panel/home');
 
-    $folders = sql_select('folders', 'name', "parent_id='{$folder_id}' AND is_subfolder='1'", true);
+    $folders = sql_select('folders', 'name', "parent_id='{$folder_id}' AND is_subfolder='1'", false);
 
     echo '<style>.blue-icon{color:#2962ff}</style>';
     echo '<ul class="collection with-header">';
