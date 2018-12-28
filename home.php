@@ -180,7 +180,7 @@ $MAX_UPLOAD_SIZE = min(asBytes(ini_get('post_max_size')), asBytes(ini_get('uploa
     <!-- Config -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="manifest" href="/manifest.json"></link>
+    <link rel="manifest" href="/site.webmanifest"></link>
     <title>Home || CDN</title>
 
     <!-- SEO -->
