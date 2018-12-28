@@ -14,13 +14,13 @@ page_header('Home');
 
 ?>
 
-<?php if (!isset($_GET['project_id'])) { ?>
+<?php if (!isset($_GET['folder_id'])) { ?>
 <div class="row">
-    <?php projects_list($_SESSION['id']); ?>
+    <?php folders_list(); ?>
 </div>
 <?php } else { ?>
 <div class="row">
-    <?php projects_info($_SESSION['id'], $_GET['project_id']); ?>
+    <?php folders_info($_GET['folder_id']); ?>
 </div>
 <?php } ?>
 
