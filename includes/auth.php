@@ -9,14 +9,14 @@ function login($access_token) {
 
     $allowed_users = json_decode(file_get_contents($GLOBALS['config']->allowed_users_json));
     if (!in_array($user['username'], $allowed_users)) {
-        redirect('/panel/?reset', 'Access Denied');
+        redirect('/?reset', 'Access Denied');
     }
 
     $_SESSION['logged_in'] = true;
     $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
     $_SESSION['access_token'] = $access_token;
 
-    redirect('/panel/home', 'You are logged in');
+    redirect('/home', 'You are logged in');
 }
 
 
@@ -25,11 +25,11 @@ function loggedin()
     try {
         api_get_token($_SESSION['access_token']);
     } catch (Exception $error) {
-        redirect('/panel/?reset', 'Please login');
+        redirect('/?reset', 'Please login');
     }
 
     if ((!$_SESSION['logged_in']) || ($_SESSION['ip'] != $_SERVER['REMOTE_ADDR']) || (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800))) {
-        redirect("/panel/?reset", 'Please login');
+        redirect("/?reset", 'Please login');
     } else {
         $_SESSION['LAST_ACTIVITY'] = time();
     }
@@ -45,5 +45,5 @@ function reset_session()
     session_destroy();
     session_start();
 
-    redirect('/panel', $alert);
+    redirect('/', $alert);
 }

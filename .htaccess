@@ -12,9 +12,6 @@ Header set Access-Control-Allow-Origin "*"
 ExpiresActive On
 ExpiresDefault "access plus 2 days"
 
-# Redirect user from root to login
-RewriteRule ^$ /panel [L]
-
 # Remove php extension
 RewriteCond %{DOCUMENT_ROOT}/$1\.php -f
 RewriteRule ^(.+?)/?$ /$1.php [L]

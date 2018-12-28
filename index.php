@@ -32,7 +32,7 @@ if (isset($_GET['reset'])) {
 }
 
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
-    redirect('/panel/home');
+    redirect('/home');
 }
 
 ?>
