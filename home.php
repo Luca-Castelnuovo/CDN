@@ -187,6 +187,11 @@ $MAX_UPLOAD_SIZE = min(asBytes(ini_get('post_max_size')), asBytes(ini_get('uploa
     <link href="https://test.lucacastelnuovo.nl" rel="canonical">
     <meta content="A system to develop your quick ideas" name="description">
 
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="https://cdn.lucacastelnuovo.nl/cdn.lucacastelnuovo.nl/css/main.css">
 </head>
