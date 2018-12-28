@@ -31,18 +31,18 @@ if(DIRECTORY_SEPARATOR==='\\') $tmp_dir = str_replace('/',DIRECTORY_SEPARATOR,$t
 $tmp = get_absolute_path($tmp_dir . '/' .$_REQUEST['file']);
 
 if($tmp === false)
-	err(404,'File or Directory Not Found');
+    err(404,'File or Directory Not Found');
 if(substr($tmp, 0,strlen($tmp_dir)) !== $tmp_dir)
-	err(403,"Forbidden");
+    err(403,"Forbidden");
 if(strpos($_REQUEST['file'], DIRECTORY_SEPARATOR) === 0)
-	err(403,"Forbidden");
+    err(403,"Forbidden");
 
 
 if(!$_COOKIE['_sfm_xsrf'])
-	setcookie('_sfm_xsrf',bin2hex(openssl_random_pseudo_bytes(16)));
+    setcookie('_sfm_xsrf',bin2hex(openssl_random_pseudo_bytes(16)));
 if($_POST) {
-	if($_COOKIE['_sfm_xsrf'] !== $_POST['xsrf'] || !$_POST['xsrf'])
-		err(403,"XSRF Failure");
+    if($_COOKIE['_sfm_xsrf'] !== $_POST['xsrf'] || !$_POST['xsrf'])
+        err(403,"XSRF Failure");
 }
 
 $file = $_REQUEST['file'] ?: '.';
@@ -161,15 +161,15 @@ function get_absolute_path($path) {
     }
 
 function err($code,$msg) {
-	http_response_code($code);
-	echo json_encode(['error' => ['code'=>intval($code), 'msg' => $msg]]);
-	exit;
+    http_response_code($code);
+    echo json_encode(['error' => ['code'=>intval($code), 'msg' => $msg]]);
+    exit;
 }
 
 function asBytes($ini_v) {
-	$ini_v = trim($ini_v);
-	$s = ['g'=> 1<<30, 'm' => 1<<20, 'k' => 1<<10];
-	return intval($ini_v) * ($s[strtolower(substr($ini_v,-1))] ?: 1);
+    $ini_v = trim($ini_v);
+    $s = ['g'=> 1<<30, 'm' => 1<<20, 'k' => 1<<10];
+    return intval($ini_v) * ($s[strtolower(substr($ini_v,-1))] ?: 1);
 }
 $MAX_UPLOAD_SIZE = min(asBytes(ini_get('post_max_size')), asBytes(ini_get('upload_max_filesize')));
 ?>
