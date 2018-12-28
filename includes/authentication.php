@@ -1,14 +1,5 @@
 <?php
 
-/* Config  */
-
-$GLOBALS['auth'] = (object) array(
-    'authorization_url' => 'https://accounts.lucacastelnuovo.nl/auth/authorize',
-    'access_token_url' => 'https://accounts.lucacastelnuovo.nl/auth/token',
-    'api_user' => 'https://api.lucacastelnuovo.nl/user/',
-    'api_token' => 'https://api.lucacastelnuovo.nl/token/',
-);
-
 
 /* Helper Functions */
 
@@ -41,9 +32,9 @@ function auth_get_authorization_code($client_id, $scope, $redirect_uri = null) {
 
     if (session_status() === PHP_SESSION_ACTIVE) {
         $_SESSION['auth_state'] = auth_gen_state(32);
-        header("Location: {$GLOBALS['auth']->authorization_url}?client_id={$client_id}&scope={$scope}&state={$_SESSION['auth_state']}&redirect_uri={$redirect_uri}");
+        header("Location: https://accounts.lucacastelnuovo.nl/auth/authorize?client_id={$client_id}&scope={$scope}&state={$_SESSION['auth_state']}&redirect_uri={$redirect_uri}");
     } else {
-        header("Location: {$GLOBALS['auth']->authorization_url}?client_id={$client_id}&scope={$scope}&redirect_uri={$redirect_uri}");
+        header("Location: https://accounts.lucacastelnuovo.nl/auth/authorize?client_id={$client_id}&scope={$scope}&redirect_uri={$redirect_uri}");
     }
 
     exit;
@@ -73,7 +64,7 @@ function auth_get_access_token($client_id, $client_secret, $code, $provided_stat
         }
     }
 
-    $access_token_request = auth_request($GLOBALS['auth']->access_token_url, ["client_id" => "{$client_id}", "client_secret" => "{$client_secret}", "code" => "{$code}", "state" => "{$provided_state}"]);
+    $access_token_request = auth_request('https://accounts.lucacastelnuovo.nl/auth/token', ["client_id" => "{$client_id}", "client_secret" => "{$client_secret}", "code" => "{$code}", "state" => "{$provided_state}"]);
 
     if (!$access_token_request['success']) {
         throw new Exception($access_token_request['error']);
@@ -90,7 +81,7 @@ function api_get_user($access_token) {
         throw new Exception('access_token empty');
     }
 
-    $user_request = json_decode(file_get_contents("{$GLOBALS['auth']->api_user}?access_token={$access_token}"), true);
+    $user_request = json_decode(file_get_contents("https://api.lucacastelnuovo.nl/user/?access_token={$access_token}"), true);
 
     if (!$user_request['success']) {
         throw new Exception($user_request['error']);
@@ -105,7 +96,7 @@ function api_get_token($access_token) {
         throw new Exception('access_token empty');
     }
 
-    $token_request = json_decode(file_get_contents("{$GLOBALS['auth']->api_token}?access_token={$access_token}"), true);
+    $token_request = json_decode(file_get_contents("https://api.lucacastelnuovo.nl/token/?access_token={$access_token}"), true);
 
     if (!$token_request['success']) {
         throw new Exception($token_request['error']);
