@@ -2,12 +2,25 @@
 # General #
 ###########
 
+# Enable engine
+RewriteEngine On
+
 # Allow access to CDN
 Header set Access-Control-Allow-Origin "*"
 
 # Enable caching option
 ExpiresActive On
 ExpiresDefault "access plus 2 days"
+
+# Redirect user from root to login
+RewriteRule ^$ /panel [L]
+
+# Remove php extension
+RewriteCond %{DOCUMENT_ROOT}/$1\.php -f
+RewriteRule ^(.+?)/?$ /$1.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ - [L]
 
 
 ##########################################
@@ -39,7 +52,6 @@ ExpiresByType application/pdf "access 1 month"
 ##########################################
 
 # Start engine and get request url
-RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 
 # Allow dynamic files (/*/dynamic/file.* => /*/dynamic/file.php)
