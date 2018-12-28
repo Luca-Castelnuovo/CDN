@@ -1,7 +1,7 @@
 <?php
 
 // Validate data is set
-function is_empty($var, $type ='Unknown', $redirectTo = '/')
+function is_empty($var, $type ='Unknown', $redirectTo = '/panel')
 {
     if (empty($var)) {
         redirect($redirectTo, "{$type} is empty.");
@@ -60,7 +60,7 @@ function csrf_gen()
 
 
 // Validate CSRF
-function csrf_val($CSRFtoken, $redirect = '/')
+function csrf_val($CSRFtoken, $redirect = '/panel')
 {
     if (!isset($_SESSION['CSRFtoken'])) {
         redirect($redirect, 'CSRF Error');
@@ -75,7 +75,7 @@ function csrf_val($CSRFtoken, $redirect = '/')
 
 
 // Validate CAPTCHA
-function captcha_val($resonse, $redirect = '/')
+function captcha_val($resonse, $redirect = '/panel')
 {
     $url = "https://www.google.com/recaptcha/api/siteverify?secret={$GLOBALS['config']->recaptcha->secret_key}&response={$resonse}";
     $response = json_decode(file_get_contents($url));

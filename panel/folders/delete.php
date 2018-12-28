@@ -20,15 +20,15 @@ function rrmdir($dir)
 
 function projects_delete($CSRFtoken, $project_id)
 {
-    csrf_val($CSRFtoken, '/home');
+    csrf_val($CSRFtoken, '/panel/home');
 
-    $user_id = check_data($user_id, true, 'User ID', true, '/home');
-    $project_id = check_data($project_id, true, 'Project ID', true, '/home');
+    $user_id = check_data($user_id, true, 'User ID', true, '/panel/home');
+    $project_id = check_data($project_id, true, 'Project ID', true, '/panel/home');
 
     $project = sql_select('projects', 'name', "owner_id='{$user_id}' AND id='{$project_id}'", true);
 
     if (empty($project['name'])) {
-        redirect('/home', 'Project doesn\'t exist');
+        redirect('/panel/home', 'Project doesn\'t exist');
     }
 
     rrmdir("{$_SERVER['DOCUMENT_ROOT']}/users/{$_SESSION['username']}/{$project['name']}");
@@ -36,5 +36,5 @@ function projects_delete($CSRFtoken, $project_id)
     sql_delete('projects', "owner_id='{$user_id}' AND id='{$project_id}'");
     sql_delete('files', "owner_id='{$user_id}' AND project_id='{$project_id}'");
 
-    redirect('/home', 'Project deleted');
+    redirect('/panel/home', 'Project deleted');
 }

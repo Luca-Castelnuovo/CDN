@@ -6,7 +6,7 @@ function sql_connect()
     $conn = new mysqli($GLOBALS['config']->database->host, $GLOBALS['config']->database->user, $GLOBALS['config']->database->password, $GLOBALS['config']->database->database);
 
     if ($conn->connect_error) {
-        redirect('/', 'Server Error');
+        redirect('/panel?reset', 'Server Error');
     } else {
         return $conn;
     }

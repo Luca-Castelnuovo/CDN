@@ -4,7 +4,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/panel/includes/init.php';
 
 loggedin();
 
-$project_id = check_data($_GET['project_id'], true, 'Project ID', true, '/home');
+$project_id = check_data($_GET['project_id'], true, 'Project ID', true, '/panel/home');
 $existing_project = sql_select('projects', 'id', "owner_id='{$_SESSION['id']}'  AND id='{$project_id}'", false);
 if ($existing_project->num_rows != 1) {
     redirect('/project', 'Project doen\'t exist');
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $file = fopen("../users/{$_SESSION['username']}/{$project['name']}/{$file_full}", "w");
     fclose($file);
 
-    redirect('/home?project_id=' . $project_id, 'File created');
+    redirect('/panel/home?project_id=' . $project_id, 'File created');
 }
 
 page_header('Create File');

@@ -16,7 +16,7 @@ function login($access_token) {
     $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
     $_SESSION['access_token'] = $access_token;
 
-    redirect('/panel/home', 'You are logged in');
+    redirect('/panel/panel/home', 'You are logged in');
 }
 
 

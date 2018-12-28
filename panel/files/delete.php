@@ -1,20 +1,30 @@
 <?php
 
-function files_delete($CSRFtoken, $folder_id, $file_id) {
-    csrf_val($CSRFtoken, '/home');
+require $_SERVER['DOCUMENT_ROOT'] . '/panel/includes/init.php';
 
-    $folder_id = check_data($folder_id, true, 'Folder ID', true, '/panel/home');
-    $file_id = check_data($file_id, true, 'File ID', true, '/panel/home');
+loggedin();
 
-    $project = sql_select('folders', 'id,name', "id='{$folder_id}'", true);
-    $file = sql_select('files', 'name', "id='{$file_id}' AND project_id='{$project['id']}'", true);
+csrf_val($_GET['CSRFtoken'], '/panel/panel/home');
 
-    if (empty($file['name'])) {
-        redirect('/home', 'File doesn\'t exist');
-    }
+$file_id = check_data($_GET['file_id'], true, 'File ID', true, '/panel/panel/home');
 
-    sql_delete('files', "owner_id='{$user_id}' AND id='{$file_id}' AND project_id='{$folder_id}'");
-    unlink("{$_SERVER['DOCUMENT_ROOT']}/users/{$_SESSION['username']}/{$project['name']}/{$file['name']}");
+$file = sql_select(
+                'files',
+                'name,folder_id',
+                "id='{$file_id}'",
+                true
+            );
 
-    redirect('/home?project_id=' . $folder_id, 'File deleted');
+if (empty($file['name'])) {
+    redirect('/panel/home', 'File doesn\'t exist');
 }
+
+sql_delete(
+    'files',
+    "id='{$file_id}'"
+);
+
+$path = folder_path($file['folder_id'], true)['path'] . $file['name'];
+unlink($path);
+
+redirect('/panel/home?folder_id=' . $file['folder_id'], 'File deleted');

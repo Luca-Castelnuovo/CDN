@@ -4,12 +4,12 @@ require $_SERVER['DOCUMENT_ROOT'] . '/panel/includes/init.php';
 
 loggedin();
 
-$project_id = check_data($_GET['project_id'], true, 'Project ID', true, '/home');
-$file_id = check_data($_GET['file_id'], true, 'File ID', true, '/home?project_id' . $project_id);
+$project_id = check_data($_GET['project_id'], true, 'Project ID', true, '/panel/home');
+$file_id = check_data($_GET['file_id'], true, 'File ID', true, '/panel/home?project_id' . $project_id);
 
 $file_sql = sql_select('files', 'name', "owner_id='{$_SESSION['id']}'  AND id='{$file_id}' AND project_id='{$project_id}'", false);
 if ($file_sql->num_rows != 1) {
-    redirect('/home?project_id=' . $project_id, 'File doen\'t exist');
+    redirect('/panel/home?project_id=' . $project_id, 'File doen\'t exist');
 } else {
     $file_assoc = $file_sql->fetch_assoc();
 }
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     fwrite($file_open, htmlspecialchars_decode($_POST['content']));
     fclose($file_open);
 
-    redirect('/home?project_id=' . $project_id, 'File updated');
+    redirect('/panel/home?project_id=' . $project_id, 'File updated');
 }
 
 $ext = pathinfo($file, PATHINFO_EXTENSION);
@@ -42,7 +42,7 @@ switch ($ext) {
         break;
 
     default:
-        redirect('/home?project_id=' . $project_id, 'Please delete this file');
+        redirect('/panel/home?project_id=' . $project_id, 'Please delete this file');
         break;
 }
 
