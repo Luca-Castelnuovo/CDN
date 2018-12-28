@@ -1,8 +1,6 @@
 <?php
 
 function folders_list() {
-    $user_id = check_data($user_id, true, 'User ID', true, '/panel/home');
-
     $projects = sql_select('folders', 'id,name', "true", false);
 
     echo '<style>.blue-icon{color:#2962ff}</style>';
