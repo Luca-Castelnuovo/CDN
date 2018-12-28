@@ -4,9 +4,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/panel/includes/init.php';
 
 loggedin();
 
-csrf_val($_GET['CSRFtoken'], '/panel/panel/home');
+csrf_val($_GET['CSRFtoken'], '/panel/home');
 
-$file_id = check_data($_GET['file_id'], true, 'File ID', true, '/panel/panel/home');
+$file_id = check_data($_GET['file_id'], true, 'File ID', true, '/panel/home');
 
 $file = sql_select(
                 'files',

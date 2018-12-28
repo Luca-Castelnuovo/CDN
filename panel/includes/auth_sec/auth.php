@@ -9,9 +9,6 @@ function login($access_token) {
 
     $allowed_users = json_decode(file_get_contents($GLOBALS['config']->allowed_users_json));
     if (!in_array($user['username'], $allowed_users)) {
-        var_dump($GLOBALS['config']->allowed_users_json);
-        var_dump(file_get_contents($GLOBALS['config']->allowed_users_json));
-        var_dump($allowed_users);exit;
         redirect('/panel/?reset', 'Access Denied');
     }
 
@@ -19,7 +16,7 @@ function login($access_token) {
     $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
     $_SESSION['access_token'] = $access_token;
 
-    redirect('/panel/panel/home', 'You are logged in');
+    redirect('/panel/home', 'You are logged in');
 }
 
 
