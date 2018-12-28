@@ -7,7 +7,7 @@ function login($access_token) {
         response(false, $error->getMessage());
     }
 
-    $allowed_users = json_decode($GLOBALS['config']->allowed_users_json);
+    $allowed_users = json_decode(file_get_contents($GLOBALS['config']->allowed_users_json));
     if (!in_array($user['username'], $allowed_users)) {
         redirect('/panel/?reset', 'Access Denied');
     }
