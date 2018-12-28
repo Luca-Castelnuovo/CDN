@@ -14,7 +14,12 @@ Liscense: MIT
 //Disable error report for undefined superglobals
 error_reporting( error_reporting() & ~E_NOTICE );
 
-$allow_delete = true;
+if (isset($_GET['delete'])) {
+    $allow_delete = true;
+} else {
+    $allow_delete = false;
+}
+
 $allow_upload = true;
 $allow_create_folder = true;
 $allow_direct_link = true;
