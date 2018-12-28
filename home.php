@@ -224,6 +224,7 @@ $MAX_UPLOAD_SIZE = min(asBytes(ini_get('post_max_size')), asBytes(ini_get('uploa
         <tbody id="list">
         </tbody>
     </table>
+    <a href="/?logout">Logout</a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="https://cdn.lucacastelnuovo.nl/cdn.lucacastelnuovo.nl/js/main.js"></script>
 </body>
