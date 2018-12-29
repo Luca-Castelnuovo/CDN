@@ -1,7 +1,7 @@
 function getService() {
     let hash = window.location.hash.substr(1);
 
-    if (hash !== "") {
+    if (hash.length) {
         return hash.replace(/^\/|\/$/g, '');
     } else {
         location.replace('/');
