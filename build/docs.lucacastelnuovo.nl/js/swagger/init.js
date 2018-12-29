@@ -1,2 +1,43 @@
-"use strict";function getService(){var e=window.location.hash.substr(1).split("&").reduce(function(e,n){var r=n.split("=");return e[r[0]]=r[1],e},{});if(null!=e)return e.service;location.replace("/")}function swaggerRender(e){var n=SwaggerUIBundle({url:e+".json",dom_id:"#swagger-ui",deepLinking:!0,presets:[SwaggerUIBundle.presets.apis,SwaggerUIStandalonePreset],plugins:[SwaggerUIBundle.plugins.DownloadUrl],layout:"StandaloneLayout"});window.ui=n;var r=document.querySelector(".topbar");r.parentNode.removeChild(r)}window.onload=function(){swaggerRender(getService()),window.addEventListener("hashchange",function(){swaggerRender(getService())})};
-//# sourceMappingURL=init.js.map
+function getService() {
+    let hash = window.location.hash.substr(1);
+
+    let result = hash.split('&').reduce(function (result, item) {
+        let parts = item.split('=');
+        result[parts[0]] = parts[1];
+        return result;
+    }, {});
+
+    if (result != null) {
+        return result['service'];
+    } else {
+        location.replace('/');
+    }
+}
+
+function swaggerRender(service) {
+    let ui = SwaggerUIBundle({
+        url: service + '.json',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+        ],
+        plugins: [
+            SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout"
+    })
+    window.ui = ui
+
+    let topbar = document.querySelector('.topbar');
+    topbar.parentNode.removeChild(topbar);
+}
+
+window.onload = function() {
+    swaggerRender(getService());
+
+    window.addEventListener("hashchange", function () {
+        swaggerRender(getService());
+    });
+}
