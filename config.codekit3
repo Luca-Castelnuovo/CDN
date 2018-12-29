@@ -56,6 +56,12 @@
 		"oT": 1,
 		"q": 90
 		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/cdn.lucacastelnuovo.nl/css/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -82,6 +88,56 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/build/cdn.lucacastelnuovo.nl/js/main.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/docs.lucacastelnuovo.nl/css/swagger.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/docs.lucacastelnuovo.nl/css/swagger.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/docs.lucacastelnuovo.nl/js/init.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/docs.lucacastelnuovo.nl/js/init.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/docs.lucacastelnuovo.nl/js/swagger/bundle.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/docs.lucacastelnuovo.nl/js/swagger/bundle.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/docs.lucacastelnuovo.nl/js/swagger/init.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/docs.lucacastelnuovo.nl/js/swagger/init.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/docs.lucacastelnuovo.nl/js/swagger/standalone.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/docs.lucacastelnuovo.nl/js/swagger/standalone.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
