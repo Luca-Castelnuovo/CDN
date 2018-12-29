@@ -1,0 +1,59 @@
+############
+# General #
+###########
+
+# Enable engine
+RewriteEngine On
+
+# Allow access to CDN
+Header set Access-Control-Allow-Origin "*"
+
+# Enable caching option
+ExpiresActive On
+ExpiresDefault "access plus 2 days"
+
+# Remove php extension
+RewriteCond %{DOCUMENT_ROOT}/$1\.php -f
+RewriteRule ^(.+?)/?$ /$1.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ - [L]
+
+
+##########################################
+# Prolong caching time for certain files #
+##########################################
+
+# Images
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/ico "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+
+# JS
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+
+# CSS
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/css "now plus 1 month"
+
+# PDF
+ExpiresByType application/pdf "access 1 month"
+
+
+##########################################
+# Prolong caching time for certain files #
+##########################################
+
+# Start engine and get request url
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Allow dynamic files (/*/dynamic/file.* => /*/dynamic/file.php)
+RewriteRule ^(.+)\/dynamic\/([a-zA-Z]+)\.(\d+)\.(js|css)$ $1/dynamic/$2.php [L]
+RewriteRule ^(.+)\/dynamic\/([a-zA-Z]+)\.(js|css)$ $1/dynamic/$2.php [L]
+
+# Cache Bust (/*/file.0-9.[js|css|png|jpe?g|gif] => /*/file.[js|css|png|jpe?g|gif])
+RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpe?g|gif)$ $1.$3 [L]

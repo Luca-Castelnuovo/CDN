@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "28905",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/.gitignore",
+		"oF": 0
+		},
 	"/.htaccess": {
 		"cB": 0,
 		"ft": 8192,
@@ -16,11 +23,90 @@
 		"oAP": "/build/.htaccess",
 		"oF": 0
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
+	"/android-chrome-192x192.png": {
+		"ft": 32768,
+		"iS": 10228,
+		"oA": 0,
+		"oAP": "/build/android-chrome-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/android-chrome-512x512.png": {
+		"ft": 32768,
+		"iS": 28254,
+		"oA": 0,
+		"oAP": "/build/android-chrome-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 9218,
+		"oA": 0,
+		"oAP": "/build/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/cdn.lucacastelnuovo.nl/css/main.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/cdn.lucacastelnuovo.nl/css/main.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/cdn.lucacastelnuovo.nl/js/jquery.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/cdn.lucacastelnuovo.nl/js/jquery.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/cdn.lucacastelnuovo.nl/js/main.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/cdn.lucacastelnuovo.nl/js/main.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 488,
+		"oA": 0,
+		"oAP": "/build/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
+	"/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 991,
+		"oA": 0,
+		"oAP": "/build/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
 		},
 	"/favicon.ico": {
 		"cB": 0,
@@ -214,6 +300,72 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
+		},
+	"/general/js/materialize.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/general/js/materialize.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/home.php",
+		"oF": 0
+		},
+	"/includes/auth.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/includes/auth.php",
+		"oF": 0
+		},
+	"/includes/authentication.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/includes/authentication.php",
+		"oF": 0
+		},
+	"/includes/config.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/includes/config.php",
+		"oF": 0
+		},
+	"/includes/init.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/includes/init.php",
+		"oF": 0
+		},
+	"/includes/output.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/includes/output.php",
+		"oF": 0
+		},
+	"/includes/security.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/includes/security.php",
+		"oF": 0
+		},
+	"/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/index.php",
+		"oF": 0
 		},
 	"/lucacastelnuovo.nl/css/_bootstrap.scss": {
 		"aP": 1,
@@ -615,153 +767,50 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/test.lucacastelnuovo.nl/css/codemirror.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
+	"/share.lucacastelnuovo.nl/js/create_message.js": {
+		"ft": 64,
 		"ma": 0,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/test.lucacastelnuovo.nl/css/codemirror.css",
+		"oAP": "/build/share.lucacastelnuovo.nl/js/create_message.js",
 		"oF": 0,
-		"oS": 3
+		"sC": 3,
+		"tS": 1
 		},
-	"/test.lucacastelnuovo.nl/css/main.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
+	"/share.lucacastelnuovo.nl/js/view_message.js": {
+		"ft": 64,
 		"ma": 0,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/test.lucacastelnuovo.nl/css/main.css",
+		"oAP": "/build/share.lucacastelnuovo.nl/js/view_message.js",
 		"oF": 0,
-		"oS": 3
-		},
-	"/test.lucacastelnuovo.nl/js/codemirror.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror.js",
-		"oF": 1,
 		"sC": 3,
 		"tS": 1
 		},
-	"/test.lucacastelnuovo.nl/js/codemirror/closetag.js": {
+	"/site.webmanifest": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/site.webmanifest",
+		"oF": 0
+		},
+	"/test.lucacastelnuovo.nl/js/init.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/closetag.js",
-		"oF": 1,
+		"oA": 0,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/init.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/test.lucacastelnuovo.nl/js/codemirror/css.js": {
+	"/test.lucacastelnuovo.nl/js/plugins/emmet.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/css.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/codemirror/javascript.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/javascript.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/codemirror/xml.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/codemirror/xml.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/css.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/css.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/files.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/files.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/invite.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/invite.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/javascript.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/javascript.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/login.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/login.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/projects.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/projects.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/register.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/register.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 1
-		},
-	"/test.lucacastelnuovo.nl/js/xml.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "/build/test.lucacastelnuovo.nl/js/xml.js",
-		"oF": 1,
+		"oA": 0,
+		"oAP": "/build/test.lucacastelnuovo.nl/js/plugins/emmet.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		}
@@ -794,9 +843,9 @@
 	"creationDate": 564134075.31215703,
 	"displayValue": "CDN",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-ron",
+	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 567514732.18551397
+	"lastBuiltDate": 567783820.95489395
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
