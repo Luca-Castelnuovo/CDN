@@ -1,14 +1,8 @@
 function getService() {
     let hash = window.location.hash.substr(1);
 
-    let result = hash.split('&').reduce(function (result, item) {
-        let parts = item.split('=');
-        result[parts[0]] = parts[1];
-        return result;
-    }, {});
-
-    if (result != null) {
-        return result['service'];
+    if (hash !== "") {
+        return hash;
     } else {
         location.replace('/');
     }
