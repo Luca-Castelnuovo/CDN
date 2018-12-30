@@ -388,13 +388,6 @@
 		"oAP": "/build/includes/authentication.php",
 		"oF": 0
 		},
-	"/includes/config.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/includes/config.php",
-		"oF": 0
-		},
 	"/includes/init.php": {
 		"cB": 0,
 		"ft": 8192,
