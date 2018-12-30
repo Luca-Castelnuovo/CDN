@@ -9,6 +9,8 @@ function getService() {
 }
 
 function swaggerRender(service) {
+    M.Sidenav.getInstance(document.querySelectorAll(".sidenav")).close();
+
     let ui = SwaggerUIBundle({
         url: service + '.json',
         dom_id: '#swagger-ui',
