@@ -1,10 +1,14 @@
 function getService() {
     let service = window.location.hash.substr(1).replace(/^\/|\/$/g, '');
 
-    if (service.length) {
-        return service;
-    } else {
+    if (!service.length) {
         location.replace('/');
+    }
+
+    if (string.includes(encodeURIComponent('https://'))) {
+        return decodeURIComponent(service);
+    } else {
+        return service + '.json';
     }
 }
 
@@ -12,7 +16,7 @@ function swaggerRender(service) {
     M.Sidenav.getInstance(document.querySelector(".sidenav")).close();
 
     let ui = SwaggerUIBundle({
-        url: service + '.json',
+        url: service,
         dom_id: '#swagger-ui',
 
         presets: [
