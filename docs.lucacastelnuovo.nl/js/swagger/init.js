@@ -1,8 +1,8 @@
 function getService() {
-    let hash = window.location.hash.substr(1).replace(/^\/|\/$/g, '');
+    let service = window.location.hash.substr(1).replace(/^\/|\/$/g, '');
 
-    if (hash.length) {
-        return hash;
+    if (service.length) {
+        return service;
     } else {
         location.replace('/');
     }
@@ -12,16 +12,25 @@ function swaggerRender(service) {
     let ui = SwaggerUIBundle({
         url: service + '.json',
         dom_id: '#swagger-ui',
-        deepLinking: true,
+
         presets: [
             SwaggerUIBundle.presets.apis,
             SwaggerUIStandalonePreset
         ],
+
         plugins: [
             SwaggerUIBundle.plugins.DownloadUrl
         ],
+
         layout: "StandaloneLayout"
     })
+
+    ui.initOAuth({
+        clientId: "7b90a348c7ff3d30f0f757113d92d34c",
+        appName: "Test OAuth2.0",
+        scopeSeparator: ",",
+    })
+
     window.ui = ui
 
     let topbar = document.querySelector('.topbar');
@@ -31,7 +40,7 @@ function swaggerRender(service) {
 window.onload = function() {
     swaggerRender(getService());
 
-    window.addEventListener("hashchange", function () {
+    window.addEventListener("hashchange", function() {
         swaggerRender(getService());
     });
 }
