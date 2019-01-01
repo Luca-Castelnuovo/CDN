@@ -473,7 +473,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/build/lucacastelnuovo.nl/css/_main.css",
+		"oAP": "/build/lucacastelnuovo.nl/css/_main2.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -728,6 +728,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/lucacastelnuovo.nl/js/jqBootstrapValidation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/lucacastelnuovo.nl/js/main.js": {
 		"ft": 64,
 		"ma": 0,
@@ -824,8 +834,14 @@
 	"/lucacastelnuovo.nl/js/compiled.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/fullPage.js",
+			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
 			"position": 0,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/fullPage.js",
+			"position": 1,
 			"type": 1
 			}
 		]
@@ -836,7 +852,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 568050709.292647
+	"lastBuiltDate": 568051697.76833701
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
