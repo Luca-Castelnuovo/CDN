@@ -1,15 +1,11 @@
 function getService() {
-    let service = window.location.hash.substr(1).replace(/^\/|\/$/g, '');
+    let service = window.location.hash;
 
     if (!service.length) {
         location.replace('/');
     }
 
-    if (service.includes(encodeURIComponent('https://')) || service.includes('https://')) {
-        return decodeURIComponent(service);
-    } else {
-        return service + '.json';
-    }
+    return 'https://test.lucacastelnuovo.nl/users/ltcastelnuovo/documentation/' + service + '.js';
 }
 
 function swaggerRender(service) {
