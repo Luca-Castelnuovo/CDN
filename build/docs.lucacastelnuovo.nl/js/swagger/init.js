@@ -37,6 +37,9 @@ function swaggerRender(service) {
 
     let topbar = document.querySelector('.topbar');
     topbar.parentNode.removeChild(topbar);
+
+    let validBadge = document.querySelector('.wrapper');
+    validBadge.parentNode.removeChild(validBadge);
 }
 
 window.onload = function() {
