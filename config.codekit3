@@ -330,6 +330,16 @@
 		"oAP": "/build/general/js/dynamic/background.php",
 		"oF": 0
 		},
+	"/general/js/form-handler.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/general/js/form-handler.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/general/js/loader.js": {
 		"ft": 64,
 		"ma": 0,
@@ -463,19 +473,6 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/build/lucacastelnuovo.nl/css/_main.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/lucacastelnuovo.nl/css/_main2.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
 		"oAP": "/build/lucacastelnuovo.nl/css/_main2.css",
 		"oF": 0,
 		"oS": 3,
@@ -490,19 +487,6 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/build/lucacastelnuovo.nl/css/compiled.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"/lucacastelnuovo.nl/css/compiled2.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/build/lucacastelnuovo.nl/css/compiled2.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -734,32 +718,12 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"/lucacastelnuovo.nl/js/contact.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/build/lucacastelnuovo.nl/js/contact.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
 	"/lucacastelnuovo.nl/js/fullPage.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/build/lucacastelnuovo.nl/js/fullPage.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/lucacastelnuovo.nl/js/jqBootstrapValidation.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/build/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -773,16 +737,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/lucacastelnuovo.nl/js/main2.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/lucacastelnuovo.nl/js/main2.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
 		},
 	"/lucacastelnuovo.nl/pdf/cv.pdf": {
 		"cB": 0,
@@ -870,20 +824,8 @@
 	"/lucacastelnuovo.nl/js/compiled.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/jqBootstrapValidation.js",
-			"position": 0,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/fullPage.js",
-			"position": 1,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "/lucacastelnuovo.nl/js/contact.js",
-			"position": 2,
+			"position": 0,
 			"type": 1
 			}
 		]
@@ -894,7 +836,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 568041270.72661197
+	"lastBuiltDate": 568050709.292647
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

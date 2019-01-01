@@ -13,7 +13,7 @@
   color: #ffffff;
 }
 
-/** Preloader credit: Mathijs Otterloo **/
+/** Preloader **/
 
 #preloader {
   background-color: #dc2f21;
@@ -48,7 +48,7 @@
   transform: translate3d(0, -10px, 0);
 }
 
-/** Spinner credit: Mathijs Otterloo **/
+/** Spinner **/
 
 svg.spinner {
   width: 40px;
@@ -309,64 +309,6 @@ section#contact {
   padding-bottom: 0;
 }
 
-#portfoli0 .portfolio-item {
-  right: 0;
-  margin: 0 0 15px;
-}
-
-#portfoli0 .portfolio-item .portfolio-link {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  max-width: 400px;
-}
-
-#portfoli0 .portfolio-item .portfolio-link .caption {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background: rgba(220, 47, 33, 0.9);
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  border-radius: 4px;
-}
-
-#portfoli0 .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
-}
-
-#portfoli0 .portfolio-item .portfolio-link .caption .caption-content {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 20px;
-  margin-top: -12px;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-}
-
-#portfoli0 .portfolio-item .portfolio-link .caption .caption-content i {
-  margin-top: -12px;
-}
-
-#portfoli0 .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfoli0 .portfolio-item .portfolio-link .caption .caption-content h4 {
-  margin: 0;
-}
-
-#portfoli0 * {
-  z-index: 2;
-}
-
-@media (min-width: 767px) {
-  #portfoli0 .portfolio-item {
-    margin: 0 0 30px;
-  }
-}
-
 .btn-outline {
   margin-top: 15px;
   border: 2px solid #fff;
@@ -385,16 +327,27 @@ footer {
 .btn-outline:active,
 .btn-outline:focus,
 .btn-outline:hover {
-  border: 2px solid #fff;
+  border: 2px solid #dc2f21;
   color: #dc2f21;
   background: #fff;
+}
+
+.btn.btn-lg.btn-outline {
+    color: #dc2f21;
+    border: 2px solid #dc2f21;
+    background: #fff;
+}
+
+.btn.btn-lg.btn-outline:hover {
+    color: #fff;
+    border: 2px solid #dc2f21;
+    background: #dc2f21;
 }
 
 .floating-label-form-group {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #eee;
 }
 
 .floating-label-form-group input,
@@ -430,16 +383,11 @@ footer {
 
 .floating-label-form-group::not(:first-child) {
   padding-left: 14px;
-  border-left: 1px solid #eee;
 }
 
 .floating-label-form-group-with-value label {
   top: 0;
   opacity: 1;
-}
-
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eee;
 }
 
 footer {
@@ -458,74 +406,19 @@ footer {
   background-color: #dc2f21;
 }
 
-.portfolio-modal .modal-content {
-  padding: 100px 0;
-  min-height: 100%;
-  border: 0;
-  border-radius: 0;
-  text-align: center;
-  background-clip: border-box;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.btn-success {
+  color: #fff !important;
+  background-color: #dc2f21 !important;
+  border-color: #fff !important;
+  transition: all .3s ease-in-out;
 }
 
-.portfolio-modal .modal-content h2 {
-  margin: 0;
-  font-size: 3em;
+.btn-success:hover {
+  color: #dc2f21 !important;
+  background-color: #fff !important;
+  border-color: #dc2f21 !important;
 }
 
-.portfolio-modal .modal-content img {
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content .item-details {
-  margin: 30px 0;
-}
-
-.portfolio-modal .close-modal {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.portfolio-modal .close-modal:hover {
-  opacity: 0.3;
-}
-
-.portfolio-modal .close-modal .lr {
-  z-index: 1051;
-  width: 1px;
-  height: 75px;
-  margin-left: 35px;
-  background-color: #2c3e50;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.portfolio-modal .close-modal .lr .rl {
-  z-index: 1052;
-  width: 1px;
-  height: 75px;
-  background-color: #2c3e50;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.navbar-nav > .active > a {
-  background-color: #233140 !important;
-}
-
-.modal.fade.in {
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-}
-
-#fp-nav ul li .fp-tooltip {
-  color: #2c3e50 !important;
+.text-danger, .text-danger:hover {
+    color: #fff !important;
 }
