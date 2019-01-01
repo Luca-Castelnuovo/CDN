@@ -473,7 +473,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/build/lucacastelnuovo.nl/css/_main2.css",
+		"oAP": "/build/lucacastelnuovo.nl/css/_main.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -733,10 +733,10 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/lucacastelnuovo.nl/js/main.js",
+		"oAP": "/build/lucacastelnuovo.nl/js/main2.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"/lucacastelnuovo.nl/pdf/cv.pdf": {
 		"cB": 0,
