@@ -1,5 +1,5 @@
 function getService() {
-    let service = window.location.hash;
+    let service = window.location.hash.replace(/#/g,'');
 
     if (!service.length) {
         location.replace('/');
