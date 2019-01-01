@@ -5,7 +5,7 @@ function getService() {
         location.replace('/');
     }
 
-    return 'https://test.lucacastelnuovo.nl/users/ltcastelnuovo/documentation/' + service + '.js';
+    return 'https://test.lucacastelnuovo.nl/users/ltcastelnuovo/documentation/' + service + '.json';
 }
 
 function swaggerRender(service) {
