@@ -16,13 +16,6 @@
 		"oAP": "/build/.gitignore",
 		"oF": 0
 		},
-	"/.htaccess": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/build/.htaccess",
-		"oF": 0
-		},
 	"/android-chrome-192x192.png": {
 		"ft": 32768,
 		"iS": 10228,
@@ -386,6 +379,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/build/includes/authentication.php",
+		"oF": 0
+		},
+	"/includes/config.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/includes/config.php",
 		"oF": 0
 		},
 	"/includes/init.php": {
@@ -894,7 +894,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 567783820.95489395
+	"lastBuiltDate": 568041270.72661197
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

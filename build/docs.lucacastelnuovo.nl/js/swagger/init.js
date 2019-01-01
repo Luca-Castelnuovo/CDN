@@ -5,7 +5,7 @@ function getService() {
         location.replace('/');
     }
 
-    if (service.includes(encodeURIComponent('https://'))) {
+    if (service.includes(encodeURIComponent('https://')) || service.includes('https://')) {
         return decodeURIComponent(service);
     } else {
         return service + '.json';
