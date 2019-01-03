@@ -30,7 +30,7 @@ submitBtn.addEventListener("click", function() {
                             <input id="inputURL" type="text" value="${json.url}" readonly>
                         </div>
                         <div class='input-field col s2'>
-                            <button id="copyBtn" class="btn waves-effect blue accent-4" data-clipboard-action="copy" data-clipboard-target="#inputURL">Copy</button>
+                            <button id="copyBtn" class="btn waves-effect blue accent-4 col s12" data-clipboard-action="copy" data-clipboard-target="#inputURL">Copy</button>
                         </div>
                     </div>
                     <div class='row'>
