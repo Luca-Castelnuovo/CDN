@@ -60,5 +60,4 @@ submitBtn.addEventListener("click", function() {
     xhr.send(`access_token=${access_token}&message=${inputMessage}&expires=${inputExpires}`);
 });
 
-var btn = document.getElementById('copyBtn');
-var clipboard = new ClipboardJS(btn);
+var clipboard = new ClipboardJS(document.querySelector('#copyBtn'));
