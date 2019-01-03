@@ -26,8 +26,11 @@ submitBtn.addEventListener("click", function() {
 
                 const html = `
                     <div class='row'>
-                        <div class='input-field col s12'>
-                            <input id="inputURL" type="text" value="${json.url}" readonly onclick="copyURL();">
+                        <div class='input-field col s10'>
+                            <input id="inputURL" type="text" value="${json.url}" readonly>
+                        </div>
+                        <div class='input-field col s2'>
+                            <button id="copyBtn" class="btn waves-effect blue accent-4" data-clipboard-target="#inputURL">Copy</button>
                         </div>
                     </div>
                     <div class='row'>
@@ -59,9 +62,4 @@ submitBtn.addEventListener("click", function() {
     xhr.send(`access_token=${access_token}&message=${inputMessage}&expires=${inputExpires}`);
 });
 
-function copyURL() {
-    const inputURL = document.querySelector("#inputURL");
-    inputURL.select();
-    document.execCommand("copy");
-    M.toast({html: "Copied link"});
-}
+new ClipboardJS('#copyBtn');
