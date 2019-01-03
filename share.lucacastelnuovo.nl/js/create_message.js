@@ -46,8 +46,6 @@ submitBtn.addEventListener("click", function() {
                 `;
 
                 container.innerHTML = html;
-                const textarea = document.querySelector("#textarea-message");
-                M.textareaAutoResize(textarea);
             } else {
                 M.Toast.dismissAll();
                 M.toast({html: "Server error, please try again later."});
@@ -62,4 +60,5 @@ submitBtn.addEventListener("click", function() {
     xhr.send(`access_token=${access_token}&message=${inputMessage}&expires=${inputExpires}`);
 });
 
-new ClipboardJS('#copyBtn');
+var btn = document.getElementById('copyBtn');
+var clipboard = new ClipboardJS(btn);
