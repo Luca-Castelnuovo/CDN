@@ -1,14 +1,13 @@
 function feed_render_posts(data) {
-    // setInterval(feed_check_posts(), 3000);
+    setInterval(feed_check_posts, 30000);
 
     if (!data.success) {
         return false;
     }
 
-    // saves only strings so json encode
-    // localStorage.setItem('posts', data);
+    localStorage.setItem('posts', JSON.stringify(data));
 
-    let posts_array = [];
+    var posts_array = [];
 
     for (post of data.posts) {
         posts_array.push(feed_render_post(post));
@@ -19,7 +18,8 @@ function feed_render_posts(data) {
 
 function feed_check_posts() {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/${CSRFtoken}/feed`, function(response) {
-        if (response !== localStorage.getItem('posts')) {
+        if (JSON.stringify(response) !== localStorage.getItem('posts')) {
+            M.Toast.dismissAll();
             M.toast({
                 html: '<span>You have new posts!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load Posts</button>',
                 displayLength: 86400000
@@ -29,8 +29,8 @@ function feed_check_posts() {
 }
 
 function feed_render_post(post) {
-    let comments;
-    let comments_form;
+    var comments;
+    var comments_form;
 
     if (post.comments !== null && post.comments_allowed) {
         comments = feed_render_comments(post.comments);
@@ -59,8 +59,8 @@ function feed_render_post(post) {
         comments_form = '';
     }
 
-    const like_icon = post.liked ? 'favorite' : 'favorite_border';
-    const like_action = post.liked ? 'undo_like' : 'like';
+    var like_icon = post.liked ? 'favorite' : 'favorite_border';
+    var like_action = post.liked ? 'undo_like' : 'like';
 
     return `
         <div class="col s12">
@@ -89,7 +89,7 @@ function feed_render_post(post) {
 }
 
 function feed_render_comments(comments) {
-    let comments_array = [];
+    var comments_array = [];
 
     for (comment of comments) {
         comments_array.push(feed_render_comment(comment));

@@ -451,8 +451,8 @@
 		},
 	"/instakilo.lucacastelnuovo.nl/js/app.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 0,
+		"ma": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/app.js",
 		"oF": 0,
@@ -935,7 +935,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 569095267.56657302
+	"lastBuiltDate": 569103722.160923
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

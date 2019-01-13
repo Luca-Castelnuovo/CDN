@@ -1,5 +1,5 @@
 function request(method, url, callback) {
-    const xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState !== 4) return;
