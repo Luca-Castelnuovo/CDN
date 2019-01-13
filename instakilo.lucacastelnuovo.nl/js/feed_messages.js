@@ -2,7 +2,6 @@ function feed_render_messages(data) {
     // setInterval(feed_check_messages(), 3000);
 
     if (!data.success) {
-        console.log('no posts');
         return false;
     }
 

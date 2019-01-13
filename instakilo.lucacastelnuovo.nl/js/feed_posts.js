@@ -2,7 +2,6 @@ function feed_render_posts(data) {
     setInterval(feed_check_posts(), 3000);
 
     if (!data.success) {
-        console.log('no posts');
         return false;
     }
 
@@ -33,7 +32,7 @@ function feed_render_post(post) {
     let comments_form;
 
     if (post.comments !== null && post.comments_allowed) {
-        comments = render_comments(post.comments);
+        comments = feed_render_comments(post.comments);
         comments_form = `
             <form action="/posts/actions" method="POST">
                 <div class="row mb-0">
@@ -92,7 +91,7 @@ function feed_render_comments(comments) {
     let comments_array = [];
 
     for (comment of comments) {
-        comments_array.push(render_comment(comment));
+        comments_array.push(feed_render_comment(comment));
     }
 
     return comments_array.join('');
