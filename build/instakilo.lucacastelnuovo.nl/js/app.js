@@ -63,14 +63,14 @@ function feed_check_posts() {
 
 function feed_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`, function(response) {
-        if (response.success) {
-            CSRFtoken = response.CSRFtoken;
+        CSRFtoken = response.CSRFtoken;
 
+        if (response.success) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
 
             const like_url = document.querySelector(`#post-${post_id} a`);
-            like_url.href = `/posts/actions/undo_like/${response.CSRFtoken}/${post_id}`;
+            like_url.onclick = `feed_undo_like_post(${post_id})`;
 
             const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite';
@@ -84,19 +84,19 @@ function feed_like_post(post_id) {
 
 function feed_undo_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
-        if (response.success) {
-            CSRFtoken = response.CSRFtoken;
+        CSRFtoken = response.CSRFtoken;
 
+        if (response.success) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
 
             const like_url = document.querySelector(`#post-${post_id} a`);
-            like_url.href = `/posts/actions/like/${response.CSRFtoken}/${post_id}`;
+            like_url.onclick = `feed_like_post(${post_id})`;
 
             const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite_border';
 
-            M.toast({html: 'Like remove'});
+            M.toast({html: 'Like removed'});
         } else {
             console.log('error', response);
         }
@@ -135,7 +135,7 @@ function feed_render_post(post) {
     }
 
     var like_icon = post.liked ? 'favorite' : 'favorite_border';
-    var like_action = post.liked ? 'undo_like' : 'like';
+    var like_function = post.liked ? `feed_undo_like_post(${post.id})` : `feed_like_post(${post.id})`;
 
     return `
         <div class="col s12">
@@ -148,7 +148,7 @@ function feed_render_post(post) {
                 </div>
                 <div class="card-action">
                     <div class="row likes" id="post-${post.id}">
-                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes} likes</span>
+                        <a onclick="${like_function}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes} likes</span>
                     </div>
                     <div class="row mb-0">
                         <h6>Comments:</h6>
