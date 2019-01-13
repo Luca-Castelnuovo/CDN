@@ -451,13 +451,13 @@
 		},
 	"/instakilo.lucacastelnuovo.nl/js/app.js": {
 		"ft": 64,
-		"ma": 0,
-		"mi": 1,
+		"ma": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/app.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"/instakilo.lucacastelnuovo.nl/js/feed_messages.js": {
 		"ft": 64,
