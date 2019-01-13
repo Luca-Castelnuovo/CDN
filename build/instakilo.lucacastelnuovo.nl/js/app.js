@@ -64,6 +64,8 @@ function feed_check_posts() {
 function feed_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`, function(response) {
         if (response.success) {
+            CSRFtoken = response.CSRFtoken;
+
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
 
@@ -71,7 +73,7 @@ function feed_like_post(post_id) {
             like_url.href = `/posts/actions/undo_like/${response.CSRFtoken}/${post_id}`;
 
             const like_icon = document.querySelector(`#post-${post_id} a i`);
-            like_icon.innerHTML = 'favorite_border';
+            like_icon.innerHTML = 'favorite';
 
             M.toast({html: 'Liked'});
         } else {
@@ -83,6 +85,8 @@ function feed_like_post(post_id) {
 function feed_undo_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
         if (response.success) {
+            CSRFtoken = response.CSRFtoken;
+
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
 
@@ -90,7 +94,7 @@ function feed_undo_like_post(post_id) {
             like_url.href = `/posts/actions/like/${response.CSRFtoken}/${post_id}`;
 
             const like_icon = document.querySelector(`#post-${post_id} a i`);
-            like_icon.innerHTML = 'favorite';
+            like_icon.innerHTML = 'favorite_border';
 
             M.toast({html: 'Like remove'});
         } else {
