@@ -75,6 +75,8 @@ function feed_like_post(post_id) {
             like_icon.innerHTML = 'favorite_border';
 
             M.toast({html: 'Liked'});
+        } else {
+            console.log('request', response);
         }
     });
 }
@@ -92,6 +94,8 @@ function feed_undo_like_post(post_id) {
             like_icon.innerHTML = 'favorite';
 
             M.toast({html: 'Like remove'});
+        } else {
+            console.log('request', response);
         }
     });
 }
