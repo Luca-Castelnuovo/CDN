@@ -65,8 +65,8 @@ function feed_check_posts() {
 function feed_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`, function(response) {
         if (response.status) {
-            const likes = document.querySelector(`#${post_id}.row.likes .post_likes`);
-            likes.innerHTML = response.likes;
+            const likes = document.querySelector(`#post-${post_id} .post_likes`);
+            likes.innerHTML = response.likes + ' ';
 
             const like_url = document.querySelector(`#${post_id}.row.likes a`);
             like_url.href = `/posts/actions/undo_like/${response.CSRFtoken}/${post_id}`;
@@ -84,8 +84,8 @@ function feed_like_post(post_id) {
 function feed_undo_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
         if (response.status) {
-            const likes = document.querySelector(`#${post_id}.row.likes .post_likes`);
-            likes.innerHTML = response.likes;
+            const likes = document.querySelector(`#post-${post_id} .post_likes`);
+            likes.innerHTML = response.likes + ' ';
 
             const like_url = document.querySelector(`#${post_id}.row.likes a`);
             like_url.href = `/posts/actions/like/${response.CSRFtoken}/${post_id}`;
@@ -144,8 +144,8 @@ function feed_render_post(post) {
                     </p>
                 </div>
                 <div class="card-action">
-                    <div class="row likes" id="${post.id}">
-                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes}</span> likes
+                    <div class="row likes" id="post-${post.id}">
+                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes} </span> likes
                     </div>
                     <div class="row mb-0">
                         <h6>Comments:</h6>
