@@ -449,12 +449,55 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/instakilo.lucacastelnuovo.nl/js/dynamic/init.php": {
-		"cB": 0,
-		"ft": 8192,
+	"/instakilo.lucacastelnuovo.nl/js/app.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/dynamic/init.php",
-		"oF": 0
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/app.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/feed_messages.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/feed_messages.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/feed_posts.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/feed_posts.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/init.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/init.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/request.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/request.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
 		},
 	"/lucacastelnuovo.nl/css/_bootstrap.scss": {
 		"aP": 1,
@@ -892,7 +935,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 569091356.27662504
+	"lastBuiltDate": 569095267.56657302
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
