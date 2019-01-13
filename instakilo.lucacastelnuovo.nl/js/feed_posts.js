@@ -17,7 +17,7 @@ function feed_render_posts(data) {
 }
 
 function feed_check_posts() {
-    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/${CSRFtoken}/feed`, function(response) {
+    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/feed`, function(response) {
         if (JSON.stringify(response) !== localStorage.getItem('posts')) {
             M.Toast.dismissAll();
             M.toast({
@@ -73,7 +73,7 @@ function feed_render_post(post) {
                 </div>
                 <div class="card-action">
                     <div class="row likes">
-                        <a href="/posts/actions/${CSRFtoken}/${like_action}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> ${post.likes} likes
+                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> ${post.likes} likes
                     </div>
                     <div class="row mb-0">
                         <h6>Comments:</h6>

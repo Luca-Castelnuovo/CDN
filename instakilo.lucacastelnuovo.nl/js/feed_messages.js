@@ -22,7 +22,7 @@ function feed_render_messages(data) {
 }
 
 function feed_check_messages() {
-    request('GET', `https://instakilo.lucacastelnuovo.nl/messages/actions/${CSRFtoken}`, function(response) {
+    request('GET', `https://instakilo.lucacastelnuovo.nl/messages/actions`, function(response) {
         if (JSON.stringify(response) !== localStorage.getItem('messages')) {
             M.Toast.dismissAll();
             M.toast({
