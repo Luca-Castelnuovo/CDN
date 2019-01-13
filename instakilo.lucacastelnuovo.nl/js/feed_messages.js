@@ -5,6 +5,7 @@ function feed_render_messages(data) {
         return false;
     }
 
+    // saves only strings so json encode
     // localStorage.setItem('messages', data);
 
     let messages_array = [];

@@ -33,13 +33,13 @@ function request(method, url, callback) {
 "use strict";
 
 function feed_render_posts(data) {
-  setInterval(feed_check_posts(), 3000);
-
+  // setInterval(feed_check_posts(), 3000);
   if (!data.success) {
     return false;
-  }
+  } // saves only strings so json encode
+  // localStorage.setItem('posts', data);
 
-  localStorage.setItem('posts', data);
+
   var posts_array = [];
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
@@ -134,7 +134,8 @@ function feed_render_messages(data) {
   // setInterval(feed_check_messages(), 3000);
   if (!data.success) {
     return false;
-  } // localStorage.setItem('messages', data);
+  } // saves only strings so json encode
+  // localStorage.setItem('messages', data);
 
 
   var messages_array = [];

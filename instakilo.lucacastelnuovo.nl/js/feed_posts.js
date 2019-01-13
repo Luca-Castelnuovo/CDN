@@ -1,11 +1,12 @@
 function feed_render_posts(data) {
-    setInterval(feed_check_posts(), 3000);
+    // setInterval(feed_check_posts(), 3000);
 
     if (!data.success) {
         return false;
     }
 
-    localStorage.setItem('posts', data);
+    // saves only strings so json encode
+    // localStorage.setItem('posts', data);
 
     let posts_array = [];
 
