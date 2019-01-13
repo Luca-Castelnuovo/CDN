@@ -62,6 +62,23 @@ function feed_check_posts() {
     });
 }
 
+function feed_like_post(post_id) {
+    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/feed`, function(response) {
+        if (response.status) {
+            const likes = document.querySelector(`#${post_id}.row.likes .post_likes`);
+            likes.innerHTML = response.likes;
+
+            const like_url = document.querySelector(`#${post_id}.row.likes a`);
+            like_url.href = `/posts/actions/undo_like/${response.CSRFtoken}/${post_id}`;
+
+            const like_icon = document.querySelector(`#${post_id}.row.likes a i`);
+            like_icon.innerHTML = 'favorite_border';
+
+            M.toast({html: 'Liked'});
+        }
+    });
+}
+
 function feed_render_post(post) {
     var comments;
     var comments_form;
@@ -106,8 +123,8 @@ function feed_render_post(post) {
                     </p>
                 </div>
                 <div class="card-action">
-                    <div class="row likes">
-                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> ${post.likes} likes
+                    <div class="row likes" id="${post.id}">
+                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes}</span> likes
                     </div>
                     <div class="row mb-0">
                         <h6>Comments:</h6>
