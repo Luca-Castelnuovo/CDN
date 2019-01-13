@@ -41,6 +41,7 @@ function feed_like_post(post_id) {
             const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite';
 
+            M.Toast.dismissAll();
             M.toast({html: 'Liked'});
         } else {
             console.log('request', response);
@@ -62,6 +63,7 @@ function feed_undo_like_post(post_id) {
             const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite_border';
 
+            M.Toast.dismissAll();
             M.toast({html: 'Like removed'});
         } else {
             console.log('error', response);
