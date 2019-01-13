@@ -1,6 +1,7 @@
 <?php
 
-function login($access_token) {
+function login($access_token)
+{
     try {
         $user = api_get_user($access_token);
     } catch (Exception $error) {
@@ -15,7 +16,9 @@ function login($access_token) {
     $_SESSION['logged_in'] = true;
     $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
     $_SESSION['access_token'] = $access_token;
+    $_SESSION['id'] = $user['id'];
 
+    log_action('5', 'auth.login', $_SERVER["REMOTE_ADDR"], $user['id']);
     redirect('/home', 'You are logged in');
 }
 

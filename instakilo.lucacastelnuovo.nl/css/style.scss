@@ -1,0 +1,58 @@
+// Colors
+$color_primary: #2962ff;
+$color_error: #f44336;
+
+
+// Framework overrides
+.input-field {
+    input:focus {
+        border-bottom: 1px solid $color_primary !important;
+        box-shadow: 0 1px 0 0 $color_primary !important;
+        + label {
+            color: $color_primary !important;
+        }
+    }
+    textarea:focus + label {
+        color: $color_primary !important;
+    }
+}
+
+.row .input-field textarea {
+    &:focus {
+        border-bottom: 1px solid $color_primary;
+        box-shadow: 0 1px 0 0 $color_primary;
+    }
+    &.invalid {
+        border-bottom: 1px solid $color_error;
+        box-shadow: 0 1px 0 0 $color_error;
+    }
+}
+
+.collection .collection-item.avatar {
+    min-height: 0;
+}
+
+
+// Helpers
+.blue-icon {
+    color: $color_primary;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mr-6 {
+    margin-right: 6px !important;
+}
+
+// Posts
+#post_owner {
+    font-weight: bolder;
+}
+
+.likes {
+    font-size: 18px;
+    display: inline-flex;
+    vertical-align: middle;
+}

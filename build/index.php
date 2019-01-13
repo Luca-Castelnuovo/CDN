@@ -23,11 +23,19 @@ if (isset($_GET['code'])) {
 }
 
 if (isset($_GET['logout'])) {
+    if ($_SESSION['logged_in']) {
+        log_action('6', 'auth.logout', $_SERVER["REMOTE_ADDR"], $_SESSION['id']);
+    }
+
     alert_set('You are logged out.');
     reset_session();
 }
 
 if (isset($_GET['reset'])) {
+    if ($_SESSION['logged_in']) {
+        log_action('6', 'auth.reset', $_SERVER["REMOTE_ADDR"], $_SESSION['id']);
+    }
+
     reset_session();
 }
 

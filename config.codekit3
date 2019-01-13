@@ -436,6 +436,26 @@
 		"oAP": "/build/index.php",
 		"oF": 0
 		},
+	"/instakilo.lucacastelnuovo.nl/css/style.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/css/style.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/dynamic/init.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/dynamic/init.php",
+		"oF": 0
+		},
 	"/lucacastelnuovo.nl/css/_bootstrap.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -872,7 +892,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 568936777.59472001
+	"lastBuiltDate": 569091356.27662504
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
