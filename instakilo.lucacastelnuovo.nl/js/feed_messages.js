@@ -26,8 +26,7 @@ function feed_check_messages() {
         if (JSON.stringify(response) !== localStorage.getItem('messages')) {
             M.Toast.dismissAll();
             M.toast({
-                html: '<span>You have new messages!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load messages</button>',
-                displayLength: 86400000
+                html: '<span>You have new messages!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load messages</button>'
             });
         }
     });

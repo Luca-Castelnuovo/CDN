@@ -55,8 +55,7 @@ function feed_check_posts() {
         if (JSON.stringify(response) !== localStorage.getItem('posts')) {
             M.Toast.dismissAll();
             M.toast({
-                html: '<span>You have new posts!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load Posts</button>',
-                displayLength: 86400000
+                html: '<span>You have new posts!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load Posts</button>'
             });
         }
     });
@@ -64,14 +63,14 @@ function feed_check_posts() {
 
 function feed_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`, function(response) {
-        if (response.status) {
+        if (response.success) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
-            likes.innerHTML = response.likes + ' ';
+            likes.innerHTML = response.likes + ' likes';
 
-            const like_url = document.querySelector(`#${post_id}.row.likes a`);
+            const like_url = document.querySelector(`#post-${post_id} a`);
             like_url.href = `/posts/actions/undo_like/${response.CSRFtoken}/${post_id}`;
 
-            const like_icon = document.querySelector(`#${post_id}.row.likes a i`);
+            const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite_border';
 
             M.toast({html: 'Liked'});
@@ -83,19 +82,19 @@ function feed_like_post(post_id) {
 
 function feed_undo_like_post(post_id) {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
-        if (response.status) {
+        if (response.success) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
-            likes.innerHTML = response.likes + ' ';
+            likes.innerHTML = response.likes + ' likes';
 
-            const like_url = document.querySelector(`#${post_id}.row.likes a`);
+            const like_url = document.querySelector(`#post-${post_id} a`);
             like_url.href = `/posts/actions/like/${response.CSRFtoken}/${post_id}`;
 
-            const like_icon = document.querySelector(`#${post_id}.row.likes a i`);
+            const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite';
 
             M.toast({html: 'Like remove'});
         } else {
-            console.log('request', response);
+            console.log('error', response);
         }
     });
 }
@@ -145,7 +144,7 @@ function feed_render_post(post) {
                 </div>
                 <div class="card-action">
                     <div class="row likes" id="post-${post.id}">
-                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes} </span> likes
+                        <a href="/posts/actions/${like_action}/${CSRFtoken}/${post.id}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes} likes</span>
                     </div>
                     <div class="row mb-0">
                         <h6>Comments:</h6>
@@ -211,8 +210,7 @@ function feed_check_messages() {
         if (JSON.stringify(response) !== localStorage.getItem('messages')) {
             M.Toast.dismissAll();
             M.toast({
-                html: '<span>You have new messages!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load messages</button>',
-                displayLength: 86400000
+                html: '<span>You have new messages!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load messages</button>'
             });
         }
     });
