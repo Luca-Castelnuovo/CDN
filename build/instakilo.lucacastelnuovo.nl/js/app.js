@@ -135,8 +135,10 @@ function feed_render_comments(comments) {
 function feed_render_comment(comment) {
     return `
         <li class="collection-item avatar">
-            <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
-            <span class="title"><a href="/u/${comment.username}" class="blue-text">${comment.username}</a></span>
+            <a href="/u/${comment.username}" class="blue-text">
+                <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                <span class="title">${comment.username}</span>
+            </a>
             <p class="truncate">${comment.body}</p>
         </li>
     `;
@@ -181,8 +183,11 @@ function feed_check_messages() {
 function feed_render_message(message) {
     return `
         <li class="collection-item avatar">
-            <i class="material-icons circle">account_circle</i> <span class="title">FirstName Last Name</span>
-            <p class="truncate">Layers, background, shot, concept – good!</p><a class="secondary-content" href="#!"><i class="material-icons blue-icon">message</i></a>
+            <a href="/u/${message.username}" class="blue-text">
+                <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                <span class="title">${message.username}</span>
+            </a>
+            <p class="truncate">${message.body}</p>
         </li>
     `;
 }
