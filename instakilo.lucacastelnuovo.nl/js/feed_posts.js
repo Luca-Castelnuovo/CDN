@@ -35,8 +35,8 @@ function feed_like_post(post_id) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
 
-            const like_url = document.querySelector(`#post-${post_id} a`);
-            like_url.onclick = `feed_undo_like_post(${post_id})`;
+            const like_function = document.querySelector(`#post-${post_id} a`);
+            like_function.setAttribute('onClick', `feed_undo_like_post(${post_id})`);
 
             const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite';
@@ -56,8 +56,8 @@ function feed_undo_like_post(post_id) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
 
-            const like_url = document.querySelector(`#post-${post_id} a`);
-            like_url.onclick = `feed_like_post(${post_id})`;
+            const like_function = document.querySelector(`#post-${post_id} a`);
+            like_function.setAttribute('onClick', `feed_like_post(${post_id})`);
 
             const like_icon = document.querySelector(`#post-${post_id} a i`);
             like_icon.innerHTML = 'favorite_border';
