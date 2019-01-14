@@ -19,16 +19,32 @@ if (typeof auto_init !== 'undefined' && auto_init) {
 }
 
 
-function request(method, url, callback) {
+function GETrequest(url, callback) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState !== 4) return;
-        callback(JSON.parse(xhr.responseText));
+        var response = JSON.parse(xhr.responseText);
+        CSRFtoken = reponse.CSRFtoken;
+        callback(response);
     };
 
-    xhr.open(method, url);
+    xhr.open('GET', url);
     xhr.send();
+}
+
+function FORMrequest(formElement, callback) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState !== 4) return;
+        var response = JSON.parse(xhr.responseText);
+        CSRFtoken = reponse.CSRFtoken;
+        callback(response);
+    };
+
+    xhr.open('POST', formElement.action, true);
+    xhr.send(new FormData (formElement));
 }
 
 
@@ -51,9 +67,7 @@ function feed_render_posts(data) {
 }
 
 function feed_check_posts() {
-    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/feed`, function(response) {
-        CSRFtoken = response.CSRFtoken;
-
+    GETrequest(`https://instakilo.lucacastelnuovo.nl/posts/actions/feed`, function(response) {
         if (JSON.stringify(response) !== localStorage.getItem('posts')) {
             M.Toast.dismissAll();
             M.toast({
@@ -64,9 +78,7 @@ function feed_check_posts() {
 }
 
 function feed_like_post(post_id) {
-    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`, function(response) {
-        CSRFtoken = response.CSRFtoken;
-
+    GETrequest(`https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`, function(response) {
         if (response.success) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
@@ -99,9 +111,7 @@ function feed_like_post(post_id) {
 }
 
 function feed_undo_like_post(post_id) {
-    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
-        CSRFtoken = response.CSRFtoken;
-
+    GETrequest(`https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
         if (response.success) {
             const likes = document.querySelector(`#post-${post_id} .post_likes`);
             likes.innerHTML = response.likes + ' likes';
@@ -133,10 +143,13 @@ function feed_undo_like_post(post_id) {
     });
 }
 
-function feed_comment_post(post_id, comment) {
-    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
-        CSRFtoken = response.CSRFtoken;
+function feed_comment_post(formElement) {
+    var formData = new FormData (formElement);
+    console.log(formData);
+    //check comment length
+    //if to long send toast
 
+    FORMrequest(formElement, function(response) {
         if (response.success) {
             const new_comment = feed_render_comment(response.new_comment);
             const comment_container = document.querySelector(`#comment-container-${post_id}`);
@@ -171,7 +184,7 @@ function feed_render_post(post) {
     if (post.comments !== null && post.comments_allowed) {
         comments = feed_render_comments(post.comments);
         comments_form = `
-            <form action="/posts/actions" method="POST">
+            <form action="/posts/actions" method="POST" onsubmit="return feed_comment_post(this);">
                 <div class="row mb-0">
                     <div class="col s10">
                         <div class="input-field">
@@ -271,9 +284,7 @@ function feed_render_messages(data) {
 }
 
 function feed_check_messages() {
-    request('GET', `https://instakilo.lucacastelnuovo.nl/messages/actions`, function(response) {
-        CSRFtoken = response.CSRFtoken;
-
+    GETrequest(`https://instakilo.lucacastelnuovo.nl/messages/actions`, function(response) {
         if (JSON.stringify(response) !== localStorage.getItem('messages')) {
             M.Toast.dismissAll();
             M.toast({
