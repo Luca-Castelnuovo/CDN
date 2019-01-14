@@ -314,15 +314,26 @@ function feed_check_messages() {
 }
 
 function feed_render_message(message) {
-    return `
-        <li class="collection-item avatar">
-            <a href="/u/${message.username}" class="blue-text">
-                <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
-                <span class="title">${message.username}</span>
-            </a>
-            <p class="truncate">${message.body}</p>
-        </li>
-    `;
+    if (message.user_is_owner) {
+        return `
+            <li class="collection-item avatar">
+                <a href="/u/${message.username}" class="blue-text">
+                    <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                    <span class="title">${message.username}</span>
+                </a>
+                <p class="truncate">${message.body}</p>
+            </li>
+        `;
+    } else {
+        return `
+            <li class="collection-item avatar">
+                <a href="/u/${message.username}" class="blue-text">
+                    <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                    <span class="title">${message.username}</span>
+                </a>
+            </li>
+        `;
+    }
 }
 
 
