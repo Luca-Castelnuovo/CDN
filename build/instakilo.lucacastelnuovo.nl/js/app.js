@@ -273,6 +273,7 @@ function feed_render_comment(comment) {
                     <span class="title">${comment.username}</span>
                 </a>
                 <p class="truncate">${comment.body}</p>
+                <a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>
             </li>
         `;
     } else {
@@ -283,7 +284,6 @@ function feed_render_comment(comment) {
                     <span class="title">${comment.username}</span>
                 </a>
                 <p class="truncate">${comment.body}</p>
-                <a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>
             </li>
         `;
     }
