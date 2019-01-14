@@ -158,7 +158,7 @@ function feed_comment_post(formElement) {
 
     FORMrequest('/posts/actions/', formData, function(response) {
         if (response.success) {
-            const text_input = document.querySelector(`form_comment-${post_id}`);
+            const text_input = document.querySelector(`#form_comment-${post_id}`);
             text_input.value = '';
             let new_comment = document.createElement('div');
             new_comment.innerHTML = feed_render_comment(response.new_comment);
