@@ -69,6 +69,7 @@ function feed_render_posts(data) {
 
 function feed_check_posts() {
     GETrequest(`https://instakilo.lucacastelnuovo.nl/posts/actions/feed`, function(response) {
+        delete response.CSRFtoken;
         if (JSON.stringify(response) !== localStorage.getItem('posts')) {
             M.Toast.dismissAll();
             M.toast({
@@ -294,6 +295,7 @@ function feed_render_messages(data) {
 
 function feed_check_messages() {
     GETrequest(`https://instakilo.lucacastelnuovo.nl/messages/actions`, function(response) {
+        delete response.CSRFtoken;
         if (JSON.stringify(response) !== localStorage.getItem('messages')) {
             M.Toast.dismissAll();
             M.toast({
