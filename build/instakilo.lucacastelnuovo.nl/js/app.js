@@ -264,16 +264,28 @@ function feed_render_comments(comments) {
 }
 
 function feed_render_comment(comment) {
-    return `
-        <li class="collection-item avatar">
-            <a href="/u/${comment.username}" class="blue-text">
-                <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
-                <span class="title">${comment.username}</span>
-            </a>
-            <p class="truncate">${comment.body}</p>
-            <a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>
-        </li>
-    `;
+    if (comment.user_is_owner) {
+        return `
+            <li class="collection-item avatar">
+                <a href="/u/${comment.username}" class="blue-text">
+                    <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                    <span class="title">${comment.username}</span>
+                </a>
+                <p class="truncate">${comment.body}</p>
+            </li>
+        `;
+    } else {
+        return `
+            <li class="collection-item avatar">
+                <a href="/u/${comment.username}" class="blue-text">
+                    <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                    <span class="title">${comment.username}</span>
+                </a>
+                <p class="truncate">${comment.body}</p>
+                <a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>
+            </li>
+        `;
+    }
 }
 
 
@@ -314,26 +326,15 @@ function feed_check_messages() {
 }
 
 function feed_render_message(message) {
-    if (message.user_is_owner) {
-        return `
-            <li class="collection-item avatar">
-                <a href="/u/${message.username}" class="blue-text">
-                    <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
-                    <span class="title">${message.username}</span>
-                </a>
-                <p class="truncate">${message.body}</p>
-            </li>
-        `;
-    } else {
-        return `
-            <li class="collection-item avatar">
-                <a href="/u/${message.username}" class="blue-text">
-                    <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
-                    <span class="title">${message.username}</span>
-                </a>
-            </li>
-        `;
-    }
+    return `
+        <li class="collection-item avatar">
+            <a href="/u/${message.username}" class="blue-text">
+                <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                <span class="title">${message.username}</span>
+            </a>
+            <p class="truncate">${message.body}</p>
+        </li>
+    `;
 }
 
 

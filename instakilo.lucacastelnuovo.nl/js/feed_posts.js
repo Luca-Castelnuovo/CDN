@@ -214,14 +214,26 @@ function feed_render_comments(comments) {
 }
 
 function feed_render_comment(comment) {
-    return `
-        <li class="collection-item avatar">
-            <a href="/u/${comment.username}" class="blue-text">
-                <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
-                <span class="title">${comment.username}</span>
-            </a>
-            <p class="truncate">${comment.body}</p>
-            <a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>
-        </li>
-    `;
+    if (comment.user_is_owner) {
+        return `
+            <li class="collection-item avatar">
+                <a href="/u/${comment.username}" class="blue-text">
+                    <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                    <span class="title">${comment.username}</span>
+                </a>
+                <p class="truncate">${comment.body}</p>
+            </li>
+        `;
+    } else {
+        return `
+            <li class="collection-item avatar">
+                <a href="/u/${comment.username}" class="blue-text">
+                    <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                    <span class="title">${comment.username}</span>
+                </a>
+                <p class="truncate">${comment.body}</p>
+                <a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>
+            </li>
+        `;
+    }
 }
