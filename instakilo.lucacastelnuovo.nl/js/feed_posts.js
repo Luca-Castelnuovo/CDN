@@ -102,18 +102,18 @@ function feed_render_post(post) {
         comments_form = `
             <form action="/posts/actions" method="POST">
                 <div class="row mb-0">
-                    <div class="col s12 m9">
-                        <div class="input-field col s12 mb-0">
+                    <div class="col s10">
+                        <div class="input-field">
                             <label for="form_comment">Comment</label>
                             <textarea id="form_comment" class="materialize-textarea counter" name="comment" data-length="200"></textarea>
                         </div>
                     </div>
-                    <div class="input-field col s12 m3">
+                    <div class="input-field col s2">
                         <input type="hidden" name="CSRFtoken" value="${CSRFtoken}">
                         <input type="hidden" name="post_id" value="${post.id}">
 
-                        <button class="btn waves-effect waves-light col s12 blue accent-4" name="action" type="submit">
-                            Send <i class="material-icons right">send</i>
+                        <button type="submit" class="btn-floating btn waves-effect waves-light blue accent-4">
+                            <i class="material-icons">send</i>
                         </button>
                     </div>
                 </div>
