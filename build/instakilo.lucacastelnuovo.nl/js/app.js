@@ -154,6 +154,7 @@ function feed_comment_post(formElement) {
     }
 
     formData.append("CSRFtoken", CSRFtoken);
+    var post_id = formData.get('post_id');
 
     FORMrequest('/posts/actions/', formData, function(response) {
         if (response.success) {
@@ -190,7 +191,7 @@ function feed_render_post(post) {
     if (post.comments !== null && post.comments_allowed) {
         comments = feed_render_comments(post.comments);
         comments_form = `
-            <form action="/posts/actions" method="POST" onsubmit="return feed_comment_post(this);">
+            <form action="/posts/actions" method="POST" onsubmit="event.preventDefault(); feed_comment_post(this);">
                 <div class="row mb-0">
                     <div class="col s10">
                         <div class="input-field">
