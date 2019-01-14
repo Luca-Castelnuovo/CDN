@@ -103,7 +103,9 @@ function feed_comment_post(formElement) {
         return false;
     }
 
-    FORMrequest(formElement, function(response) {
+    formData.append("CSRFtoken", CSRFtoken);
+
+    FORMrequest(formData, function(response) {
         if (response.success) {
             const new_comment = feed_render_comment(response.new_comment);
             const comment_container = document.querySelector(`#comment-container-${post_id}`);
@@ -147,9 +149,7 @@ function feed_render_post(post) {
                         </div>
                     </div>
                     <div class="input-field col s2">
-                        <input type="hidden" name="CSRFtoken" value="${CSRFtoken}">
                         <input type="hidden" name="post_id" value="${post.id}">
-
                         <button type="submit" class="btn-floating btn waves-effect waves-light blue accent-4">
                             <i class="material-icons">send</i>
                         </button>
