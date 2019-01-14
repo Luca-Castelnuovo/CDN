@@ -264,6 +264,7 @@ function feed_render_comments(comments) {
 }
 
 function feed_render_comment(comment) {
+    console.log(comment);
     if (comment.user_is_owner) {
         return `
             <li class="collection-item avatar">
