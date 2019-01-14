@@ -138,7 +138,7 @@ function feed_comment_post(formElement) {
 }
 
 function feed_delete_comment(comment_id) {
-    if (!confirm('Are you sure?');) {
+    if (!confirm('Are you sure?')) {
         return false;
     }
 
