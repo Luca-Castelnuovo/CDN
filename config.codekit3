@@ -436,6 +436,16 @@
 		"oAP": "/build/index.php",
 		"oF": 0
 		},
+	"/instakilo.lucacastelnuovo.nl/css/filepond.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/css/filepond.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/instakilo.lucacastelnuovo.nl/css/style.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -475,6 +485,96 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/feed_posts.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/init.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/init.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/lib.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/lib.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/plugin_crop.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/plugin_crop.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/plugin_exif.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/plugin_exif.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/plugin_transform.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/plugin_transform.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/plugin_type.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/plugin_type.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/plugin_validate.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/plugin_validate.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/polyfill_browser.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/polyfill_browser.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/instakilo.lucacastelnuovo.nl/js/filepond/polyfill_filepond.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/filepond/polyfill_filepond.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -935,7 +1035,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 569150102.53222203
+	"lastBuiltDate": 569192997.882985
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
