@@ -46,7 +46,8 @@ function feed_like_post(post_id) {
             M.Toast.dismissAll();
             M.toast({html: 'Liked'});
 
-            var storageJSONPosts = JSON.parse(localStorage.getItem('posts')).posts;
+            var storageJSON = JSON.parse(localStorage.getItem('posts'));
+            var storageJSONPosts = storageJSON.posts;
             var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
                 if (post.id == post_id) {
                     post.liked = true;
@@ -55,7 +56,8 @@ function feed_like_post(post_id) {
                 return post;
             });
 
-            localStorage.setItem('posts', JSON.stringify(storageJSONPostsUpdated));
+            storageJSON.posts = storageJSONPostsUpdated;
+            localStorage.setItem('posts', JSON.stringify(storageJSON));
         } else {
             console.log('request', response);
         }
@@ -79,7 +81,8 @@ function feed_undo_like_post(post_id) {
             M.Toast.dismissAll();
             M.toast({html: 'Like removed'});
 
-            var storageJSONPosts = JSON.parse(localStorage.getItem('posts')).posts;
+            var storageJSON = JSON.parse(localStorage.getItem('posts'));
+            var storageJSONPosts = storageJSON.posts;
             var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
                 if (post.id == post_id) {
                     post.liked = false;
@@ -88,7 +91,8 @@ function feed_undo_like_post(post_id) {
                 return post;
             });
 
-            localStorage.setItem('posts', JSON.stringify(storageJSONPostsUpdated));
+            storageJSON.posts = storageJSONPostsUpdated;
+            localStorage.setItem('posts', JSON.stringify(storageJSON));
         } else {
             console.log('error', response);
         }
@@ -108,7 +112,8 @@ function feed_comment_post(post_id, comment) {
             M.Toast.dismissAll();
             M.toast({html: 'Comment sent'});
 
-            var storageJSONPosts = JSON.parse(localStorage.getItem('posts')).posts;
+            var storageJSON = JSON.parse(localStorage.getItem('posts'));
+            var storageJSONPosts = storageJSON.posts;
             var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
                 if (post.id == post_id) {
                     post.comments = response.comments;
@@ -117,7 +122,8 @@ function feed_comment_post(post_id, comment) {
                 return post;
             });
 
-            localStorage.setItem('posts', JSON.stringify(storageJSONPostsUpdated));
+            storageJSON.posts = storageJSONPostsUpdated;
+            localStorage.setItem('posts', JSON.stringify(storageJSON));
         } else {
             console.log('error', response);
         }
