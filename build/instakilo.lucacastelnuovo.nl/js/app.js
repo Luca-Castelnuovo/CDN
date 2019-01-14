@@ -191,7 +191,7 @@ function feed_render_post(post) {
     var comments;
     var comments_form;
 
-    if (post.comments !== null && post.comments_allowed) {
+    if (post.comments_allowed) {
         comments = feed_render_comments(post.comments);
         comments_form = `
             <form action="/posts/actions" method="POST" onsubmit="event.preventDefault(); feed_comment_post(this);">
