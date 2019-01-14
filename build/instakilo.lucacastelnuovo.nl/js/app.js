@@ -187,6 +187,10 @@ function feed_comment_post(formElement) {
     });
 }
 
+function feed_delete_comment(comment_id) {
+    console.log(`delete ${comment_id}`);
+}
+
 function feed_render_post(post) {
     var comments;
     var comments_form;
@@ -263,6 +267,7 @@ function feed_render_comment(comment) {
                 <span class="title">${comment.username}</span>
             </a>
             <p class="truncate">${comment.body}</p>
+            <a onclick="feed_delete_comment(${comment.id})" class="secondary-content"><i class="material-icons blue-icon">trash</i></a>
         </li>
     `;
 }
