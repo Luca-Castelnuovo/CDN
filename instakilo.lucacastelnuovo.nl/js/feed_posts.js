@@ -18,6 +18,8 @@ function feed_render_posts(data) {
 
 function feed_check_posts() {
     request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/feed`, function(response) {
+        CSRFtoken = response.CSRFtoken;
+
         if (JSON.stringify(response) !== localStorage.getItem('posts')) {
             M.Toast.dismissAll();
             M.toast({
@@ -93,6 +95,35 @@ function feed_undo_like_post(post_id) {
     });
 }
 
+function feed_comment_post(post_id, comment) {
+    request('GET', `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`, function(response) {
+        CSRFtoken = response.CSRFtoken;
+
+        if (response.success) {
+            const new_comment = feed_render_comment(response.new_comment);
+            const comment_container = document.querySelector(`#comment-container-${post_id}`);
+
+            comment_container.appendChild(new_comment);
+
+            M.Toast.dismissAll();
+            M.toast({html: 'Comment sent'});
+
+            var storageJSONPosts = JSON.parse(localStorage.getItem('posts')).posts;
+            var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
+                if (post.id == post_id) {
+                    post.comments = response.comments;
+                }
+
+                return post;
+            });
+
+            localStorage.setItem('posts', JSON.stringify(storageJSONPostsUpdated));
+        } else {
+            console.log('error', response);
+        }
+    });
+}
+
 function feed_render_post(post) {
     var comments;
     var comments_form;
@@ -142,7 +173,7 @@ function feed_render_post(post) {
                     </div>
                     <div class="row mb-0">
                         <h6>Comments:</h6>
-                        <ul class="collection">
+                        <ul id="comment-container-${post.id}" class="collection">
                             ${comments}
                         </ul>
                             ${comments_form}

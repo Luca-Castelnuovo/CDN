@@ -23,6 +23,8 @@ function feed_render_messages(data) {
 
 function feed_check_messages() {
     request('GET', `https://instakilo.lucacastelnuovo.nl/messages/actions`, function(response) {
+        CSRFtoken = response.CSRFtoken;
+
         if (JSON.stringify(response) !== localStorage.getItem('messages')) {
             M.Toast.dismissAll();
             M.toast({
