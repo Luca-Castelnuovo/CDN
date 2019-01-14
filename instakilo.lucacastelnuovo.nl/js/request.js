@@ -12,7 +12,7 @@ function GETrequest(url, callback) {
     xhr.send();
 }
 
-function FORMrequest(formElement, callback) {
+function FORMrequest(url, formData, callback) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -22,6 +22,6 @@ function FORMrequest(formElement, callback) {
         callback(response);
     };
 
-    xhr.open('POST', formElement.action, true);
-    xhr.send(new FormData (formElement));
+    xhr.open('POST', url, true);
+    xhr.send(formData);
 }

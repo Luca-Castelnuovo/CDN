@@ -105,7 +105,7 @@ function feed_comment_post(formElement) {
 
     formData.append("CSRFtoken", CSRFtoken);
 
-    FORMrequest(formData, function(response) {
+    FORMrequest('/posts/actions/', formData, function(response) {
         if (response.success) {
             const new_comment = feed_render_comment(response.new_comment);
             const comment_container = document.querySelector(`#comment-container-${post_id}`);

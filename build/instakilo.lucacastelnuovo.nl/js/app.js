@@ -33,7 +33,7 @@ function GETrequest(url, callback) {
     xhr.send();
 }
 
-function FORMrequest(formElement, callback) {
+function FORMrequest(url, formData, callback) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -43,8 +43,8 @@ function FORMrequest(formElement, callback) {
         callback(response);
     };
 
-    xhr.open('POST', formElement.action, true);
-    xhr.send(new FormData (formElement));
+    xhr.open('POST', url, true);
+    xhr.send(formData);
 }
 
 
@@ -155,7 +155,7 @@ function feed_comment_post(formElement) {
 
     formData.append("CSRFtoken", CSRFtoken);
 
-    FORMrequest(formData, function(response) {
+    FORMrequest('/posts/actions/', formData, function(response) {
         if (response.success) {
             const new_comment = feed_render_comment(response.new_comment);
             const comment_container = document.querySelector(`#comment-container-${post_id}`);
