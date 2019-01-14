@@ -98,15 +98,13 @@ function feed_like_post(post_id) {
             var storageJSONUpdated = storageJSON.posts.map(function(post) {
                 if (post.id == post_id) {
                     post.liked = true;
+                    post.likes++;
                 }
 
                 return post;
             });
 
-            console.log('old storage', storageJSON);
             storageJSON.posts = storageJSONUpdated;
-            console.log('new storage', storageJSON);
-            console.log('new post', storageJSONUpdated);
             localStorage.setItem('posts', JSON.stringify(storageJSON));
         } else {
             console.log('request', response);
@@ -133,15 +131,13 @@ function feed_undo_like_post(post_id) {
             var storageJSONUpdated = storageJSON.posts.map(function(post) {
                 if (post.id == post_id) {
                     post.liked = false;
+                    post.likes--;
                 }
 
                 return post;
             });
 
-            console.log('old storage', storageJSON);
             storageJSON.posts = storageJSONUpdated;
-            console.log('new storage', storageJSON);
-            console.log('new post', storageJSONUpdated);
             localStorage.setItem('posts', JSON.stringify(storageJSON));
         } else {
             console.log('error', response);
