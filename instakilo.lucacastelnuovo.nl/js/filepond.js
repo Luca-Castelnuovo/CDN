@@ -7,7 +7,7 @@ FilePond.registerPlugin(
 );
 
 FilePond.setOptions({
-    maxFileSize: '2MB',
+    maxFileSize: '5MB',
     acceptedFileTypes: [
         'image/png',
         'image/jpg',
