@@ -10,6 +10,7 @@ function feed_render_messages(data) {
         `;
     }
 
+    delete data.CSRFtoken;
     localStorage.setItem('messages', JSON.stringify(data));
 
     var messages_array = [];

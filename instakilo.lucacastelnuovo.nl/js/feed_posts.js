@@ -5,6 +5,7 @@ function feed_render_posts(data) {
         return false;
     }
 
+    delete data.CSRFtoken;
     localStorage.setItem('posts', JSON.stringify(data));
 
     var posts_array = [];
