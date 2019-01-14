@@ -147,8 +147,7 @@ function feed_undo_like_post(post_id) {
 
 function feed_comment_post(formElement) {
     var formData = new FormData (formElement);
-    var comment = formData.get('comment');
-    if (comment.legth > 200) {
+    if (formData.get('comment').legth > 200) {
         M.Toast.dismissAll();
         M.toast({html: 'Comment too long'});
         return false;
