@@ -33,7 +33,7 @@ function request(method, url, callback) {
 
 
 function feed_render_posts(data) {
-    setInterval(feed_check_posts, 30000);
+    setInterval(feed_check_posts, 60000);
 
     if (!data.success) {
         return false;
@@ -77,6 +77,17 @@ function feed_like_post(post_id) {
 
             M.Toast.dismissAll();
             M.toast({html: 'Liked'});
+
+            var storageJSONPosts = JSON.parse(localStorage.getItem('posts')).posts;
+            var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
+                if (post.id == post_id) {
+                    post.liked = true;
+                }
+
+                return post;
+            });
+
+            localStorage.setItem('posts', JSON.stringify(storageJSONPostsUpdated));
         } else {
             console.log('request', response);
         }
@@ -99,6 +110,17 @@ function feed_undo_like_post(post_id) {
 
             M.Toast.dismissAll();
             M.toast({html: 'Like removed'});
+
+            var storageJSONPosts = JSON.parse(localStorage.getItem('posts')).posts;
+            var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
+                if (post.id == post_id) {
+                    post.liked = false;
+                }
+
+                return post;
+            });
+
+            localStorage.setItem('posts', JSON.stringify(storageJSONPostsUpdated));
         } else {
             console.log('error', response);
         }
