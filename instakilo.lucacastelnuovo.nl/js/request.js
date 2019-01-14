@@ -4,7 +4,7 @@ function GETrequest(url, callback) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState !== 4) return;
         var response = JSON.parse(xhr.responseText);
-        CSRFtoken = reponse.CSRFtoken;
+        CSRFtoken = response.CSRFtoken;
         callback(response);
     };
 
@@ -18,7 +18,7 @@ function FORMrequest(formElement, callback) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState !== 4) return;
         var response = JSON.parse(xhr.responseText);
-        CSRFtoken = reponse.CSRFtoken;
+        CSRFtoken = response.CSRFtoken;
         callback(response);
     };
 

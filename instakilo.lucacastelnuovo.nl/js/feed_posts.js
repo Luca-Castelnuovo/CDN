@@ -96,6 +96,7 @@ function feed_undo_like_post(post_id) {
 function feed_comment_post(formElement) {
     var formData = new FormData (formElement);
     console.log(formData);
+    return false;
     //check comment length
     //if to long send toast
 
