@@ -158,6 +158,8 @@ function feed_comment_post(formElement) {
 
     FORMrequest('/posts/actions/', formData, function(response) {
         if (response.success) {
+            const text_input = document.querySelector(`form_comment-${post_id}`);
+            text_input.value = '';
             let new_comment = document.createElement('div');
             new_comment.innerHTML = feed_render_comment(response.new_comment);
             const comment_container = document.querySelector(`#comment-container-${post_id}`);
@@ -196,8 +198,8 @@ function feed_render_post(post) {
                 <div class="row mb-0">
                     <div class="col s10">
                         <div class="input-field">
-                            <label for="form_comment">Comment</label>
-                            <textarea id="form_comment" class="materialize-textarea counter" name="comment" data-length="200"></textarea>
+                            <label for="form_comment-${post.id}">Comment</label>
+                            <textarea id="form_comment-${post.id}" class="materialize-textarea counter" name="comment" data-length="200"></textarea>
                         </div>
                     </div>
                     <div class="input-field col s2">
