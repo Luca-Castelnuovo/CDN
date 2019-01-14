@@ -145,10 +145,12 @@ function feed_undo_like_post(post_id) {
 
 function feed_comment_post(formElement) {
     var formData = new FormData (formElement);
-    console.log(formData);
-    return false;
-    //check comment length
-    //if to long send toast
+    var comment = formData.get('comment');
+    if (comment.legth > 200) {
+        M.Toast.dismissAll();
+        M.toast({html: 'Comment too long'});
+        return false;
+    }
 
     FORMrequest(formElement, function(response) {
         if (response.success) {
