@@ -95,8 +95,7 @@ function feed_like_post(post_id) {
             M.toast({html: 'Liked'});
 
             var storageJSON = JSON.parse(localStorage.getItem('posts'));
-            var storageJSONPosts = storageJSON.posts;
-            var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
+            var storageJSONUpdated = storageJSON.posts.map(function(post) {
                 if (post.id == post_id) {
                     post.liked = true;
                 }
@@ -104,7 +103,10 @@ function feed_like_post(post_id) {
                 return post;
             });
 
-            storageJSON.posts = storageJSONPostsUpdated;
+            console.log('old storage', storageJSON);
+            storageJSON.posts = storageJSONUpdated;
+            console.log('new storage', storageJSON);
+            console.log('new post', storageJSONUpdated);
             localStorage.setItem('posts', JSON.stringify(storageJSON));
         } else {
             console.log('request', response);
@@ -128,8 +130,7 @@ function feed_undo_like_post(post_id) {
             M.toast({html: 'Like removed'});
 
             var storageJSON = JSON.parse(localStorage.getItem('posts'));
-            var storageJSONPosts = storageJSON.posts;
-            var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
+            var storageJSONUpdated = storageJSON.posts.map(function(post) {
                 if (post.id == post_id) {
                     post.liked = false;
                 }
@@ -137,7 +138,10 @@ function feed_undo_like_post(post_id) {
                 return post;
             });
 
-            storageJSON.posts = storageJSONPostsUpdated;
+            console.log('old storage', storageJSON);
+            storageJSON.posts = storageJSONUpdated;
+            console.log('new storage', storageJSON);
+            console.log('new post', storageJSONUpdated);
             localStorage.setItem('posts', JSON.stringify(storageJSON));
         } else {
             console.log('error', response);
