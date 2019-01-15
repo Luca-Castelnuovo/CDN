@@ -1,6 +1,6 @@
 function user_followers(username) {
     GETrequest(`/u/${username}/followers`, function(response) {
-        var followers_html;
+        var followers_html = [];
         var follower_html;
 
         for (follower of response.followers) {
@@ -26,7 +26,7 @@ function user_followers(username) {
 
 function user_following(username) {
     GETrequest(`/u/${username}/following`, function(response) {
-        var followings_html;
+        var followings_html = [];
         var following_html;
 
         for (following of response.following) {
