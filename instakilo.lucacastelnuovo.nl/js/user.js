@@ -6,11 +6,13 @@ function user_followers(username) {
         for (follower of response.followers) {
             follower_html = `
                 <li class="collection-item avatar">
-                    <a href="/u/${follower.username}" class="blue-text">
-                        <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${follower.username}.png'" class="circle" />
-                        <span class="title">${follower.username}</span>
-                    </a>
-                    <a href="#!" class="waves-effect waves-light btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'blue accent-4 "'}">${follower.is_following ? 'Following' : 'Follow'}</a>
+                    <div clas="row mb-0">
+                        <a href="/u/${follower.username}" class="blue-text">
+                            <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${follower.username}.png'" class="circle" />
+                            <span class="title">${follower.username}</span>
+                        </a>
+                        <a href="#!" class="waves-effect waves-light btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'blue accent-4 "'}">${follower.is_following ? 'Following' : 'Follow'}</a>
+                    </div>
                 </li>
             `;
             followers_html.push(follower_html);
@@ -31,11 +33,13 @@ function user_following(username) {
         for (following of response.following) {
             following_html = `
                 <li class="collection-item avatar">
-                    <a href="/u/${following.username}" class="blue-text">
-                        <img src="${following.profile_picture}" onerror="this.src='https://github.com/identicons/${following.username}.png'" class="circle" />
-                        <span class="title">${following.username}</span>
-                    </a>
-                    <a href="#!" class="waves-effect waves-light btn tooltipped grey lighten-5 black-text roght" data-position="right" data-tooltip="Unfollow">Following</a>
+                    <div clas="row mb-0">
+                        <a href="/u/${following.username}" class="blue-text">
+                            <img src="${following.profile_picture}" onerror="this.src='https://github.com/identicons/${following.username}.png'" class="circle" />
+                            <span class="title">${following.username}</span>
+                        </a>
+                        <a href="#!" class="waves-effect waves-light btn tooltipped grey lighten-5 black-text roght" data-position="right" data-tooltip="Unfollow">Following</a>
+                    </div>
                 </li>
             `;
             followings_html.push(following_html);
