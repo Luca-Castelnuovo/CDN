@@ -237,6 +237,7 @@ function feed_render_post(post) {
                     <p>
                         <span id="post_owner"><a href="/u/${post.username}">${post.username}</a></span> ${post.caption}
                     </p>
+                    <a href="/posts/edit/${post.id}" class="secondary-content"><i class="material-icons blue-icon">edit</i></a>
                 </div>
                 <div class="card-action">
                     <div class="row likes" id="post-${post.id}">
