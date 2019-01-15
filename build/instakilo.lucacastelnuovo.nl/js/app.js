@@ -102,7 +102,7 @@ function feed_render_posts_profile(data) {
     var posts_array = [];
 
     for (post of data.posts) {
-        posts_array.push(feed_render_post(post));
+        posts_array.push(feed_render_post(post, true));
     }
 
     return posts_array.join('');
