@@ -252,7 +252,7 @@ function feed_render_post(post) {
                 <div class="card-content">
                     <p>
                         <span id="post_owner"><a href="/u/${post.username}">${post.username}</a></span> ${post.caption}
-                        ${post.user_is_owner ? `<a href="/posts/edit/${post.id}" class="secondary-content"><i class="material-icons blue-icon">edit</i></a>` : ''}
+                        ${post.user_is_owner ? `<a href="/posts/edit/${post.id}" class="secondary-content tooltipped" data-position="right" data-tooltip="Edit post"><i class="material-icons blue-icon">edit</i></a>` : ''}
                     </p>
                 </div>
                 <div class="card-action">
@@ -290,7 +290,7 @@ function feed_render_comment(comment) {
                 <span class="title tt-none">${comment.username}</span>
             </a>
             <p class="truncate">${comment.body}</p>
-            ${comment.user_is_owner ? `<a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>` : ''}
+            ${comment.user_is_owner ? `<a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content tooltipped" data-position="right" data-tooltip="Delete comment"><i class="material-icons blue-icon">delete</i></a>` : ''}
         </li>
     `;
 }
@@ -301,9 +301,8 @@ function feed_render_messages(data) {
 
     if (!data.success) {
         return `
-            <li class="collection-item avatar">
-                <i class="material-icons circle">account_circle</i> <span class="title">FirstName Last Name</span>
-                <p class="truncate">Layers, background, shot, concept – good!</p><a class="secondary-content" href="#!"><i class="material-icons blue-icon">message</i></a>
+            <li class="collection-item">
+                You don't have any messages.
             </li>
         `;
     }
@@ -340,8 +339,62 @@ function feed_render_message(message) {
                 <span class="title">${message.username}</span>
             </a>
             <p class="truncate">${message.body}</p>
+            <a href="/messages/#reply_to=${message.username}" class="secondary-content tooltipped" data-position="right" data-tooltip="Reply"><i class="material-icons blue-icon">reply</i></a>
         </li>
     `;
+}
+
+
+function user_followers() {
+    GETrequest(`/user/actions/followers`, function(response) {
+        var followers_html;
+        var follower_html;
+
+        for (follower of response.followers) {
+            follower_html = `
+                <li class="collection-item avatar">
+                    <a href="/u/${follower.username}" class="blue-text">
+                        <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                        <span class="title">${follower.username}</span>
+                    </a>
+                    <p class="truncate">${message.body}</p>
+                </li>
+            `;
+            followers_html.push(follower_html);
+        }
+
+        document.querySelector('#followers_container').innerHTML = followers_html.join('');
+
+        var modal = M.Modal.getInstance(document.querySelector('#followers_modal'));
+        modal.open();
+    });
+
+}
+
+function user_following() {
+    GETrequest(`/user/actions/following`, function(response) {
+        var followings_html;
+        var following_html;
+
+        for (follower of response.following) {
+            following_html = `
+                <li class="collection-item avatar">
+                    <a href="/u/${follower.username}" class="blue-text">
+                        <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                        <span class="title">${follower.username}</span>
+                    </a>
+                    <p class="truncate">${message.body}</p>
+                </li>
+            `;
+            followings_html.push(following_html);
+        }
+
+        document.querySelector('#followers_container').innerHTML = followings_html.join('');
+
+        var modal = M.Modal.getInstance(document.querySelector('#followers_modal'));
+        modal.open();
+    });
+
 }
 
 
@@ -349,3 +402,4 @@ function feed_render_message(message) {
 // @codekit-prepend "request.js";
 // @codekit-prepend "feed_posts.js";
 // @codekit-prepend "feed_messages.js";
+// @codekit-prepend "user.js";

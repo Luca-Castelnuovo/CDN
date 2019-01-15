@@ -3,9 +3,8 @@ function feed_render_messages(data) {
 
     if (!data.success) {
         return `
-            <li class="collection-item avatar">
-                <i class="material-icons circle">account_circle</i> <span class="title">FirstName Last Name</span>
-                <p class="truncate">Layers, background, shot, concept – good!</p><a class="secondary-content" href="#!"><i class="material-icons blue-icon">message</i></a>
+            <li class="collection-item">
+                You don't have any messages.
             </li>
         `;
     }
@@ -42,6 +41,7 @@ function feed_render_message(message) {
                 <span class="title">${message.username}</span>
             </a>
             <p class="truncate">${message.body}</p>
+            <a href="/messages/#reply_to=${message.username}" class="secondary-content tooltipped" data-position="right" data-tooltip="Reply"><i class="material-icons blue-icon">reply</i></a>
         </li>
     `;
 }

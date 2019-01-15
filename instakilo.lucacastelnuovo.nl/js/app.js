@@ -2,3 +2,4 @@
 // @codekit-prepend "request.js";
 // @codekit-prepend "feed_posts.js";
 // @codekit-prepend "feed_messages.js";
+// @codekit-prepend "user.js";
