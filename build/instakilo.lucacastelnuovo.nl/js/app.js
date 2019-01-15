@@ -62,7 +62,7 @@ function feed_render_posts(data) {
         <div class="col s12">
             <div class="card">
                 <div class="card-content">
-                    <h4>You don't have ant posts.</h4>
+                    <h4>You don't have any posts.</h4>
                 </div>
                 <div class="card-action center">
                     <div class="row mb-0">
@@ -76,6 +76,28 @@ function feed_render_posts(data) {
 
     delete data.CSRFtoken;
     localStorage.setItem('posts', JSON.stringify(data));
+
+    var posts_array = [];
+
+    for (post of data.posts) {
+        posts_array.push(feed_render_post(post));
+    }
+
+    return posts_array.join('');
+}
+
+function feed_render_posts_profile(data) {
+    if (!data.success) {
+        return `
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <h4>This user doesn't have any posts.</h4>
+                </div>
+            </div>
+        </div>
+        `;
+    }
 
     var posts_array = [];
 
