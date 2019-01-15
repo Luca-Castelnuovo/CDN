@@ -248,7 +248,7 @@ function feed_render_post(post) {
                 <div class="card-image"><img id="post_image" class="materialboxed" data-caption="${post.caption}" src="${post.img_url}"></div>
                 <div class="card-content">
                     <p>
-                        <span id="post_owner"><a href="/u/${post.username}" class="tt-none">${post.username}</a></span> ${post.caption}
+                        <span id="post_owner"><a href="/u/${post.username}">${post.username}</a></span> ${post.caption}
                         ${post.user_is_owner ? `<a href="/posts/edit/${post.id}" class="secondary-content"><i class="material-icons blue-icon">edit</i></a>` : ''}
                     </p>
                 </div>
@@ -284,7 +284,7 @@ function feed_render_comment(comment) {
         <li class="collection-item avatar">
             <a href="/u/${comment.username}" class="blue-text">
                 <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
-                <span class="title">${comment.username}</span>
+                <span class="title tt-none">${comment.username}</span>
             </a>
             <p class="truncate">${comment.body}</p>
             ${comment.user_is_owner ? `<a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>` : ''}
