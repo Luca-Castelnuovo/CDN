@@ -99,6 +99,7 @@ function feed_like_post(post_id) {
                 if (post.id == post_id) {
                     post.liked = true;
                     post.likes++;
+                    post.likes.toString();
                 }
 
                 return post;
@@ -132,6 +133,7 @@ function feed_undo_like_post(post_id) {
                 if (post.id == post_id) {
                     post.liked = false;
                     post.likes--;
+                    post.likes.toString();
                 }
 
                 return post;
