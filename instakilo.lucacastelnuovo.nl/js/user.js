@@ -38,7 +38,7 @@ function user_following(username) {
                             <img src="${following.profile_picture}" onerror="this.src='https://github.com/identicons/${following.username}.png'" class="circle" />
                             <span class="title">${following.username}</span>
                         </a>
-                        <a href="#!" class="waves-effect btn tooltipped grey lighten-5 black-text roght" data-position="right" data-tooltip="Unfollow">Following</a>
+                        <a href="#!" class="waves-effect btn tooltipped grey lighten-5 black-text right" data-position="right" data-tooltip="Unfollow">Following</a>
                     </div>
                 </li>
             `;
