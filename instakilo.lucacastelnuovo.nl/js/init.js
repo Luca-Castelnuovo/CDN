@@ -12,7 +12,7 @@ function materialize_init() {
     var materialbox = M.Materialbox.init(document.querySelectorAll('.materialboxed'), {});
 }
 
-if (typeof auto_init !== 'undefined' && auto_init) {
+if (typeof auto_init === 'undefined' || !auto_init) {
     document.addEventListener('DOMContentLoaded', function() {
         materialize_init();
     });
