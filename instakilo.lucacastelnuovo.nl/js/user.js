@@ -11,7 +11,7 @@ function user_followers(username) {
                             <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${follower.username}.png'" class="circle" />
                             <span class="title">${follower.username}</span>
                         </a>
-                        <a href="#!" class="waves-effect btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">${follower.is_following ? 'Following' : 'Follow'}</a>
+                        <a onclick="${follower.is_following ? `user_follow(${follower.username})` : `user_undo_follow(${follower.username})`}" class="waves-effect btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">${follower.is_following ? 'Following' : 'Follow'}</a>
                     </div>
                 </li>
             `;
@@ -38,7 +38,7 @@ function user_following(username) {
                             <img src="${following.profile_picture}" onerror="this.src='https://github.com/identicons/${following.username}.png'" class="circle" />
                             <span class="title">${following.username}</span>
                         </a>
-                        <a href="#!" class="waves-effect btn tooltipped grey lighten-5 black-text right" data-position="right" data-tooltip="Unfollow">Following</a>
+                        <a onclick="user_follow(${following.username})" class="waves-effect btn tooltipped grey lighten-5 black-text right" data-position="right" data-tooltip="Unfollow">Following</a>
                     </div>
                 </li>
             `;
@@ -50,4 +50,12 @@ function user_following(username) {
         var modal = M.Modal.getInstance(document.querySelector('#followers_modal'));
         modal.open();
     });
+}
+
+function user_follow(user_name) {
+    console.log(user_name);
+}
+
+function user_undo_follow(user_name) {
+    console.log(user_name);
 }
