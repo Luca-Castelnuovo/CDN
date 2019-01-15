@@ -10,6 +10,9 @@ function materialize_init() {
 
     // Enable MaterialBox
     var materialbox = M.Materialbox.init(document.querySelectorAll('.materialboxed'), {});
+
+    // Tooltip
+    var tooltips = M.Tooltip.init(document.querySelectorAll('.tooltipped'), []);
 }
 
 if (typeof auto_init === 'undefined' || !auto_init) {
