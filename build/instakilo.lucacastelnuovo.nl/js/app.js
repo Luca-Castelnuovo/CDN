@@ -52,7 +52,18 @@ function feed_render_posts(data) {
     setInterval(feed_check_posts, 60000);
 
     if (!data.success) {
-        return false;
+        return `
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <h4>You don't have ant posts.</h4>
+                </div>
+                <div class="card-action center">
+                    <a href="/posts/add" class="btn waves-effect waves-light blue accent-4 col s12">Create a post</a>
+                </div>
+            </div>
+        </div>
+        `;
     }
 
     delete data.CSRFtoken;
