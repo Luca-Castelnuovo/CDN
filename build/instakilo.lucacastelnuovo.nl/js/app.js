@@ -59,7 +59,9 @@ function feed_render_posts(data) {
                     <h4>You don't have ant posts.</h4>
                 </div>
                 <div class="card-action center">
-                    <a href="/posts/add" class="btn waves-effect waves-light blue accent-4 col s12">Create a post</a>
+                    <div class="row mb-0">
+                        <a href="/posts/add" class="btn waves-effect waves-light blue accent-4 col s12">Create a post</a>
+                    </div>
                 </div>
             </div>
         </div>
