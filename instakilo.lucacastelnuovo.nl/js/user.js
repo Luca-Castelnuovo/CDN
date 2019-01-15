@@ -6,7 +6,7 @@ function user_followers(username) {
         for (follower of response.followers) {
             follower_html = `
                 <li class="collection-item avatar">
-                    <div clas="row mb-0">
+                    <div class="row mb-0">
                         <a href="/u/${follower.username}" class="blue-text">
                             <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${follower.username}.png'" class="circle" />
                             <span class="title">${follower.username}</span>
@@ -33,7 +33,7 @@ function user_following(username) {
         for (following of response.following) {
             following_html = `
                 <li class="collection-item avatar">
-                    <div clas="row mb-0">
+                    <div class="row mb-0">
                         <a href="/u/${following.username}" class="blue-text">
                             <img src="${following.profile_picture}" onerror="this.src='https://github.com/identicons/${following.username}.png'" class="circle" />
                             <span class="title">${following.username}</span>
