@@ -182,7 +182,7 @@ function feed_delete_comment(comment_id) {
     console.log(`delete ${comment_id}`);
 }
 
-function feed_render_post(post) {
+function feed_render_post(post, profile = false) {
     var comments;
     var comments_form;
 
@@ -215,7 +215,7 @@ function feed_render_post(post) {
     var like_function = post.liked ? `feed_undo_like_post(${post.id})` : `feed_like_post(${post.id})`;
 
     return `
-        <div class="col s12">
+        <div class="col s12 ${profile ? 'm6 l4 xl3' : ''}">
             <div class="card">
                 <div class="card-image"><img id="post_image" class="materialboxed" data-caption="${post.caption}" src="${post.img_url}"></div>
                 <div class="card-content">
