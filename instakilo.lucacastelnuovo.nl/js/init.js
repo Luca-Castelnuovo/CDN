@@ -13,6 +13,9 @@ function materialize_init() {
 
     // Tooltip
     var tooltips = M.Tooltip.init(document.querySelectorAll('.tooltipped'), []);
+
+    // Modals
+    var modals = M.Modal.init(document.querySelectorAll('.modal'), {});
 }
 
 if (typeof auto_init === 'undefined' || !auto_init) {
