@@ -360,7 +360,7 @@ function user_followers(username) {
                         <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${follower.username}.png'" class="circle" />
                         <span class="title">${follower.username}</span>
                     </a>
-                    <a href="#!" class="waves-effect waves-light btn tooltipped grey lighten-5" data-position="right" data-tooltip="Unfollow">Following</a>
+                    <a href="#!" class="waves-effect waves-light btn right ${following.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'blue accent-4 "'}">${following.is_following ? 'Following' : 'Follow'}</a>
                 </li>
             `;
             followers_html.push(follower_html);
@@ -371,7 +371,6 @@ function user_followers(username) {
         var modal = M.Modal.getInstance(document.querySelector('#followers_modal'));
         modal.open();
     });
-
 }
 
 function user_following(username) {
@@ -386,7 +385,7 @@ function user_following(username) {
                         <img src="${following.profile_picture}" onerror="this.src='https://github.com/identicons/${following.username}.png'" class="circle" />
                         <span class="title">${following.username}</span>
                     </a>
-                    <a href="#!" class="waves-effect waves-light btn right ${following.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'blue accent-4 "'}">${following.is_following ? 'Following' : 'Follow'}</a>
+                    <a href="#!" class="waves-effect waves-light btn tooltipped grey lighten-5 black-text roght" data-position="right" data-tooltip="Unfollow">Following</a>
                 </li>
             `;
             followings_html.push(following_html);
@@ -397,7 +396,6 @@ function user_following(username) {
         var modal = M.Modal.getInstance(document.querySelector('#followers_modal'));
         modal.open();
     });
-
 }
 
 
