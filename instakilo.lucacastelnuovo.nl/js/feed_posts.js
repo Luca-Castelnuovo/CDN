@@ -199,7 +199,7 @@ function feed_render_post(post) {
                 <div class="card-content">
                     <p>
                         <span id="post_owner"><a href="/u/${post.username}">${post.username}</a></span> ${post.caption}
-                        <a href="/posts/edit/${post.id}" class="secondary-content"><i class="material-icons blue-icon">edit</i></a>
+                        ${post.user_is_owner ? `<a href="/posts/edit/${post.id}" class="secondary-content"><i class="material-icons blue-icon">edit</i></a>` : ''}
                     </p>
                 </div>
                 <div class="card-action">
@@ -230,26 +230,14 @@ function feed_render_comments(comments) {
 }
 
 function feed_render_comment(comment) {
-    if (comment.user_is_owner) {
-        return `
-            <li class="collection-item avatar">
-                <a href="/u/${comment.username}" class="blue-text">
-                    <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
-                    <span class="title">${comment.username}</span>
-                </a>
-                <p class="truncate">${comment.body}</p>
-                <a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>
-            </li>
-        `;
-    } else {
-        return `
-            <li class="collection-item avatar">
-                <a href="/u/${comment.username}" class="blue-text">
-                    <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
-                    <span class="title">${comment.username}</span>
-                </a>
-                <p class="truncate">${comment.body}</p>
-            </li>
-        `;
-    }
+    return `
+        <li class="collection-item avatar">
+            <a href="/u/${comment.username}" class="blue-text">
+                <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                <span class="title">${comment.username}</span>
+            </a>
+            <p class="truncate">${comment.body}</p>
+            ${comment.user_is_owner ? `<a href="#!" onclick="feed_delete_comment('${comment.id}')" class="secondary-content"><i class="material-icons blue-icon">delete</i></a>` : ''}
+        </li>
+    `;
 }
