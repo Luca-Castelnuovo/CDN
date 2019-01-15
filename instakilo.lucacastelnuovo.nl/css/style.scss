@@ -55,15 +55,19 @@ $color_error: #f44336;
     cursor: pointer;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .tt-none {
     text-transform: none !important;
 }
 
-// Posts
-#post_owner {
+.bold {
     font-weight: bolder;
 }
 
+// Posts
 .likes {
     font-size: 18px;
     display: inline-flex;
