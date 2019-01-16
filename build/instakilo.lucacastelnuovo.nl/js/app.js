@@ -209,7 +209,7 @@ function feed_comment_post(formElement) {
 
   console.log('1', formData);
 
-  if (formData.get("comment").legth > 200) {
+  if (formData.get("comment").length > 200) {
     M.Toast.dismissAll();
     M.toast({ html: "Comment too long" });
     return false;
@@ -217,7 +217,7 @@ function feed_comment_post(formElement) {
 
   console.log('2', formData);
 
-  if (formData.get("comment").legth < 1) {
+  if (formData.get("comment").length < 1) {
     M.Toast.dismissAll();
     M.toast({ html: "Comment too short" });
     return false;
