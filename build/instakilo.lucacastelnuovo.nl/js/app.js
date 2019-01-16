@@ -212,6 +212,12 @@ function feed_comment_post(formElement) {
     return false;
   }
 
+  if (formData.get("comment").legth < 1) {
+    M.Toast.dismissAll();
+    M.toast({ html: "Comment too short" });
+    return false;
+  }
+
   formData.append("CSRFtoken", CSRFtoken);
   var post_id = formData.get("post_id");
 
