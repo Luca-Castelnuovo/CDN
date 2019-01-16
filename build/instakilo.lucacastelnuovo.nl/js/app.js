@@ -206,17 +206,24 @@ function feed_undo_like_post(post_id) {
 
 function feed_comment_post(formElement) {
   var formData = new FormData(formElement);
+
+  console.log('1', formData);
+
   if (formData.get("comment").legth > 200) {
     M.Toast.dismissAll();
     M.toast({ html: "Comment too long" });
     return false;
   }
 
+  console.log('2', formData);
+
   if (formData.get("comment").legth < 1) {
     M.Toast.dismissAll();
     M.toast({ html: "Comment too short" });
     return false;
   }
+
+  console.log('3', formData);
 
   formData.append("CSRFtoken", CSRFtoken);
   var post_id = formData.get("post_id");
