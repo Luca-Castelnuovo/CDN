@@ -209,7 +209,7 @@ function feed_delete_comment(post_id, comment_id) {
     }
 
     GETrequest(
-        `https://instakilo.lucacastelnuovo.nl/posts/actions/delete_comment/${CSRFtoken}/${post_id}&${comment_id}`,
+        `https://instakilo.lucacastelnuovo.nl/posts/actions/delete_comment/${CSRFtoken}/${post_id}&comment_id=${comment_id}`,
         function(response) {
             if (response.success) {
                 var comment = document.querySelector(`#${post_id}-${comment_id}`);
