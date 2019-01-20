@@ -148,7 +148,7 @@ function feed_undo_like_post(post_id) {
 function feed_comment_post(formElement) {
   var formData = new FormData(formElement);
 
-  console.log('1', formData);
+  console.log("1", formData);
 
   if (formData.get("comment").length > 200) {
     M.Toast.dismissAll();
@@ -156,7 +156,7 @@ function feed_comment_post(formElement) {
     return false;
   }
 
-  console.log('2', formData);
+  console.log("2", formData);
 
   if (formData.get("comment").length < 1) {
     M.Toast.dismissAll();
@@ -164,7 +164,7 @@ function feed_comment_post(formElement) {
     return false;
   }
 
-  console.log('3', formData);
+  console.log("3", formData);
 
   formData.append("CSRFtoken", CSRFtoken);
   var post_id = formData.get("post_id");
@@ -199,6 +199,8 @@ function feed_comment_post(formElement) {
     } else {
       console.log("error", response);
     }
+
+    render_hashtags();
   });
 }
 

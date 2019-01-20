@@ -29,31 +29,31 @@ if (typeof auto_init === "undefined" || !auto_init) {
 
 
 function GETrequest(url, callback) {
-    var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState !== 4) return;
-        var response = JSON.parse(xhr.responseText);
-        CSRFtoken = response.CSRFtoken;
-        callback(response);
-    };
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== 4) return;
+    var response = JSON.parse(xhr.responseText);
+    CSRFtoken = response.CSRFtoken;
+    callback(response);
+  };
 
-    xhr.open('GET', url);
-    xhr.send();
+  xhr.open("GET", url);
+  xhr.send();
 }
 
 function FORMrequest(url, formData, callback) {
-    var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState !== 4) return;
-        var response = JSON.parse(xhr.responseText);
-        CSRFtoken = response.CSRFtoken;
-        callback(response);
-    };
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== 4) return;
+    var response = JSON.parse(xhr.responseText);
+    CSRFtoken = response.CSRFtoken;
+    callback(response);
+  };
 
-    xhr.open('POST', url, true);
-    xhr.send(formData);
+  xhr.open("POST", url, true);
+  xhr.send(formData);
 }
 
 
@@ -207,7 +207,7 @@ function feed_undo_like_post(post_id) {
 function feed_comment_post(formElement) {
   var formData = new FormData(formElement);
 
-  console.log('1', formData);
+  console.log("1", formData);
 
   if (formData.get("comment").length > 200) {
     M.Toast.dismissAll();
@@ -215,7 +215,7 @@ function feed_comment_post(formElement) {
     return false;
   }
 
-  console.log('2', formData);
+  console.log("2", formData);
 
   if (formData.get("comment").length < 1) {
     M.Toast.dismissAll();
@@ -223,7 +223,7 @@ function feed_comment_post(formElement) {
     return false;
   }
 
-  console.log('3', formData);
+  console.log("3", formData);
 
   formData.append("CSRFtoken", CSRFtoken);
   var post_id = formData.get("post_id");
@@ -258,6 +258,8 @@ function feed_comment_post(formElement) {
     } else {
       console.log("error", response);
     }
+
+    render_hashtags();
   });
 }
 
@@ -381,49 +383,58 @@ function feed_render_comment(comment) {
 
 
 function feed_render_messages(data) {
-    setInterval(feed_check_messages, 30000);
+  setInterval(feed_check_messages, 30000);
 
-    if (!data.success) {
-        return `
+  if (!data.success) {
+    return `
             <li class="collection-item">
                 You don't have any messages.
             </li>
         `;
-    }
+  }
 
-    delete data.CSRFtoken;
-    localStorage.setItem('messages', JSON.stringify(data));
+  delete data.CSRFtoken;
+  localStorage.setItem("messages", JSON.stringify(data));
 
-    var messages_array = [];
+  var messages_array = [];
 
-    for (message of data.messages) {
-        messages_array.push(feed_render_message(message));
-    }
+  for (message of data.messages) {
+    messages_array.push(feed_render_message(message));
+  }
 
-    return messages_array.join('');
+  return messages_array.join("");
 }
 
 function feed_check_messages() {
-    GETrequest(`https://instakilo.lucacastelnuovo.nl/messages/actions`, function(response) {
-        delete response.CSRFtoken;
-        if (JSON.stringify(response) !== localStorage.getItem('messages')) {
-            M.Toast.dismissAll();
-            M.toast({
-                html: '<span>You have new messages!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load messages</button>'
-            });
-        }
-    });
+  GETrequest(`https://instakilo.lucacastelnuovo.nl/messages/actions`, function(
+    response
+  ) {
+    delete response.CSRFtoken;
+    if (JSON.stringify(response) !== localStorage.getItem("messages")) {
+      M.Toast.dismissAll();
+      M.toast({
+        html:
+          '<span>You have new messages!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load messages</button>'
+      });
+    }
+  });
 }
 
 function feed_render_message(message) {
-    return `
+  return `
         <li class="collection-item avatar">
             <a href="/u/${message.username}" class="blue-text">
-                <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                <img src="${
+                  message.profile_picture
+                }" onerror="this.src='https://github.com/identicons/${
+    message.username
+  }.png'" class="circle" />
                 <span class="title">${message.username}</span>
             </a>
             <p class="truncate">${message.body}</p>
-            <a href="/messages/#reply_to=${message.username}" class="secondary-content tooltipped" data-position="right" data-tooltip="Reply"><i class="material-icons blue-icon">reply</i></a>
+            <a href="/messages/#reply_to=${
+              message.username
+            }" class="secondary-content tooltipped" data-position="right" data-tooltip="Reply"><i class="material-icons blue-icon">reply</i></a>
         </li>
     `;
 }
@@ -525,15 +536,21 @@ function user_undo_follow(user_name) {
 
 
 function render_hashtags() {
-    var captions = document.querySelectorAll('.post_caption');
-    for (caption of captions) {
-        caption.innerHTML = caption.innerHTML.replace(/(^|\s)(#[a-z\d-]+)/ig, "$1<span class='hash_tag'>$2</span>");
-    }
+  var captions = document.querySelectorAll(".post_caption");
+  for (caption of captions) {
+    caption.innerHTML = caption.innerHTML.replace(
+      /(^|\s)(#[a-z\d-]+)/gi,
+      "$1<span class='hash_tag'>$2</span>"
+    );
+  }
 
-    var comments = document.querySelectorAll('.comment_body');
-    for (comment of comments) {
-        comment.innerHTML = comment.innerHTML.replace(/(^|\s)(#[a-z\d-]+)/ig, "$1<span class='hash_tag'>$2</span>");
-    }
+  var comments = document.querySelectorAll(".comment_body");
+  for (comment of comments) {
+    comment.innerHTML = comment.innerHTML.replace(
+      /(^|\s)(#[a-z\d-]+)/gi,
+      "$1<span class='hash_tag'>$2</span>"
+    );
+  }
 }
 
 
