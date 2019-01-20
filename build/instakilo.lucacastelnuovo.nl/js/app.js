@@ -299,7 +299,7 @@ function feed_render_post(post, profile = false) {
 
   return `
         <div class="col s12 ${profile ? "m6 l4" : ""}">
-            <div class="card">
+            <div class="card mt-0">
                 <div class="card-image"><img id="post_image" class="materialboxed" data-caption="${
                   post.caption
                 }" src="${post.img_url}"></div>
@@ -396,7 +396,7 @@ function feed_render_messages(data) {
     messages_array.push(feed_render_message(message));
   }
 
-  var messages_box = new Sticky("#selector");
+  var messages_box = new Sticky("#messages_box");
 
   return messages_array.join("");
 }

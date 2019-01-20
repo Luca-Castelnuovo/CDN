@@ -240,7 +240,7 @@ function feed_render_post(post, profile = false) {
 
   return `
         <div class="col s12 ${profile ? "m6 l4" : ""}">
-            <div class="card">
+            <div class="card mt-0">
                 <div class="card-image"><img id="post_image" class="materialboxed" data-caption="${
                   post.caption
                 }" src="${post.img_url}"></div>
