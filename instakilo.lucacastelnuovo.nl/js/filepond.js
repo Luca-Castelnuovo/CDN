@@ -14,3 +14,15 @@ FilePond.setOptions({
 });
 
 var pond = FilePond.create(document.querySelector('input[type="file"]'));
+
+var upload_btn = document.querySelector("button.btn-large");
+var caption_input = document.querySelector("#caption");
+upload_btn.disabled = true;
+var pond_instance = document.querySelector(".filepond--root");
+pond_instance.addEventListener("FilePond:processfile", e => {
+  if (e.detail.error !== null) {
+    M.toast({ html: "Please reupload image" });
+  }
+
+  upload_btn.disabled = false;
+});
