@@ -1,28 +1,27 @@
 function materialize_init() {
-  // Enable SideBar
-  var sidenav = M.Sidenav.init(document.querySelectorAll(".sidenav"), {
-    edge: "right",
-    draggable: 1
-  });
+    // Enable SideBar
+    var sidenav = M.Sidenav.init(document.querySelectorAll(".sidenav"), {
+        edge: "right",
+        draggable: 1
+    });
 
-  // Add character counter to inputs
-  M.CharacterCounter.init(document.querySelectorAll(".counter"));
+    // Add character counter to inputs
+    M.CharacterCounter.init(document.querySelectorAll(".counter"));
 
-  // Enable MaterialBox
-  var materialbox = M.Materialbox.init(
-    document.querySelectorAll(".materialboxed"),
-    {}
-  );
+    // Enable MaterialBox
+    var materialbox = M.Materialbox.init(
+        document.querySelectorAll(".materialboxed"), {}
+    );
 
-  // Tooltip
-  var tooltips = M.Tooltip.init(document.querySelectorAll(".tooltipped"), {});
+    // Tooltip
+    var tooltips = M.Tooltip.init(document.querySelectorAll(".tooltipped"), {});
 
-  // Modals
-  var modals = M.Modal.init(document.querySelectorAll(".modal"), {});
+    // Modals
+    var modals = M.Modal.init(document.querySelectorAll(".modal"), {});
 }
 
 if (typeof auto_init === "undefined" || !auto_init) {
-  document.addEventListener("DOMContentLoaded", function() {
-    materialize_init();
-  });
+    document.addEventListener("DOMContentLoaded", function() {
+        materialize_init();
+    });
 }

@@ -1,8 +1,8 @@
 function feed_render_posts(data) {
-  setInterval(feed_check_posts, 60000);
+    setInterval(feed_check_posts, 60000);
 
-  if (!data.success) {
-    return `
+    if (!data.success) {
+        return `
         <div class="col s12">
             <div class="card">
                 <div class="card-content">
@@ -16,23 +16,23 @@ function feed_render_posts(data) {
             </div>
         </div>
         `;
-  }
+    }
 
-  delete data.CSRFtoken;
-  localStorage.setItem("posts", JSON.stringify(data));
+    delete data.CSRFtoken;
+    localStorage.setItem("posts", JSON.stringify(data));
 
-  var posts_array = [];
+    var posts_array = [];
 
-  for (post of data.posts) {
-    posts_array.push(feed_render_post(post));
-  }
+    for (post of data.posts) {
+        posts_array.push(feed_render_post(post));
+    }
 
-  return posts_array.join("");
+    return posts_array.join("");
 }
 
 function feed_render_posts_profile(data) {
-  if (!data.success) {
-    return `
+    if (!data.success) {
+        return `
         <div class="col s12">
             <div class="card">
                 <div class="card-content">
@@ -41,182 +41,220 @@ function feed_render_posts_profile(data) {
             </div>
         </div>
         `;
-  }
+    }
 
-  var posts_array = [];
+    var posts_array = [];
 
-  for (post of data.posts) {
-    posts_array.push(feed_render_post(post, true));
-  }
+    for (post of data.posts) {
+        posts_array.push(feed_render_post(post, true));
+    }
 
-  return posts_array.join("");
+    return posts_array.join("");
 }
 
 function feed_check_posts() {
-  GETrequest(
-    `https://instakilo.lucacastelnuovo.nl/posts/actions/feed`,
-    function(response) {
-      delete response.CSRFtoken;
-      if (JSON.stringify(response) !== localStorage.getItem("posts")) {
-        M.Toast.dismissAll();
-        M.toast({
-          html:
-            '<span>You have new posts!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load Posts</button>'
-        });
-      }
-    }
-  );
+    GETrequest(
+        `https://instakilo.lucacastelnuovo.nl/posts/actions/feed`,
+        function(response) {
+            delete response.CSRFtoken;
+            if (JSON.stringify(response) !== localStorage.getItem("posts")) {
+                M.Toast.dismissAll();
+                M.toast({
+                    html: '<span>You have new posts!</span><button class="btn-flat toast-action blue-text accent-4" onclick="location.reload()">Load Posts</button>'
+                });
+            }
+        }
+    );
 }
 
 function feed_like_post(post_id) {
-  GETrequest(
-    `https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`,
-    function(response) {
-      if (response.success) {
-        const likes = document.querySelector(`#post-${post_id} .post_likes`);
-        likes.innerHTML = response.likes + " likes";
+    GETrequest(
+        `https://instakilo.lucacastelnuovo.nl/posts/actions/like/${CSRFtoken}/${post_id}`,
+        function(response) {
+            if (response.success) {
+                const likes = document.querySelector(`#post-${post_id} .post_likes`);
+                likes.innerHTML = response.likes + " likes";
 
-        const like_function = document.querySelector(`#post-${post_id} a`);
-        like_function.setAttribute(
-          "onClick",
-          `feed_undo_like_post(${post_id})`
-        );
+                const like_function = document.querySelector(`#post-${post_id} a`);
+                like_function.setAttribute(
+                    "onClick",
+                    `feed_undo_like_post(${post_id})`
+                );
 
-        const like_icon = document.querySelector(`#post-${post_id} a i`);
-        like_icon.innerHTML = "favorite";
+                const like_icon = document.querySelector(`#post-${post_id} a i`);
+                like_icon.innerHTML = "favorite";
 
-        M.Toast.dismissAll();
-        M.toast({ html: "Liked" });
+                M.Toast.dismissAll();
+                M.toast({
+                    html: "Liked"
+                });
 
-        var storageJSON = JSON.parse(localStorage.getItem("posts"));
-        var storageJSONUpdated = storageJSON.posts.map(function(post) {
-          if (post.id == post_id) {
-            post.liked = true;
-            post.likes++;
-            post.likes = `${post.likes}`;
-          }
+                var storageJSON = JSON.parse(localStorage.getItem("posts"));
+                var storageJSONUpdated = storageJSON.posts.map(function(post) {
+                    if (post.id == post_id) {
+                        post.liked = true;
+                        post.likes++;
+                        post.likes = `${post.likes}`;
+                    }
 
-          return post;
-        });
+                    return post;
+                });
 
-        storageJSON.posts = storageJSONUpdated;
-        localStorage.setItem("posts", JSON.stringify(storageJSON));
-      } else {
-        console.log("error", response);
-      }
-    }
-  );
+                storageJSON.posts = storageJSONUpdated;
+                localStorage.setItem("posts", JSON.stringify(storageJSON));
+            } else {
+                console.log("error", response);
+            }
+        }
+    );
 }
 
 function feed_undo_like_post(post_id) {
-  GETrequest(
-    `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`,
-    function(response) {
-      if (response.success) {
-        const likes = document.querySelector(`#post-${post_id} .post_likes`);
-        likes.innerHTML = response.likes + " likes";
+    GETrequest(
+        `https://instakilo.lucacastelnuovo.nl/posts/actions/undo_like/${CSRFtoken}/${post_id}`,
+        function(response) {
+            if (response.success) {
+                const likes = document.querySelector(`#post-${post_id} .post_likes`);
+                likes.innerHTML = response.likes + " likes";
 
-        const like_function = document.querySelector(`#post-${post_id} a`);
-        like_function.setAttribute("onClick", `feed_like_post(${post_id})`);
+                const like_function = document.querySelector(`#post-${post_id} a`);
+                like_function.setAttribute("onClick", `feed_like_post(${post_id})`);
 
-        const like_icon = document.querySelector(`#post-${post_id} a i`);
-        like_icon.innerHTML = "favorite_border";
+                const like_icon = document.querySelector(`#post-${post_id} a i`);
+                like_icon.innerHTML = "favorite_border";
 
-        M.Toast.dismissAll();
-        M.toast({ html: "Like removed" });
+                M.Toast.dismissAll();
+                M.toast({
+                    html: "Like removed"
+                });
 
-        var storageJSON = JSON.parse(localStorage.getItem("posts"));
-        var storageJSONUpdated = storageJSON.posts.map(function(post) {
-          if (post.id == post_id) {
-            post.liked = false;
-            post.likes--;
-            post.likes = `${post.likes}`;
-          }
+                var storageJSON = JSON.parse(localStorage.getItem("posts"));
+                var storageJSONUpdated = storageJSON.posts.map(function(post) {
+                    if (post.id == post_id) {
+                        post.liked = false;
+                        post.likes--;
+                        post.likes = `${post.likes}`;
+                    }
 
-          return post;
-        });
+                    return post;
+                });
 
-        storageJSON.posts = storageJSONUpdated;
-        localStorage.setItem("posts", JSON.stringify(storageJSON));
-      }
-    }
-  );
+                storageJSON.posts = storageJSONUpdated;
+                localStorage.setItem("posts", JSON.stringify(storageJSON));
+            }
+        }
+    );
 }
 
 function feed_comment_post(formElement) {
-  var formData = new FormData(formElement);
+    var formData = new FormData(formElement);
 
-  if (formData.get("comment").length > 200) {
-    M.Toast.dismissAll();
-    M.toast({ html: "Comment too long" });
-    return false;
-  }
-
-  if (formData.get("comment").length < 1) {
-    M.Toast.dismissAll();
-    M.toast({ html: "Comment too short" });
-    return false;
-  }
-
-  formData.append("CSRFtoken", CSRFtoken);
-  var post_id = formData.get("post_id");
-
-  FORMrequest("/posts/actions/", formData, function(response) {
-    if (response.success) {
-      const text_input = document.querySelector(`#form_comment-${post_id}`);
-      text_input.value = "";
-      let new_comment = document.createElement("div");
-      new_comment.innerHTML = feed_render_comment(response.new_comment);
-      const comment_container = document.querySelector(
-        `#comment-container-${post_id}`
-      );
-
-      comment_container.appendChild(new_comment);
-
-      M.Toast.dismissAll();
-      M.toast({ html: "Comment sent" });
-
-      var storageJSON = JSON.parse(localStorage.getItem("posts"));
-      var storageJSONPosts = storageJSON.posts;
-      var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
-        if (post.id == post_id) {
-          post.comments = response.comments;
-        }
-
-        return post;
-      });
-
-      storageJSON.posts = storageJSONPostsUpdated;
-      localStorage.setItem("posts", JSON.stringify(storageJSON));
-
-      render_hashtags();
+    if (formData.get("comment")
+        .length > 200) {
+        M.Toast.dismissAll();
+        M.toast({
+            html: "Comment too long"
+        });
+        return false;
     }
-  });
+
+    if (formData.get("comment")
+        .length < 1) {
+        M.Toast.dismissAll();
+        M.toast({
+            html: "Comment too short"
+        });
+        return false;
+    }
+
+    formData.append("CSRFtoken", CSRFtoken);
+    var post_id = formData.get("post_id");
+
+    FORMrequest("/posts/actions/", formData, function(response) {
+        if (response.success) {
+            const text_input = document.querySelector(`#form_comment-${post_id}`);
+            text_input.value = "";
+            let new_comment = document.createElement("div");
+            new_comment.innerHTML = feed_render_comment(response.new_comment);
+            const comment_container = document.querySelector(
+                `#comment-container-${post_id}`
+            );
+
+            comment_container.appendChild(new_comment);
+
+            M.Toast.dismissAll();
+            M.toast({
+                html: "Comment sent"
+            });
+
+            var storageJSON = JSON.parse(localStorage.getItem("posts"));
+            var storageJSONPosts = storageJSON.posts;
+            var storageJSONPostsUpdated = storageJSONPosts.map(function(post) {
+                if (post.id == post_id) {
+                    post.comments = response.comments;
+                }
+
+                return post;
+            });
+
+            storageJSON.posts = storageJSONPostsUpdated;
+            localStorage.setItem("posts", JSON.stringify(storageJSON));
+
+            render_hashtags();
+        }
+    });
 }
 
-function feed_delete_comment(comment_id) {
-  if (!confirm("Are you sure?")) {
-    return false;
-  }
+function feed_delete_comment(post_id, comment_id) {
+    if (!confirm("Are you sure?")) {
+        return false;
+    }
 
-  console.log(`delete ${comment_id}`);
+    console.log(`delete ${comment_id}`);
+
+    GETrequest(
+        `https://instakilo.lucacastelnuovo.nl/posts/actions/delete_comment/${CSRFtoken}/${post_id}&${comment_id}`,
+        function(response) {
+            if (response.success) {
+                var comment = document.querySelector(`#${post_id}-${comment_id}`);
+                comment.parentNode.removeChild(elem);
+
+                M.Toast.dismissAll();
+                M.toast({
+                    html: "Comment deleted"
+                });
+
+                var storageJSON = JSON.parse(localStorage.getItem("posts"));
+                var storageJSONUpdated = storageJSON.posts.map(function(post) {
+                    if (post.id == post_id) {
+                        post.comments = post.comments.filter(function(obj) {
+                            return obj.id !== comment_id;
+                        });
+                    }
+
+                    return post;
+                });
+
+                storageJSON.posts = storageJSONUpdated;
+                localStorage.setItem("posts", JSON.stringify(storageJSON));
+            }
+        }
+    );
 }
 
 function feed_render_post(post, profile = false) {
-  var comments;
-  var comments_form;
+    var comments;
+    var comments_form;
 
-  if (post.comments_allowed) {
-    comments = feed_render_comments(post.comments, profile);
-    comments_form = `
+    if (post.comments_allowed) {
+        comments = feed_render_comments(post.comments, profile, post.id);
+        comments_form = `
             <form action="/posts/actions" method="POST" onsubmit="event.preventDefault(); feed_comment_post(this);">
                 <div class="row mb-0">
                     <div class="col s10">
                         <div class="input-field">
                             <label for="form_comment-${post.id}">Comment</label>
-                            <textarea id="form_comment-${
-                              post.id
-                            }" class="materialize-textarea counter" name="comment" data-length="200"></textarea>
+                            <textarea id="form_comment-${post.id}" class="materialize-textarea counter" name="comment" data-length="200"></textarea>
                         </div>
                     </div>
                     <div class="input-field col s2">
@@ -228,47 +266,33 @@ function feed_render_post(post, profile = false) {
                 </div>
             </form>
         `;
-  } else {
-    comments = '<li class="collection-item">Comments are disabled</li>';
-    comments_form = "";
-  }
+    } else {
+        comments = '<li class="collection-item">Comments are disabled</li>';
+        comments_form = "";
+    }
 
-  var like_icon = post.liked ? "favorite" : "favorite_border";
-  var like_function = post.liked
-    ? `feed_undo_like_post(${post.id})`
-    : `feed_like_post(${post.id})`;
+    var like_icon = post.liked ? "favorite" : "favorite_border";
+    var like_function = post.liked ?
+        `feed_undo_like_post(${post.id})` :
+        `feed_like_post(${post.id})`;
 
-  return `
+    return `
         <div class="col s12 ${profile ? "m6 l4" : ""}">
             <div class="card mt-0">
-                <div class="card-image"><img id="post_image" class="materialboxed" data-caption="${
-                  post.caption
-                }" src="${post.img_url}"></div>
+                <div class="card-image"><img id="post_image" class="materialboxed" data-caption="${post.caption}" src="${post.img_url}"></div>
                 <div class="card-content">
                     <p>
-                        <span class="bold"><a href="/u/${post.username}">${
-    post.username
-  }</a></span> <span class="post_caption">${post.caption}</span>
-                        ${
-                          post.user_is_owner
-                            ? `<a href="/posts/edit/${
-                                post.id
-                              }" class="secondary-content tooltipped" data-position="right" data-tooltip="Edit post"><i class="material-icons blue-icon">edit</i></a>`
-                            : ""
-                        }
+                        <span class="bold"><a href="/u/${post.username}">${post.username}</a></span> <span class="post_caption">${post.caption}</span>
+                        ${post.user_is_owner ? `<a href="/posts/edit/${post.id}" class="secondary-content tooltipped" data-position="right" data-tooltip="Edit post"><i class="material-icons blue-icon">edit</i></a>` : ""}
                     </p>
                 </div>
                 <div class="card-action">
                     <div class="row likes" id="post-${post.id}">
-                        <a onclick="${like_function}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${
-    post.likes
-  } likes</span>
+                        <a onclick="${like_function}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes} likes</span>
                     </div>
                     <div class="row mb-0">
                         <h6>Comments:</h6>
-                        <ul id="comment-container-${
-                          post.id
-                        }" class="collection">
+                        <ul id="comment-container-${post.id}" class="collection">
                             ${comments}
                         </ul>
                             ${comments_form}
@@ -279,39 +303,29 @@ function feed_render_post(post, profile = false) {
     `;
 }
 
-function feed_render_comments(comments, profile) {
-  var comments_array = [];
+function feed_render_comments(comments, profile, post_id) {
+    var comments_array = [];
 
-  if (profile) {
-    comments = comments.slice(0, 3);
-  }
+    if (profile) {
+        comments = comments.slice(0, 3);
+    }
 
-  for (comment of comments) {
-    comments_array.push(feed_render_comment(comment));
-  }
+    for (comment of comments) {
+        comments_array.push(feed_render_comment(comment, post_id));
+    }
 
-  return comments_array.join("");
+    return comments_array.join("");
 }
 
-function feed_render_comment(comment) {
-  return `
-        <li class="collection-item avatar comment_container">
+function feed_render_comment(comment, post_id) {
+    return `
+        <li class="collection-item avatar comment_container" id="${post_id}-${comment.id}">
             <a href="/u/${comment.username}" class="blue-text">
-                <img src="${
-                  comment.profile_picture
-                }" onerror="this.src='https://github.com/identicons/${
-    comment.username
-  }.png'" class="circle" />
+                <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
                 <span class="title tt-none">${comment.username}</span>
             </a>
             <p class="truncate comment_body">${comment.body}</p>
-            ${
-              comment.user_is_owner
-                ? `<a href="#!" onclick="feed_delete_comment('${
-                    comment.id
-                  }')" class="secondary-content tooltipped comment_delete_btn" data-position="right" data-tooltip="Delete comment"><i class="material-icons blue-icon">delete</i></a>`
-                : ""
-            }
+            ${comment.user_is_owner ? `<a href="#!" onclick="feed_delete_comment('${post_id}', '${comment.id}')" class="secondary-content tooltipped comment_delete_btn" data-position="right" data-tooltip="Delete comment"><i class="material-icons blue-icon">delete</i></a>` : ""}
         </li>
     `;
 }
