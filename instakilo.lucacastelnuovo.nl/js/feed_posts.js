@@ -28,9 +28,6 @@ function feed_render_posts(data) {
   }
 
   return posts_array.join("");
-
-  var elems = document.querySelectorAll(".pushpin");
-  var instances = M.Pushpin.init(elems, {});
 }
 
 function feed_render_posts_profile(data) {
@@ -141,8 +138,6 @@ function feed_undo_like_post(post_id) {
 
         storageJSON.posts = storageJSONUpdated;
         localStorage.setItem("posts", JSON.stringify(storageJSON));
-      } else {
-        console.log("error", response);
       }
     }
   );
@@ -151,23 +146,17 @@ function feed_undo_like_post(post_id) {
 function feed_comment_post(formElement) {
   var formData = new FormData(formElement);
 
-  console.log("1", formData);
-
   if (formData.get("comment").length > 200) {
     M.Toast.dismissAll();
     M.toast({ html: "Comment too long" });
     return false;
   }
 
-  console.log("2", formData);
-
   if (formData.get("comment").length < 1) {
     M.Toast.dismissAll();
     M.toast({ html: "Comment too short" });
     return false;
   }
-
-  console.log("3", formData);
 
   formData.append("CSRFtoken", CSRFtoken);
   var post_id = formData.get("post_id");
@@ -199,11 +188,9 @@ function feed_comment_post(formElement) {
 
       storageJSON.posts = storageJSONPostsUpdated;
       localStorage.setItem("posts", JSON.stringify(storageJSON));
-    } else {
-      console.log("error", response);
-    }
 
-    render_hashtags();
+      render_hashtags();
+    }
   });
 }
 
