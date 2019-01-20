@@ -315,7 +315,7 @@ function feed_render_post(post, profile = false) {
                     <p>
                         <span class="bold"><a href="/u/${post.username}">${
     post.username
-  }</a></span> ${post.caption}
+  }</a></span> <span class="post_caption">${post.caption}</span>
                         ${
                           post.user_is_owner
                             ? `<a href="/posts/edit/${
@@ -367,7 +367,7 @@ function feed_render_comment(comment) {
   }.png'" class="circle" />
                 <span class="title tt-none">${comment.username}</span>
             </a>
-            <p class="truncate">${comment.body}</p>
+            <p class="truncate comment_body">${comment.body}</p>
             ${
               comment.user_is_owner
                 ? `<a href="#!" onclick="feed_delete_comment('${
@@ -524,8 +524,22 @@ function user_undo_follow(user_name) {
 }
 
 
+function render_hashtags() {
+    var captions = document.querySelectorAll('.post_caption');
+    for (caption of captions) {
+        caption.innerHTML = caption.innerHTML.replace(/(^|\s)(#[a-z\d-]+)/ig, "$1<span class='hash_tag'>$2</span>");
+    }
+
+    var comments = document.querySelectorAll('.comment_body');
+    for (comment of comments) {
+        comment.innerHTML = comment.innerHTML.replace(/(^|\s)(#[a-z\d-]+)/ig, "$1<span class='hash_tag'>$2</span>");
+    }
+}
+
+
 // @codekit-prepend "init.js";
 // @codekit-prepend "request.js";
 // @codekit-prepend "feed_posts.js";
 // @codekit-prepend "feed_messages.js";
 // @codekit-prepend "user.js";
+// @codekit-prepend "hash_tag.js";

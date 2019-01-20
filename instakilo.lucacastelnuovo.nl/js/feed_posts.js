@@ -256,7 +256,7 @@ function feed_render_post(post, profile = false) {
                     <p>
                         <span class="bold"><a href="/u/${post.username}">${
     post.username
-  }</a></span> ${post.caption}
+  }</a></span> <span class="post_caption">${post.caption}</span>
                         ${
                           post.user_is_owner
                             ? `<a href="/posts/edit/${
@@ -308,7 +308,7 @@ function feed_render_comment(comment) {
   }.png'" class="circle" />
                 <span class="title tt-none">${comment.username}</span>
             </a>
-            <p class="truncate">${comment.body}</p>
+            <p class="truncate comment_body">${comment.body}</p>
             ${
               comment.user_is_owner
                 ? `<a href="#!" onclick="feed_delete_comment('${
