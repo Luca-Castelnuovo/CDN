@@ -28,6 +28,9 @@ function feed_render_posts(data) {
   }
 
   return posts_array.join("");
+
+  var elems = document.querySelectorAll(".pushpin");
+  var instances = M.Pushpin.init(elems, {});
 }
 
 function feed_render_posts_profile(data) {
