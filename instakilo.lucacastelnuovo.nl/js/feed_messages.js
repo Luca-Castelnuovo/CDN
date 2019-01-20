@@ -18,8 +18,7 @@ function feed_render_messages(data) {
     messages_array.push(feed_render_message(message));
   }
 
-  var elems = document.querySelectorAll(".pushpin");
-  var instances = M.Pushpin.init(elems, {});
+  var messages_box = new Sticky("#selector");
 
   return messages_array.join("");
 }
