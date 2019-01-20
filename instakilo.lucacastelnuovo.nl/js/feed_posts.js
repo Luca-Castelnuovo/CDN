@@ -173,7 +173,7 @@ function feed_comment_post(formElement) {
             const text_input = document.querySelector(`#form_comment-${post_id}`);
             text_input.value = "";
             let new_comment = document.createElement("div");
-            new_comment.innerHTML = feed_render_comment(response.new_comment);
+            new_comment.innerHTML = feed_render_comment(response.new_comment, post_id);
             const comment_container = document.querySelector(
                 `#comment-container-${post_id}`
             );
