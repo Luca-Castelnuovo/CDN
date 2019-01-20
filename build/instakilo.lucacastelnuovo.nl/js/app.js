@@ -160,8 +160,6 @@ function feed_like_post(post_id) {
 
                 storageJSON.posts = storageJSONUpdated;
                 localStorage.setItem("posts", JSON.stringify(storageJSON));
-            } else {
-                console.log("error", response);
             }
         }
     );
@@ -268,8 +266,6 @@ function feed_delete_comment(post_id, comment_id) {
         return false;
     }
 
-    console.log(`delete ${comment_id}`);
-
     GETrequest(
         `https://instakilo.lucacastelnuovo.nl/posts/actions/delete_comment/${CSRFtoken}/${post_id}&${comment_id}`,
         function(response) {
@@ -295,6 +291,8 @@ function feed_delete_comment(post_id, comment_id) {
 
                 storageJSON.posts = storageJSONUpdated;
                 localStorage.setItem("posts", JSON.stringify(storageJSON));
+            } else {
+                console.log("error", response);
             }
         }
     );
