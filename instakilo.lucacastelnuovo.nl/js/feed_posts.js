@@ -213,7 +213,7 @@ function feed_delete_comment(post_id, comment_id) {
         function(response) {
             if (response.success) {
                 var comment = document.querySelector(`#${post_id}-${comment_id}`);
-                comment.parentNode.removeChild(elem);
+                comment.parentNode.removeChild(comment);
 
                 M.Toast.dismissAll();
                 M.toast({
