@@ -217,7 +217,7 @@ function feed_render_post(post, profile = false) {
   var comments_form;
 
   if (post.comments_allowed) {
-    comments = feed_render_comments(post.comments);
+    comments = feed_render_comments(post.comments, profile);
     comments_form = `
             <form action="/posts/actions" method="POST" onsubmit="event.preventDefault(); feed_comment_post(this);">
                 <div class="row mb-0">
@@ -289,8 +289,12 @@ function feed_render_post(post, profile = false) {
     `;
 }
 
-function feed_render_comments(comments) {
+function feed_render_comments(comments, profile) {
   var comments_array = [];
+
+  if (profile) {
+    comments = comments.slice(0, 3);
+  }
 
   for (comment of comments) {
     comments_array.push(feed_render_comment(comment));
