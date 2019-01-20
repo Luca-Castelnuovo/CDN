@@ -212,7 +212,7 @@ function feed_delete_comment(post_id, comment_id) {
         `https://instakilo.lucacastelnuovo.nl/posts/actions/delete_comment/${CSRFtoken}/${post_id}&comment_id=${comment_id}`,
         function(response) {
             if (response.success) {
-                var comment = document.querySelector(`#${post_id}-${comment_id}`);
+                var comment = document.querySelector(`#comment-${post_id}-${comment_id}`);
                 comment.parentNode.removeChild(comment);
 
                 M.Toast.dismissAll();
@@ -317,7 +317,7 @@ function feed_render_comments(comments, profile, post_id) {
 
 function feed_render_comment(comment, post_id) {
     return `
-        <li class="collection-item avatar comment_container" id="${post_id}-${comment.id}">
+        <li class="collection-item avatar comment_container" id="comment-${post_id}-${comment.id}">
             <a href="/u/${comment.username}" class="blue-text">
                 <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
                 <span class="title tt-none">${comment.username}</span>
