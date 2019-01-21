@@ -313,6 +313,17 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"/general/images/profile_picture.png": {
+		"ft": 32768,
+		"iS": 597,
+		"oA": 0,
+		"oAP": "/build/general/images/profile_picture.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 90
+		},
 	"/general/js/ajax.js": {
 		"ft": 64,
 		"ma": 0,
@@ -975,7 +986,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 569679615.70384598
+	"lastBuiltDate": 569750438.76299906
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

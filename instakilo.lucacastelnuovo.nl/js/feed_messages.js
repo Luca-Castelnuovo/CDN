@@ -41,7 +41,7 @@ function feed_render_message(message) {
     return `
         <li class="collection-item avatar">
             <a href="/u/${message.username}" class="blue-text">
-                <img src="${message.profile_picture}" onerror="this.src='https://github.com/identicons/${message.username}.png'" class="circle" />
+                <img src="${message.profile_picture}" onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'" class="circle" />
                 <span class="title">${message.username}</span>
             </a>
             <p class="truncate">${message.body}</p>
