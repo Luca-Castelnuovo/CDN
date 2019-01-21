@@ -78,7 +78,7 @@ function user_undo_follow(user_name) {
     GETrequest(`/u/${user_name}/undo_follow/${CSRFtoken}`, function(response) {
         M.Toast.dismissAll();
         M.toast({
-            html: `${user_name} followed`
+            html: `${user_name} unfollowed`
         });
     });
 }
