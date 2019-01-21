@@ -377,7 +377,7 @@ function feed_render_comment(comment, post_id) {
     return `
         <li class="collection-item avatar comment_container" id="comment-${post_id}-${comment.id}">
             <a href="/u/${comment.username}" class="blue-text">
-                <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                <img src="${comment.profile_picture}" onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'" class="circle" />
                 <span class="title tt-none">${comment.username}</span>
             </a>
             <p class="truncate comment_body">${comment.body}</p>
@@ -450,7 +450,7 @@ function user_followers(username) {
                 <li class="collection-item avatar">
                     <div class="row mb-0">
                         <a href="/u/${follower.username}" class="blue-text">
-                            <img src="${follower.profile_picture}" onerror="this.src='https://github.com/identicons/${follower.username}.png'" class="circle" />
+                            <img src="${follower.profile_picture}" onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'" class="circle" />
                             <span class="title">${follower.username}</span>
                         </a>
                         <a onclick="${ follower.is_following ? `user_follow('${follower.username}')` : `user_undo_follow('${follower.username}')`}" class="waves-effect btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">${follower.is_following ? "Following" : "Follow"}</a>
@@ -483,7 +483,7 @@ function user_following(username) {
                         <a href="/u/${user_owner_is_following.username}" class="blue-text">
                             <img
                                 src="${user_owner_is_following.profile_picture}"
-                                onerror="this.src='https://github.com/identicons/${user_owner_is_following.username}.png'"
+                                onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'"
                                 class="circle"
                             />
                             <span class="title">${user_owner_is_following.username}</span>

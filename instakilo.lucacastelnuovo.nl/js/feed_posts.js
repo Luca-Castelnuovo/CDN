@@ -319,7 +319,7 @@ function feed_render_comment(comment, post_id) {
     return `
         <li class="collection-item avatar comment_container" id="comment-${post_id}-${comment.id}">
             <a href="/u/${comment.username}" class="blue-text">
-                <img src="${comment.profile_picture}" onerror="this.src='https://github.com/identicons/${comment.username}.png'" class="circle" />
+                <img src="${comment.profile_picture}" onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'" class="circle" />
                 <span class="title tt-none">${comment.username}</span>
             </a>
             <p class="truncate comment_body">${comment.body}</p>
