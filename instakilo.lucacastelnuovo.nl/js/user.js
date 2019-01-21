@@ -66,9 +66,19 @@ function user_following(username) {
 }
 
 function user_follow(user_name) {
-    console.log('follow', user_name);
+    GETrequest(`/u/${user_name}/follow/${CSRFtoken}`, function(response) {
+        M.Toast.dismissAll();
+        M.toast({
+            html: `${user_name} followed`
+        });
+    });
 }
 
 function user_undo_follow(user_name) {
-    console.log('undo_follow', user_name);
+    GETrequest(`/u/${user_name}/undo_follow/${CSRFtoken}`, function(response) {
+        M.Toast.dismissAll();
+        M.toast({
+            html: `${user_name} followed`
+        });
+    });
 }
