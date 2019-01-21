@@ -452,7 +452,7 @@ function user_followers(username) {
                             <img src="${follower.profile_picture}" onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'" class="circle" />
                             <span class="title">${follower.username}</span>
                         </a>
-                        <a onclick="${ follower.is_following ? `user_follow('${follower.username}')` : `user_undo_follow('${follower.username}')`}" class="waves-effect btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">${follower.is_following ? "Following" : "Follow"}</a>
+                        <a onclick="${ follower.is_following ? `user_undo_follow('${follower.username}')` : `user_follow('${follower.username}')`}" class="waves-effect btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">${follower.is_following ? "Following" : "Follow"}</a>
                     </div>
                 </li>
             `);
@@ -487,7 +487,7 @@ function user_following(username) {
                             />
                             <span class="title">${user_owner_is_following.username}</span>
                         </a>
-                        <a onclick="${user_owner_is_following.is_following ? `user_follow('${user_owner_is_following.username}')` : `user_undo_follow('${user_owner_is_following.username}')` }" class="waves-effect btn right ${user_owner_is_following.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">
+                        <a onclick="${user_owner_is_following.is_following ? `user_undo_follow('${user_owner_is_following.username}')` : `user_follow('${user_owner_is_following.username}')` }" class="waves-effect btn right ${user_owner_is_following.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">
                             ${user_owner_is_following.is_following ? "Following" : "Follow"}
                         </a>
                     </div>
