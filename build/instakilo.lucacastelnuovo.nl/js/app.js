@@ -442,11 +442,10 @@ function feed_render_message(message) {
 
 function user_followers(username) {
     GETrequest(`/u/${username}/followers`, function(response) {
-        var followers_html = [];
-        var follower_html;
+        var followers_of_owner = [];
 
         for (follower of response.followers) {
-            follower_html = `
+            followers_of_owner.push(`
                 <li class="collection-item avatar">
                     <div class="row mb-0">
                         <a href="/u/${follower.username}" class="blue-text">
@@ -456,18 +455,18 @@ function user_followers(username) {
                         <a onclick="${ follower.is_following ? `user_follow('${follower.username}')` : `user_undo_follow('${follower.username}')`}" class="waves-effect btn right ${follower.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">${follower.is_following ? "Following" : "Follow"}</a>
                     </div>
                 </li>
-            `;
-            followers_html.push(follower_html);
+            `);
         }
 
-        document.querySelector(
-                "#followers_container"
-            )
-            .innerHTML = followers_html.join("");
+        document.querySelector("#followers_container")
+            .innerHTML = followers_of_owner.join("");
 
         var tooltips = M.Tooltip.init(document.querySelectorAll(".tooltipped"), {});
         var modal = M.Modal.getInstance(document.querySelector("#followers_modal"));
         modal.open();
+
+        document.querySelector('#followers_number')
+            .innerHTML = response.follower_number;
     });
 }
 
@@ -502,6 +501,9 @@ function user_following(username) {
         var tooltips = M.Tooltip.init(document.querySelectorAll(".tooltipped"), {});
         var modal = M.Modal.getInstance(document.querySelector("#following_modal"));
         modal.open();
+
+        document.querySelector('#following_number')
+            .innerHTML = response.following_number;
     });
 }
 
