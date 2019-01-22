@@ -45,9 +45,9 @@ function user_following(username) {
                             />
                             <span class="title">${user_owner_is_following.username}</span>
                         </a>
-                        <a onclick="${user_owner_is_following.is_following ? `user_undo_follow('${user_owner_is_following.username}')` : `user_follow('${user_owner_is_following.username}')` }" class="waves-effect btn right ${user_owner_is_following.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">
+                        ${users_owner_is_following.is_owner_self ? `` : `<a onclick="${user_owner_is_following.is_following ? `user_undo_follow('${user_owner_is_following.username}')` : `user_follow('${user_owner_is_following.username}')` }" class="waves-effect btn right ${user_owner_is_following.is_following ? `grey lighten-5 black-text tooltipped" data-position="right" data-tooltip="Unfollow` : 'waves-light blue accent-4 "'}">
                             ${user_owner_is_following.is_following ? "Following" : "Follow"}
-                        </a>
+                        </a>`}
                     </div>
                 </li>
             `);
