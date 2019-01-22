@@ -513,6 +513,7 @@ function user_follow(user_name) {
         M.toast({
             html: `${user_name} followed`
         });
+        location.reload();
     });
 }
 
@@ -522,6 +523,7 @@ function user_undo_follow(user_name) {
         M.toast({
             html: `${user_name} unfollowed`
         });
+        location.reload();
     });
 }
 
