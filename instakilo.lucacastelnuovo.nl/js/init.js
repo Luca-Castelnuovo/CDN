@@ -21,7 +21,11 @@ function materialize_init() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    yall();
+    yall({
+        observeChanges: true,
+        idlyLoad: true
+    });
+
     if (typeof auto_init === "undefined" || !auto_init) {
         materialize_init();
     }
