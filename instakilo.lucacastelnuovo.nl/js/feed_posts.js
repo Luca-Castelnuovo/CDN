@@ -1,7 +1,13 @@
-function feed_render_posts(data) {
-    setInterval(feed_check_posts, 60000);
+function feed_render_posts(data, loadMore = false) {
+    if (!loadMore) {
+        setInterval(feed_check_posts, 60000);
+    }
 
     if (!data.success) {
+        if (loadMore) {
+            return false;
+        }
+
         return `
         <div class="col s12">
             <div class="card">
@@ -18,8 +24,10 @@ function feed_render_posts(data) {
         `;
     }
 
-    delete data.CSRFtoken;
-    localStorage.setItem("posts", JSON.stringify(data));
+    if (!loadMore) {
+        delete data.CSRFtoken;
+        localStorage.setItem("posts", JSON.stringify(data));
+    }
 
     var posts_array = [];
 
