@@ -288,13 +288,13 @@ function feed_render_post(post, profile = false) {
                     <div class="row likes" id="post-${post.id}">
                         <a onclick="${like_function}" class="mr-6"><i class="material-icons blue-icon">${like_icon}</i></a> <span class="post_likes">${post.likes} likes</span>
                     </div>
-                    <div class="row mb-0">
+                    ${profile ? `` : `<div class="row mb-0">
                         <h6>Comments:</h6>
                         <ul id="comment-container-${post.id}" class="collection">
                             ${comments}
                         </ul>
                             ${comments_form}
-                    </div>
+                    </div>`}
                 </div>
             </div>
         </div>
