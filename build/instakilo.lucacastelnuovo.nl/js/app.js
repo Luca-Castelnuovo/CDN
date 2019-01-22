@@ -474,7 +474,6 @@ function user_following(username) {
         var following_html;
 
         for (user_owner_is_following of response.following) {
-            console.log(user_owner_is_following);
             users_owner_is_following.push(`
                 <li class="collection-item avatar">
                     <div class="row mb-0">
@@ -486,7 +485,7 @@ function user_following(username) {
                             />
                             <span class="title">${user_owner_is_following.username}</span>
                         </a>
-                        ${users_owner_is_following.is_user_self ?
+                        ${user_owner_is_following.is_user_self ?
                             ``
                             :
                             `<a onclick="${user_owner_is_following.is_following ?
