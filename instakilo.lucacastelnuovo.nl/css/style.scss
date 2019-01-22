@@ -73,6 +73,10 @@ $color_error: #f44336;
     font-weight: bolder;
 }
 
+.hidden {
+    visibility: none;
+}
+
 .likes {
     font-size: 18px;
     display: inline-flex;

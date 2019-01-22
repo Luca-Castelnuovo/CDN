@@ -486,7 +486,7 @@ function user_following(username) {
                             <span class="title">${user_owner_is_following.username}</span>
                         </a>
                         ${user_owner_is_following.is_user_self ?
-                            ``
+                            `<a href="#" class="btn hidden">btn</a>`
                             :
                             `<a onclick="${user_owner_is_following.is_following ?
                                 `user_undo_follow('${user_owner_is_following.username}')`
