@@ -479,7 +479,7 @@ function user_followers(username) {
             `);
         }
 
-        document.querySelector("#following_container")
+        document.querySelector("#followers_container")
             .innerHTML = users_owner_is_following.join("");
 
         var tooltips = M.Tooltip.init(document.querySelectorAll(".tooltipped"), {});
