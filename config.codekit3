@@ -530,6 +530,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/instakilo.lucacastelnuovo.nl/js/lazyload.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/build/instakilo.lucacastelnuovo.nl/js/lazyload.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/instakilo.lucacastelnuovo.nl/js/request.js": {
 		"ft": 64,
 		"ma": 0,
@@ -986,7 +996,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 569750438.76299906
+	"lastBuiltDate": 569873236.86588395
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

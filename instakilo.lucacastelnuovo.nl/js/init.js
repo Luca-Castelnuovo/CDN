@@ -1,3 +1,5 @@
+yall();
+
 function materialize_init() {
     // Enable SideBar
     var sidenav = M.Sidenav.init(document.querySelectorAll(".sidenav"), {
