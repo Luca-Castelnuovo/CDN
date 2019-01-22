@@ -41,7 +41,7 @@ function user_followers(username) {
         var modal = M.Modal.getInstance(document.querySelector("#followers_modal"));
         modal.open();
 
-        document.querySelector('#followers_number')
+        document.querySelector('#followersNumber')
             .innerHTML = response.followers_number;
     });
 }
@@ -89,7 +89,7 @@ function user_following(username) {
         var modal = M.Modal.getInstance(document.querySelector("#following_modal"));
         modal.open();
 
-        document.querySelector('#following_number')
+        document.querySelector('#followingNumber')
             .innerHTML = response.following_number;
     });
 }
