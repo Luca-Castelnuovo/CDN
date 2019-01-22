@@ -233,8 +233,6 @@ function feed_delete_comment(post_id, comment_id) {
 
                 storageJSON.posts = storageJSONUpdated;
                 localStorage.setItem("posts", JSON.stringify(storageJSON));
-            } else {
-                console.log("error", response);
             }
         }
     );
