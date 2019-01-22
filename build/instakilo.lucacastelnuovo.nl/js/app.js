@@ -338,7 +338,7 @@ function feed_render_post(post, profile = false) {
     return `
         <div class="col s12 ${profile ? "m6 l4" : ""}">
             <div class="card mt-0">
-                <div class="card-image"><img id="post_image" class="materialboxed lazy" data-caption="${post.caption}" data-src="${post.img_url}" src="https://via.placeholder.com/150.jpg?text=${post.caption}"></div>
+                <div class="card-image"><img id="post_image" class="materialboxed lazy" data-caption="${post.caption}" data-src="${post.img_url}" src="https://via.placeholder.com/150.jpg"></div>
                 <div class="card-content">
                     <p>
                         <span class="bold"><a href="/u/${post.username}">${post.username}</a></span> <span class="post_caption">${post.caption}</span>
@@ -380,7 +380,7 @@ function feed_render_comment(comment, post_id) {
     return `
         <li class="collection-item avatar comment_container" id="comment-${post_id}-${comment.id}">
             <a href="/u/${comment.username}" class="blue-text">
-                <img src="https://via.placeholder.com/25.jpg?text=${comment.username}" data-src="${comment.profile_picture}" onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'" class="circle lazy" />
+                <img src="https://via.placeholder.com/25.jpg" data-src="${comment.profile_picture}" onerror="this.src='https://cdn.lucacastelnuovo.nl/general/images/profile_picture.png'" class="circle lazy" />
                 <span class="title tt-none">${comment.username}</span>
             </a>
             <p class="truncate comment_body">${comment.body}</p>
