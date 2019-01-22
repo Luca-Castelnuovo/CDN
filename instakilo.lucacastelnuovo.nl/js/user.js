@@ -34,6 +34,7 @@ function user_following(username) {
         var following_html;
 
         for (user_owner_is_following of response.following) {
+            console.log(user_owner_is_following);
             users_owner_is_following.push(`
                 <li class="collection-item avatar">
                     <div class="row mb-0">
