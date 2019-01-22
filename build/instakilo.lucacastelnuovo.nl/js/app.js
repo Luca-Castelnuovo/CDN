@@ -1,5 +1,3 @@
-yall();
-
 function materialize_init() {
     // Enable SideBar
     var sidenav = M.Sidenav.init(document.querySelectorAll(".sidenav"), {
@@ -22,11 +20,12 @@ function materialize_init() {
     var modals = M.Modal.init(document.querySelectorAll(".modal"), {});
 }
 
-if (typeof auto_init === "undefined" || !auto_init) {
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
+    yall();
+    if (typeof auto_init === "undefined" || !auto_init) {
         materialize_init();
-    });
-}
+    }
+});
 
 
 function GETrequest(url, callback) {
