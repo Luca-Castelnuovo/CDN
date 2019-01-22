@@ -61,28 +61,24 @@ function FORMrequest(url, formData, callback) {
 }
 
 
-function feed_render_posts(data, softError = false) {
+function feed_render_posts(data) {
     setInterval(feed_check_posts, 60000);
 
     if (!data.success) {
-        if (!softError) {
-            return `
-            <div class="col s12">
-                <div class="card">
-                    <div class="card-content">
-                        <h4>You don't have any posts.</h4>
-                    </div>
-                    <div class="card-action center">
-                        <div class="row mb-0">
-                            <a href="/posts/add" class="btn waves-effect waves-light blue accent-4 col s12">Create a post</a>
-                        </div>
+        return `
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <h4>You don't have any posts.</h4>
+                </div>
+                <div class="card-action center">
+                    <div class="row mb-0">
+                        <a href="/posts/add" class="btn waves-effect waves-light blue accent-4 col s12">Create a post</a>
                     </div>
                 </div>
             </div>
-            `;
-        } else {
-            return false;
-        }
+        </div>
+        `;
     }
 
     delete data.CSRFtoken;
