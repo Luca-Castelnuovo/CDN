@@ -399,7 +399,8 @@ function feed_render_comment(comment, post_id) {
 
 
 function feed_render_messages(data) {
-    setInterval(feed_check_messages, 30000);
+    // Currently disabled due to unifished function
+    // setInterval(feed_check_messages, 30000);
 
     if (!data.success) {
         return `
