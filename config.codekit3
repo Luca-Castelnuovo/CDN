@@ -385,9 +385,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "/build/general/js/materialize.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 1
 		},
@@ -996,7 +996,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 570055156.78269994
+	"lastBuiltDate": 570993715.97115803
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
