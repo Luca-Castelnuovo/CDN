@@ -49,6 +49,12 @@
 		"oT": 1,
 		"q": 90
 		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/cdn.lucacastelnuovo.nl/css/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -869,6 +875,20 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/lucacastelnuovo.nl/keys/pgp.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/keys/pgp.txt",
+		"oF": 0
+		},
+	"/lucacastelnuovo.nl/keys/ssh.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/build/lucacastelnuovo.nl/keys/ssh.txt",
+		"oF": 0
+		},
 	"/lucacastelnuovo.nl/pdf/cv.pdf": {
 		"cB": 0,
 		"ft": 8192,
@@ -979,11 +999,11 @@
 	},
 "projectAttributes": {
 	"creationDate": 564134075.31215703,
-	"displayValue": "CDN",
+	"displayValue": "cdn",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 573058715.16283596
+	"lastBuiltDate": 573062853.747895
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
