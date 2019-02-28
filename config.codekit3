@@ -49,12 +49,6 @@
 		"oT": 1,
 		"q": 90
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/cdn.lucacastelnuovo.nl/css/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -989,7 +983,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 573058341.02384806
+	"lastBuiltDate": 573058715.16283596
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

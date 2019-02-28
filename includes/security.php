@@ -9,21 +9,6 @@ function is_empty($var, $type ='Unknown', $redirectTo = '/')
 }
 
 
-// Clean data
-function clean_data($data)
-{
-    $conn = sql_connect();
-    $data = $conn->escape_string($data);
-    sql_disconnect($conn);
-
-    $data = trim($data);
-    $data = htmlspecialchars($data);
-    $data = stripslashes($data);
-
-    return $data;
-}
-
-
 // Check data
 function check_data($data, $isEmpty = true, $isEmptyType = 'Unknown', $clean = true, $redirectTo = null)
 {
