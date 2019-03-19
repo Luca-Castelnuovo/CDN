@@ -44,6 +44,7 @@ JS;
         echo <<<'JS'
         if (document.cookie.indexOf("consent=") >= 0) {
             _paq.push(['setConsentGiven'])
+            console.log('analyics started');
         }
 JS;
     }
