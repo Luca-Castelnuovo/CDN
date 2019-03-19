@@ -40,11 +40,13 @@ JS;
 ?>
 
 <?php
-    echo <<<'JS'
-    if (document.cookie.indexOf("consent=") >= 0) {
-        _paq.push(['setConsentGiven'])
-    }
+    if (!empty($consent)) {
+        echo <<<'JS'
+        if (document.cookie.indexOf("consent=") >= 0) {
+            _paq.push(['setConsentGiven'])
+        }
 JS;
+    }
 ?>
 
 <?php
