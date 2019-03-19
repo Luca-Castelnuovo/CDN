@@ -11,13 +11,6 @@
       rel="stylesheet"
       href="https://cdn.lucacastelnuovo.nl/general/css/materialize.css"
     />
-
-    <style>
-      [type="checkbox"].filled-in:checked + span:not(.lever):after {
-        border: 2px solid #2962ff !important;
-        background-color: #2962ff !important;
-      }
-    </style>
   </head>
 
   <body>
@@ -88,20 +81,10 @@
 
         <div class="row">
           <h5>Opt-out of website tracking</h5>
-          <p>
-            Opt-out complete; your visits to this website will not be recorded
-            by the Web Analytics tool. Note that if you clear your cookies,
-            delete the opt-out cookie, or if you change computers or Web
-            browsers, you will need to perform the opt-out procedure again.
-          </p>
-          <p>
-            <label>
-              <input type="checkbox" class="filled-in" id="consent-checkbox" />
-              <span>
-                <b id="consent-message">Failed to retrieve consent status.</b>
-              </span>
-            </label>
-          </p>
+          <iframe
+            style="border: 0; height: 200px; width: 600px;"
+            src="https://analytics.lucacastelnuovo.nl/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=&fontFamily="
+          ></iframe>
         </div>
 
         <div class="row">
@@ -115,30 +98,5 @@
     </div>
 
     <script src="https://cdn.lucacastelnuovo.nl/general/js/materialize.js"></script>
-    <script type="text/javascript">
-      const consentMessage = document.querySelector("#consent-message");
-      const consentCheckbox = document.querySelector("#consent-checkbox");
-
-      if (document.cookie.indexOf("consent=") >= 0) {
-        consentCheckbox.checked = true;
-        consentMessage.innerHTML =
-          "You are not opted out. Uncheck this box to opt-out.";
-      } else {
-        consentCheckbox.checked = false;
-        consentMessage.innerHTML =
-          "You are currently opted out. Check this box to opt-in.";
-      }
-
-      consentCheckbox.addEventListener("change", () => {
-        if (consentCheckbox.checked) {
-          document.cookie = "consent=1;path=/;domain=lucacastelnuovo.nl";
-          location.reload();
-        } else {
-          document.cookie =
-            "consent=;path=/;domain=lucacastelnuovo.nl;expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-          location.reload();
-        }
-      });
-    </script>
   </body>
 </html>
