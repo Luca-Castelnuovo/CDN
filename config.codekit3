@@ -25,12 +25,12 @@
 		"oAP": "/build/analytics.lucacastelnuovo.nl/html/privacy.html",
 		"oF": 0
 		},
-	"/analytics.lucacastelnuovo.nl/js/dynamic/consent.php": {
+	"/analytics.lucacastelnuovo.nl/js/dynamic/tracking.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/analytics.lucacastelnuovo.nl/js/dynamic/consent.php",
+		"oAP": "/build/analytics.lucacastelnuovo.nl/js/dynamic/tracking.php",
 		"oF": 0
 		},
 	"/android-chrome-192x192.png": {
@@ -1071,7 +1071,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 574724091.64732802
+	"lastBuiltDate": 574725096.72304404
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

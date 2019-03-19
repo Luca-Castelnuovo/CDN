@@ -131,14 +131,13 @@
 
       consentCheckbox.addEventListener("change", () => {
         if (consentCheckbox.checked) {
-          document.cookie = "consent=1";
+          document.cookie = "consent=1;path=/;domain=lucacastelnuovo.nl";
           location.reload();
         } else {
-          document.cookie = "consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+          document.cookie =
+            "consent=;path=/;domain=lucacastelnuovo.nl;expires=Thu, 01 Jan 1970 00:00:00 UTC;";
           location.reload();
         }
-
-        console.log(consentCheckbox);
       });
     </script>
   </body>
