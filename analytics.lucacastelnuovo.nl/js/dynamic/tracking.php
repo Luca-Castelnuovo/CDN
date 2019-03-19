@@ -5,7 +5,7 @@
 <?php
 
     if (isset($_GET['require_consent'])) {
-        $consent = '_paq.push(["require_consent"]);';
+        $consent = '_paq.push(["requireConsent"]);';
     }
 
     if (isset($_GET['site_id']) && !empty($_GET['site_id'])) {
@@ -43,7 +43,7 @@ JS;
     if (!empty($consent)) {
         echo <<<'JS'
         if (document.cookie.indexOf("consent=") >= 0) {
-            _paq.push(['setConsentGiven'])
+            _paq.push(['setConsentGiven']);
             console.log('analyics started');
         }
 JS;
