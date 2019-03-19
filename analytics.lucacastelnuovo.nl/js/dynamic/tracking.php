@@ -8,7 +8,7 @@
         $consent = '_paq.push(["require_consent"]);';
     }
 
-    if (isset($_GET['site_id'])) {
+    if (isset($_GET['site_id']) && !empty($_GET['site_id'])) {
         $site_id = $_GET['site_id'];
     } else {
         echo 'alert("please specify site_id")';
