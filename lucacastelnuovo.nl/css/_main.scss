@@ -333,15 +333,15 @@ footer {
 }
 
 .btn.btn-lg.btn-outline {
-    color: #dc2f21;
-    border: 2px solid #dc2f21;
-    background: #fff;
+  color: #dc2f21;
+  border: 2px solid #dc2f21;
+  background: #fff;
 }
 
 .btn.btn-lg.btn-outline:hover {
-    color: #fff;
-    border: 2px solid #dc2f21;
-    background: #dc2f21;
+  color: #fff;
+  border: 2px solid #dc2f21;
+  background: #dc2f21;
 }
 
 .floating-label-form-group {
@@ -410,7 +410,7 @@ footer {
   color: #fff !important;
   background-color: #dc2f21 !important;
   border-color: #fff !important;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-success:hover {
@@ -419,6 +419,11 @@ footer {
   border-color: #dc2f21 !important;
 }
 
-.text-danger, .text-danger:hover {
-    color: #fff !important;
+.text-danger,
+.text-danger:hover {
+  color: #fff !important;
+}
+
+.text {
+  color: #2c3e50 !important;
 }
