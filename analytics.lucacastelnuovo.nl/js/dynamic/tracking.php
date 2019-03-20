@@ -15,7 +15,7 @@ if (isset($_GET['track_subdomains']) && !empty($_GET['track_subdomains'])) {
     $exclude_outlinks = "_paq(['setDomains', ['*.{$_GET['track_subdomains']}']]);";
 }
 
-$output = <<<JS
+echo <<<JS
     var _paq = window._paq || [];
 
     {$track_subdomains}
@@ -44,5 +44,3 @@ $output = <<<JS
       s.parentNode.insertBefore(g, s);
     })();
 JS;
-
-echo preg_replace("/\r|\n/", '', $output);
