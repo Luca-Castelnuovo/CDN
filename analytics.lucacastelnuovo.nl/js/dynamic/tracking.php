@@ -45,4 +45,4 @@ $output = <<<JS
     })();
 JS;
 
-echo preg_replace("/\r|\n| /", '', $output);
+echo preg_replace("/\r|\n/", '', $output);
