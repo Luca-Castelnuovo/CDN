@@ -468,6 +468,8 @@ $(function(){
 })
 
 </script>
+<!-- Analytics -->
+<script src="https://cdn.lucacastelnuovo.nl/tracking/7"></script>
 </head><body>
 <div id="top">
    <?php if ($allow_create_folder) {
