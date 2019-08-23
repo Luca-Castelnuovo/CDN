@@ -1,1 +1,0 @@
-"use strict";function stopLoading(){content.fadeOut(0,function(){loader.removeClass("loading"),content.removeClass("hidden").fadeIn("fast")})}function startLoading(){content.fadeOut("fast",function(){content.addClass("hidden").fadeIn(0),loader.addClass("loading")})}var content=jQuery(".content"),loader=jQuery(".loader");content.addClass("hidden"),loader.addClass("loading");

@@ -1,2 +1,3 @@
-# CDN-V2
-This updated version will now include an authentication module
+# CDN
+
+The CDN is now rewritten to get the static assets from the projects in the webroot
