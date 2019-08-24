@@ -2,7 +2,11 @@
 
 require '../cdn.php';
 
-$cdn = new CDN($_GET['url_path']);
+if(!isset($_GET['path']) || empty($_GET['path'])) {
+	header('Location: gen.php');
+}
+
+$cdn = new CDN($_GET['path']);
 $cdn = $cdn->outputAsset();
 
 if (!$cdn) {
