@@ -1,6 +1,8 @@
 <?php
 
-//If dynamic execute PHP.
+require __DIR__ . '/vendor/autload.php';
+
+
 
 class CDN
 {
@@ -10,19 +12,19 @@ class CDN
     private $fileHashPresent = false;
     private $fileRules = [
         "js" => [
-            "cacheTime" => 3600,
+            "cacheTime" => 604800, // 1 week
             "contentType" => "application/javascript"
         ],
         "css" => [
-            "cacheTime" => 3600,
+            "cacheTime" => 604800, // 1 week
             "contentType" => "text/css"
         ],
         "png" => [
-            "cacheTime" => 3600,
+            "cacheTime" => 2419200, // 3 weeks
             "contentType" => "image/png"
         ],
         "jpg" => [
-            "cacheTime" => 3600,
+            "cacheTime" => 2419200, // 3 weeks
             "contentType" => "image/jpeg"
         ]
     ];
@@ -37,7 +39,7 @@ class CDN
         $path = "/var/www/{$this->urlPath}";
         $pathInfo = pathinfo($path);
 
-        if (preg_match('^(.*)\.([0-9]*)\.(js|css|png|jpe?g)^', $path, $matches)) {
+        if (preg_match('^(.*)\.([0-9a-z]*)\.(js|css|png|jpe?g)^', $path, $matches)) {
             $this->fileHashPresent = true;
             $this->parsedPath = "{$matches[1]}.{$matches[3]}";
         } else {
