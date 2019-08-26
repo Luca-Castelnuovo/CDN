@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/vendor/autload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $configKey = getenv('CONFIG_KEY');
 $configClient = new \ConfigCat\ConfigCatClient($configKey);
