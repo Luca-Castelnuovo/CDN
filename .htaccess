@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^CDN/([^/]+)/$ index.php?path=$1
