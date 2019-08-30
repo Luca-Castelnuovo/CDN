@@ -1,3 +1,4 @@
 RewriteEngine On
 
-RewriteRule ^CDN/([^/]+)/$ index.php?path=$1
+# RewriteRule ^CDN/([^/]+)/$ index.php?path=$1
+RewriteRule ^([^/]+)/$ index.php?path=$1
