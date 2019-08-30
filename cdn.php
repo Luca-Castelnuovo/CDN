@@ -1,15 +1,5 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
-
-$configKey = getenv('CONFIG_KEY');
-$configClient = new \ConfigCat\ConfigCatClient($configKey);
-
-if (!$configClient->getValue("appActive", true)) {
-    http_response_code(503);
-    exit('App is temporarily disabled.');
-}
-
 class CDN
 {
     private $urlPath;
