@@ -1,6 +1,6 @@
 <?php
 
-class CDN
+class Server
 {
     private $urlPath;
     private $parsedPath;
@@ -49,6 +49,8 @@ class CDN
     {
         $fileExists = file_exists($this->parsedPath);
 
+        echo "Parsed path: {$this->parsedPath}";
+
         return $fileExists;
     }
 
@@ -84,7 +86,7 @@ class CDN
         return $fileContent;
     }
 
-    public function outputAsset()
+    public function start()
     {
         $this->parsePath();
 
