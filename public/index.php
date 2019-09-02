@@ -1,5 +1,10 @@
 <?php
 
+// debug
+echo $_GET['path'];
+exit;
+// end debug
+
 require '../server.php';
 
 $server = new Server($_GET['path']);
