@@ -17,7 +17,7 @@ function cdnPath($path) {
 	$pathInfo = pathinfo($path);
 
 	if (!in_array($pathInfo['extension'], ['js','css','png','jpg']) || !file_exists($path)) {
-    	return "File not found";
+    	return "https://cdn.lucacastelnuovo.nl/general/js/error.js";
     }
 
     $fileHash = hash_file('haval160,4', $path);    
