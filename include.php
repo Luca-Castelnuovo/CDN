@@ -15,7 +15,7 @@ function cdnPath($path) {
 
 	$pathInfo = pathinfo($path);
 
-	if (!in_array($pathInfo['extension'], ['js','css','png','jpg', 'pdf', 'txt', 'csv']) || !file_exists($path)) {
+	if (!in_array($pathInfo['extension'], ['js','css','png','jpg', 'pdf', 'txt', 'csv', 'py']) || !file_exists($path)) {
     	return "Asset not found";
     }
 

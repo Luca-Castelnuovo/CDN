@@ -34,6 +34,10 @@ class Server
         "csv" => [
             "cacheTime" => 60, // 1 minute
             "contentType" => "text/csv"
+        ],
+        "py" => [
+            "cacheTime" => 60, // 1 minute
+            "contentType" => "text/x-python"
         ]
     ];
 
