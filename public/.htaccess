@@ -2,3 +2,6 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php?path=%{REQUEST_URI} [L,QSA]
+
+Header set Access-Control-Allow-Origin "files.lucacastelnuovo.nl"
+Header set Access-Control-Allow-Methods "GET"
