@@ -30,6 +30,10 @@ class Server
         "pdf" => [
             "cacheTime" => 3600, // 1 hour
             "contentType" => "application/pdf"
+        ],
+        "csv" => [
+            "cacheTime" => 60, // 1 minute
+            "contentType" => "text/csv"
         ]
     ];
 
