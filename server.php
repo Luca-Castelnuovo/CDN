@@ -32,6 +32,7 @@ class Server
     
     private function parsePath()
     {
+        $this->urlPath = ltrim($this->urlPath, '/');
         $path = "/var/www/{$this->urlPath}";
         $pathInfo = pathinfo($path);
 
