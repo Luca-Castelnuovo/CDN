@@ -8,20 +8,28 @@ class Server
     private $fileHashPresent = false;
     private $fileRules = [
         "js" => [
-            "cacheTime" => 604800, // 1 week
+            "cacheTime" => 86400, // 1 day
             "contentType" => "application/javascript"
         ],
         "css" => [
-            "cacheTime" => 604800, // 1 week
+            "cacheTime" => 86400, // 1 day
             "contentType" => "text/css"
         ],
         "png" => [
-            "cacheTime" => 2419200, // 3 weeks
+            "cacheTime" => 604800, // 1 week
             "contentType" => "image/png"
         ],
         "jpg" => [
-            "cacheTime" => 2419200, // 3 weeks
+            "cacheTime" => 604800, // 1 week
             "contentType" => "image/jpeg"
+        ],
+        "txt" => [
+            "cacheTime" => 60, // 1 minute
+            "contentType" => "text/plain"
+        ],
+        "pdf" => [
+            "cacheTime" => 3600, // 1 hour
+            "contentType" => "application/pdf"
         ]
     ];
 
