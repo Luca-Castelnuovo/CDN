@@ -14,4 +14,11 @@ HTML;
 	exit();
 }
 
-echo cdnPath($_GET['path']);
+$output = cdnPath($_GET['path']);
+
+if (!$output) {
+    http_response_code(404);
+    exit('Asset not found');
+}
+
+echo $output;

@@ -16,7 +16,7 @@ function cdnPath($path) {
 	$pathInfo = pathinfo($path);
 
 	if (!in_array($pathInfo['extension'], ['js','css','png','jpg', 'pdf', 'txt', 'csv', 'py']) || !file_exists($path)) {
-    	return "Asset not found";
+    	return false;
     }
 
     $fileHash = hash_file('haval160,4', $path);    
