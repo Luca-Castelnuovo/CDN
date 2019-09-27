@@ -52,7 +52,7 @@ class Server
         $path = "/var/www/{$this->urlPath}";
         $pathInfo = pathinfo($path);
 
-        if (preg_match('^(.*)\.([0-9a-z]*)\.(js|css|png|jpe?g)^', $path, $matches)) {
+        if (preg_match('^(.*)\.([0-9a-z]*)\.(.*)^', $path, $matches)) {
             $this->fileHashPresent = true;
             $this->parsedPath = "{$matches[1]}.{$matches[3]}";
         } else {
