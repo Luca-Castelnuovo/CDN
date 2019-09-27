@@ -1,5 +1,9 @@
 <?php
 
+if (empty($_GET['path'])) {
+    header('Location: gen.php');
+}
+
 require '../server.php';
 
 $server = new Server($_GET['path']);
