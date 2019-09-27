@@ -43,13 +43,16 @@ class Server
         }
 
         $this->fileExtension = $pathInfo['extension'];
+
+        var_dump($this->urlPath);
+        var_dump($pathInfo);
+        var_dump($this->parsedPath);
+        exit;
     }
 
     private function fileExists()
     {
         $fileExists = file_exists($this->parsedPath);
-
-        echo "Parsed path: {$this->parsedPath}";
 
         return $fileExists;
     }
