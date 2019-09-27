@@ -89,11 +89,7 @@ class Server
     {
         $this->parsePath();
 
-        if (!$this->fileIsAllowed()) {
-            return false;
-        }
-
-        if (!$this->fileExists()) {
+        if (!$this->fileIsAllowed() || !$this->fileExists()) {
             return false;
         }
 
