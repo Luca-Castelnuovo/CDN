@@ -5,7 +5,6 @@
 	// cdnPath('/general/js/ajax.js'); - recommended
 	// cdnPath('general/js/ajax.js');
 
-
 function cdnPath($path) {
     $cdnHost = 'https://cdn.lucacastelnuovo.nl';
 
@@ -17,7 +16,7 @@ function cdnPath($path) {
 	$pathInfo = pathinfo($path);
 
 	if (!in_array($pathInfo['extension'], ['js','css','png','jpg']) || !file_exists($path)) {
-    	return "https://cdn.lucacastelnuovo.nl/general/js/error.js";
+    	return "Asset not found";
     }
 
     $fileHash = hash_file('haval160,4', $path);    
